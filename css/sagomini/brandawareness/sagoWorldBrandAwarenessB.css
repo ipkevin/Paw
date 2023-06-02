@@ -16,23 +16,23 @@ h1, h2, h3, p {
 }
 
 div, input, span, p {
-    font-family: 'SagoMini Rounded Regular';
+    font-family: 'BangoPro'; /* 'SagoMini Rounded Regular'; */
 }
 
 .hero-content h1 {
-    font-family: 'SagoMini Rounded Bold';
+    font-family: 'PPBango'; /* 'SagoMini Rounded Bold'; */
 }
 
 .font-bold {
-    font-family: 'SagoMini Rounded Bold';
+    font-family: 'PPBango'; /* 'SagoMini Rounded Bold'; */
 }
 
 .games-list-section .games-list-container .game h4 {
-    font-family: 'SagoMini Rounded Bold';
+    font-family: 'PPBango'; /* 'SagoMini Rounded Bold'; */
 }
 
 select {
-    font-family: 'SagoMini Rounded Regular';
+    font-family: 'BangoPro'; /* 'SagoMini Rounded Regular'; */
 }
 
 .hero-content-section {
@@ -584,10 +584,13 @@ select {
     }
 
     .hero-content-section .hero-content .hero-title {
-        width: 440px;
+        width: 600px; /* 440px; */
         margin: auto;
         margin-top: 17.1px;
         font-size: 60px;
+    }
+    .hero-content-section .hero-content .hero-title-h2 {
+        font-size: 40px;
     }
 
     .simple-video-section {

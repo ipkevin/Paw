@@ -61,20 +61,20 @@ html {
     color: #4A4C58;
     width: 100%;
     height: 100%;
-    font-family: 'VAGRound-Light';
+    font-family: 'Bango Pro'; /* 'VAGRound-Light'; */
     letter-spacing: 0.5px;
 }
 
 div, input, span, p {
-    font-family: 'VAGRound-Light';
+    font-family: 'Bango Pro'; /* 'VAGRound-Light'; */
 }
 
 button {
-    font-family: 'VAGRound-Bold';
+    font-family: 'PPBango'; /* 'VAGRound-Bold'; */
 }
 
 .font-bold {
-    font-family: 'VAGRound-Bold';
+    font-family: 'PPBango'; /* 'VAGRound-Bold'; */
 }
 
 .color-green {
