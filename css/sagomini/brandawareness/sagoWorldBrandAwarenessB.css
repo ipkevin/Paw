@@ -3,11 +3,11 @@
 @import '../../buttonStyles.css';
 
 h1, h2, h3 {
-    font-family: 'SagoMini Rounded Bold';
+    font-family: 'PPBango'; /* 'SagoMini Rounded Bold'; */
 }
 
 button.button {
-    font-family: 'SagoMini Rounded Bold';
+    font-family: 'PPBango'; /* 'SagoMini Rounded Bold'; */
     line-height: 68px;
 }
 
@@ -16,7 +16,7 @@ h1, h2, h3, p {
 }
 
 div, input, span, p {
-    font-family: 'BangoPro'; /* 'SagoMini Rounded Regular'; */
+    font-family: 'Bango Pro'; /* 'SagoMini Rounded Regular'; */
 }
 
 .hero-content h1 {
@@ -588,6 +588,9 @@ select {
         margin: auto;
         margin-top: 17.1px;
         font-size: 60px;
+    }
+    .hero-content-section .hero-content .game-title-highlighted {
+        color: #FC69C3; /* temp color for h1 on homepage for paw mockup */
     }
     .hero-content-section .hero-content .hero-title-h2 {
         font-size: 40px;
