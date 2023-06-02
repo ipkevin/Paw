@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,30 +11,27 @@
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<link href="/styles/sagomini/style.css" rel="stylesheet">
-    <link href="/styles/sagomini/forms.css" rel="stylesheet">
-	<link href="/styles/sagomini/brandawareness/sagoWorldBrandAwareness.css" rel="stylesheet">
+	<link href="/css/sagomini/style.css" rel="stylesheet">
+    <link href="/css/sagomini/forms.css" rel="stylesheet">
+	<link href="/css/sagomini/brandawareness/sagoWorldBrandAwarenessB.css" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{#ifEnv "NODE_ENV" "production"}}G-PQ2L5XECW2{{else}}G-EJZKH5MY78{{/ifEnv}}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ2L5XECW2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', '{{#ifEnv "NODE_ENV" "production"}}G-PQ2L5XECW2{{else}}G-EJZKH5MY78{{/ifEnv}}');
+        gtag('config', 'G-PQ2L5XECW2');
 
         window.dataLayer.push({
             'event': 'Pageview',
-            'pagePath': '{{gtagPagePath}}',
-            'pageTitle': '{{gtagPageTitle}}'
+            'pagePath': '/',
+            'pageTitle': 'Landing - brandawareness - ba-world-b'
         });
     </script>
-    -->
 
     <!-- Facebook Pixel Code - sagominiworld.com -->
-    <!--
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -49,18 +47,12 @@
     <noscript><img height="1" width="1"
         src="https://www.facebook.com/tr?id=3331269340438534&ev=PageView&noscript=1"
     /></noscript>
-    -->
     <!-- End Facebook Pixel Code -->
 </head>
 <body>
     <!-- ***** HERO HEADER ***** -->
     <section class="hero-content-section tablet-mobile-only">
         <div class="hero-content-container">
-            
-           <video preload="auto" autoplay="" loop="" muted="" playsinline="">
-                <source src="/images/header_videos/World_Header_Video.mp4" type="video/mp4">
-            </video>
-            <div class="hero-overlay"></div>
             <div class="hero-content">    
                 <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
                 <h1 class="hero-title">Giggles that help kids grow.</h1>
@@ -71,109 +63,25 @@
     <!-- ***** HERO HEADER (DESKTOP) ***** -->
     <section class="hero-content-section desktop-only">
         <div class="hero-content-container">
-           <video preload="auto" autoplay="" loop="" muted="" playsinline="">
-                <source src="/images/header_videos/World_Header_Video.mp4" type="video/mp4">
-            </video>
-            <div class="hero-overlay"></div>
             <div class="hero-content">    
                 <div>
-                    <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
                     <h1 class="hero-title">Giggles that help kids grow.</h1>
-                </div>
-                <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
-               <!-- {{> downloadprintableworld }} -->
-                <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
-                <form action="/printables/download" method="POST" target="_blank">
-                    <section class="download-printable-section">
-                        <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
-                        <h1>Download a <span class="color-pink font-bold">free printable activity</span> for your kiddo!</h1>
-                        <div class="input-container">
-                            <input id="emailCreate" name="email" class="text-input caret-pink" type="email" placeholder="email address"></input>
-                        </div>
-                        <!-- ***** Age Group Select (Mobile) ***** -->
-                        <div class="input-container mobile-select age-select">
-                            <select aria-placeholder="select an age group" class="mobile-select">
-                                <option value="default" disabled selected>select an age group</option>
-                                <option value="toddler">Toddler (1 - 3 years old)</option>
-                                <option value="preschooler">Preschooler (3 - 5 years old)</option>
-                                <option value="schoolaged">School-aged (6+ years old)</option>
-                            </select>
-                        </div>
-                    
-                        <!-- ***** Age Group Select (Desktop) ***** -->
-                        <div class="desktop-custom-select">
-                            <div class="select">
-                            <input aria-placeholder="select an age group" 
-                                    class="select-input age-input"
-                                    name="age-input"
-                                    type="hidden"
-                                    value="default" />
-                            <div class="custom-select-label age-input-label">select an age group</div>
-                                <ul class="select-list">
-                                    <li class="select-item" onclick="selectCustomDropdownItem(this)" data-value="default" disabled selected>select an age group</li>
-                                    <li class="select-item" data-value="toddler">Toddler (1 - 3 years old)</li>
-                                    <li class="select-item" data-value="preschooler">Preschooler (3 - 5 years old)</li>
-                                    <li class="select-item" data-value="schoolaged">School-aged (6+ years old)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    
-                        <!-- ***** Interest Select (Mobile) ***** -->
-                        <div class="input-container mobile-select interest-select">
-                            <select aria-placeholder="what does your kiddo like?" name="interest-select" class="mobile-select">
-                                <option value="default" disabled selected>what does your kiddo like?</option>
-                                <option value="outdoors">Exploring the outdoors</option>
-                                <option value="resto">Running a restaurant</option>
-                                <option value="puppet">Hosting a puppet show</option>
-                                <option value="characters">Designing characters</option>
-                            </select>
-                        </div>
-                    
-                        <!-- ***** Interest Select (Desktop) ***** -->
-                        <div class="desktop-custom-select">
-                            <div class="select">
-                            <input aria-placeholder="what does your kiddo like?" 
-                                class="select-input interest-input" 
-                                name="interest-input"
-                                type="hidden" />
-                            <div class="custom-select-label interest-input-label">what does your kiddo like?</div>
-                                <ul class="select-list">
-                                    <li class="select-item interest-select-item" data-value="outdoors">Exploring the outdoors</li>
-                                    <li class="select-item interest-select-item" data-value="resto">Making pretend food</li>
-                                    <li class="select-item interest-select-item" data-value="puppet">Hosting a puppet show</li>
-                                    <li class="select-item interest-select-item" data-value="characters">Designing characters</li>
-                                </ul>
-                            </div>
-                        </div>
-                    
-                        <!-- ***** PRINTABLES SUBSCRIBE SECTION ***** -->
-                        <div class="printables-subscribe-section sago-world">
-                            <div class="custom-checkbox">
-                                <input checked
-                                    class="subscribe-checkbox"
-                                    type="checkbox"></input>
-                                <label class="subscribe-label"></label>
-                            </div>
-                            <p>Yes, I would like free printables and promotions emailed to me every week.</p>
-                        </div>
-                    
-                        <div class="button-download-container">
-                            <button class="button-download sago-world button background-pink">Download</button>
+                    <!-- ***** SIMPLE VIDEO SECTION ***** -->
+                    <section class="simple-video-section">
+                        <div>
+                            <iframe 
+                                id="youtube"
+                                class="simple-video-frame"
+                                src="https://www.youtube.com/embed/y0Bujh6bM4k?rel=0&enablejsapi=1" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
                         </div>
                     </section>
-                    <input type="hidden" name="token" value="{{tokens.[0]}}" />
-                    <input type="hidden" name="printable" value="https://sagomini.com/printables" />
-                </form>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
-    <div class="tablet-mobile-only">
-        <!-- {{> downloadprintableworld }} -->
-        <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
-            <form action="/printables/download" method="POST" target="_blank">
+                </div>
+                <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
+                <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
+                <form action="/printables/download" method="POST" target="_blank">
                 <section class="download-printable-section">
                     <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
                     <h1>Download a <span class="color-pink font-bold">free printable activity</span> for your kiddo!</h1>
@@ -223,9 +131,9 @@
                     <div class="desktop-custom-select">
                         <div class="select">
                         <input aria-placeholder="what does your kiddo like?" 
-                            class="select-input interest-input" 
-                            name="interest-input"
-                            type="hidden" />
+                               class="select-input interest-input" 
+                               name="interest-input"
+                               type="hidden" />
                         <div class="custom-select-label interest-input-label">what does your kiddo like?</div>
                             <ul class="select-list">
                                 <li class="select-item interest-select-item" data-value="outdoors">Exploring the outdoors</li>
@@ -240,8 +148,8 @@
                     <div class="printables-subscribe-section sago-world">
                         <div class="custom-checkbox">
                             <input checked
-                                class="subscribe-checkbox"
-                                type="checkbox"></input>
+                                   class="subscribe-checkbox"
+                                   type="checkbox"></input>
                             <label class="subscribe-label"></label>
                         </div>
                         <p>Yes, I would like free printables and promotions emailed to me every week.</p>
@@ -251,18 +159,17 @@
                         <button class="button-download sago-world button background-pink">Download</button>
                     </div>
                 </section>
-                <input type="hidden" name="token" value="{{tokens.[0]}}" />
+                <input type="hidden" name="token" value="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYW1wYWlnbiI6ImJyYW5kYXdhcmVuZXNzIiwidmFyaWFudCI6ImJhLXdvcmxkLWIiLCJwbGFuIjoiY29tLnNhZ29zYWdvLldvcmxkLnByb21vLnN1YnNjcmlwdGlvbi5vbmVfbW9udGgiLCJwcm9kdWN0bGluZSI6InNhZ29taW5pLXdvcmxkIiwiZnJpZW5kbHluYW1lIjoibWVldC13b3JsZC0xIiwid2Vic3RvcmUiOmZhbHNlLCJhZmZpbGlhdGUiOmZhbHNlLCJza2lwbGFuZGluZyI6ZmFsc2UsImZhc3RvbmJvYXJkIjp0cnVlLCJpYXQiOjE2ODU2NjkxOTQsImV4cCI6MTY4NTc1NTU5NCwiYXVkIjoiaHR0cHM6Ly9zdG9yZS5zYWdvbWluaS5jb206NDQzIiwiaXNzIjoiaHR0cHM6Ly9zdG9yZS5zYWdvbWluaS5jb206NDQzIiwic3ViIjoiMTczLjE4My4xMTkuMjE1In0.JREd3lVzpxgh4pm2LUmdP-QV9Wk4JO149efjlW3H2IKseyO06sEWTYEQHHMQRnEPMsXWmetvs2r9k1ddsCTmrw" />
                 <input type="hidden" name="printable" value="https://sagomini.com/printables" />
-            </form>
-    </div>
+                </form>            </div>
+        </div>
+    </section>
 
     <!-- ***** SIMPLE VIDEO SECTION ***** -->
-    <section class="simple-video-section">
-         <h2 class="section-subheader">Unlimited play in the palm of your hand
-        </h2>
+    <section class="simple-video-section tablet-mobile-only">
         <div>
             <iframe 
-                id="youtube"
+                id="youtube-mobile"
                 class="simple-video-frame"
                 src="https://www.youtube.com/embed/y0Bujh6bM4k?rel=0&enablejsapi=1" 
                 frameborder="0" 
@@ -270,6 +177,91 @@
                 allowfullscreen></iframe>
         </div>
     </section>
+
+    <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
+    <div class="tablet-mobile-only">
+        <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
+        <form action="/printables/download" method="POST" target="_blank">
+        <section class="download-printable-section">
+            <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
+            <h1>Download a <span class="color-pink font-bold">free printable activity</span> for your kiddo!</h1>
+            <div class="input-container">
+                <input id="emailCreate" name="email" class="text-input caret-pink" type="email" placeholder="email address"></input>
+            </div>
+            <!-- ***** Age Group Select (Mobile) ***** -->
+            <div class="input-container mobile-select age-select">
+                <select aria-placeholder="select an age group" class="mobile-select">
+                    <option value="default" disabled selected>select an age group</option>
+                    <option value="toddler">Toddler (1 - 3 years old)</option>
+                    <option value="preschooler">Preschooler (3 - 5 years old)</option>
+                    <option value="schoolaged">School-aged (6+ years old)</option>
+                </select>
+            </div>
+        
+            <!-- ***** Age Group Select (Desktop) ***** -->
+            <div class="desktop-custom-select">
+                <div class="select">
+                <input aria-placeholder="select an age group" 
+                        class="select-input age-input"
+                        name="age-input"
+                        type="hidden"
+                        value="default" />
+                <div class="custom-select-label age-input-label">select an age group</div>
+                    <ul class="select-list">
+                        <li class="select-item" onclick="selectCustomDropdownItem(this)" data-value="default" disabled selected>select an age group</li>
+                        <li class="select-item" data-value="toddler">Toddler (1 - 3 years old)</li>
+                        <li class="select-item" data-value="preschooler">Preschooler (3 - 5 years old)</li>
+                        <li class="select-item" data-value="schoolaged">School-aged (6+ years old)</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- ***** Interest Select (Mobile) ***** -->
+            <div class="input-container mobile-select interest-select">
+                <select aria-placeholder="what does your kiddo like?" name="interest-select" class="mobile-select">
+                    <option value="default" disabled selected>what does your kiddo like?</option>
+                    <option value="outdoors">Exploring the outdoors</option>
+                    <option value="resto">Running a restaurant</option>
+                    <option value="puppet">Hosting a puppet show</option>
+                    <option value="characters">Designing characters</option>
+                </select>
+            </div>
+        
+            <!-- ***** Interest Select (Desktop) ***** -->
+            <div class="desktop-custom-select">
+                <div class="select">
+                <input aria-placeholder="what does your kiddo like?" 
+                       class="select-input interest-input" 
+                       name="interest-input"
+                       type="hidden" />
+                <div class="custom-select-label interest-input-label">what does your kiddo like?</div>
+                    <ul class="select-list">
+                        <li class="select-item interest-select-item" data-value="outdoors">Exploring the outdoors</li>
+                        <li class="select-item interest-select-item" data-value="resto">Making pretend food</li>
+                        <li class="select-item interest-select-item" data-value="puppet">Hosting a puppet show</li>
+                        <li class="select-item interest-select-item" data-value="characters">Designing characters</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- ***** PRINTABLES SUBSCRIBE SECTION ***** -->
+            <div class="printables-subscribe-section sago-world">
+                <div class="custom-checkbox">
+                    <input checked
+                           class="subscribe-checkbox"
+                           type="checkbox"></input>
+                    <label class="subscribe-label"></label>
+                </div>
+                <p>Yes, I would like free printables and promotions emailed to me every week.</p>
+            </div>
+        
+            <div class="button-download-container">
+                <button class="button-download sago-world button background-pink">Download</button>
+            </div>
+        </section>
+        <input type="hidden" name="token" value="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYW1wYWlnbiI6ImJyYW5kYXdhcmVuZXNzIiwidmFyaWFudCI6ImJhLXdvcmxkLWIiLCJwbGFuIjoiY29tLnNhZ29zYWdvLldvcmxkLnByb21vLnN1YnNjcmlwdGlvbi5vbmVfbW9udGgiLCJwcm9kdWN0bGluZSI6InNhZ29taW5pLXdvcmxkIiwiZnJpZW5kbHluYW1lIjoibWVldC13b3JsZC0xIiwid2Vic3RvcmUiOmZhbHNlLCJhZmZpbGlhdGUiOmZhbHNlLCJza2lwbGFuZGluZyI6ZmFsc2UsImZhc3RvbmJvYXJkIjp0cnVlLCJpYXQiOjE2ODU2NjkxOTQsImV4cCI6MTY4NTc1NTU5NCwiYXVkIjoiaHR0cHM6Ly9zdG9yZS5zYWdvbWluaS5jb206NDQzIiwiaXNzIjoiaHR0cHM6Ly9zdG9yZS5zYWdvbWluaS5jb206NDQzIiwic3ViIjoiMTczLjE4My4xMTkuMjE1In0.JREd3lVzpxgh4pm2LUmdP-QV9Wk4JO149efjlW3H2IKseyO06sEWTYEQHHMQRnEPMsXWmetvs2r9k1ddsCTmrw" />
+        <input type="hidden" name="printable" value="https://sagomini.com/printables" />
+        </form>    </div>
 
     <!-- ***** GAMES LIST SECTION (MOBILE) ***** -->
     <section class="games-list-section mobile-only">
@@ -579,11 +571,90 @@
         </div>
     </section>
 
-    <!-- ***** DOWNLOAD PRINTABLE SECTION (FOOTER) ***** -->
     <div class="brand-awareness-footer">
         <div>
-            {{> downloadprintableworld }}
-        </div>
+            <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
+            <form action="/printables/download" method="POST" target="_blank">
+            <section class="download-printable-section">
+                <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
+                <h1>Download a <span class="color-pink font-bold">free printable activity</span> for your kiddo!</h1>
+                <div class="input-container">
+                    <input id="emailCreate" name="email" class="text-input caret-pink" type="email" placeholder="email address"></input>
+                </div>
+                <!-- ***** Age Group Select (Mobile) ***** -->
+                <div class="input-container mobile-select age-select">
+                    <select aria-placeholder="select an age group" class="mobile-select">
+                        <option value="default" disabled selected>select an age group</option>
+                        <option value="toddler">Toddler (1 - 3 years old)</option>
+                        <option value="preschooler">Preschooler (3 - 5 years old)</option>
+                        <option value="schoolaged">School-aged (6+ years old)</option>
+                    </select>
+                </div>
+            
+                <!-- ***** Age Group Select (Desktop) ***** -->
+                <div class="desktop-custom-select">
+                    <div class="select">
+                    <input aria-placeholder="select an age group" 
+                            class="select-input age-input"
+                            name="age-input"
+                            type="hidden"
+                            value="default" />
+                    <div class="custom-select-label age-input-label">select an age group</div>
+                        <ul class="select-list">
+                            <li class="select-item" onclick="selectCustomDropdownItem(this)" data-value="default" disabled selected>select an age group</li>
+                            <li class="select-item" data-value="toddler">Toddler (1 - 3 years old)</li>
+                            <li class="select-item" data-value="preschooler">Preschooler (3 - 5 years old)</li>
+                            <li class="select-item" data-value="schoolaged">School-aged (6+ years old)</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <!-- ***** Interest Select (Mobile) ***** -->
+                <div class="input-container mobile-select interest-select">
+                    <select aria-placeholder="what does your kiddo like?" name="interest-select" class="mobile-select">
+                        <option value="default" disabled selected>what does your kiddo like?</option>
+                        <option value="outdoors">Exploring the outdoors</option>
+                        <option value="resto">Running a restaurant</option>
+                        <option value="puppet">Hosting a puppet show</option>
+                        <option value="characters">Designing characters</option>
+                    </select>
+                </div>
+            
+                <!-- ***** Interest Select (Desktop) ***** -->
+                <div class="desktop-custom-select">
+                    <div class="select">
+                    <input aria-placeholder="what does your kiddo like?" 
+                           class="select-input interest-input" 
+                           name="interest-input"
+                           type="hidden" />
+                    <div class="custom-select-label interest-input-label">what does your kiddo like?</div>
+                        <ul class="select-list">
+                            <li class="select-item interest-select-item" data-value="outdoors">Exploring the outdoors</li>
+                            <li class="select-item interest-select-item" data-value="resto">Making pretend food</li>
+                            <li class="select-item interest-select-item" data-value="puppet">Hosting a puppet show</li>
+                            <li class="select-item interest-select-item" data-value="characters">Designing characters</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <!-- ***** PRINTABLES SUBSCRIBE SECTION ***** -->
+                <div class="printables-subscribe-section sago-world">
+                    <div class="custom-checkbox">
+                        <input checked
+                               class="subscribe-checkbox"
+                               type="checkbox"></input>
+                        <label class="subscribe-label"></label>
+                    </div>
+                    <p>Yes, I would like free printables and promotions emailed to me every week.</p>
+                </div>
+            
+                <div class="button-download-container">
+                    <button class="button-download sago-world button background-pink">Download</button>
+                </div>
+            </section>
+            <input type="hidden" name="token" value="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYW1wYWlnbiI6ImJyYW5kYXdhcmVuZXNzIiwidmFyaWFudCI6ImJhLXdvcmxkLWIiLCJwbGFuIjoiY29tLnNhZ29zYWdvLldvcmxkLnByb21vLnN1YnNjcmlwdGlvbi5vbmVfbW9udGgiLCJwcm9kdWN0bGluZSI6InNhZ29taW5pLXdvcmxkIiwiZnJpZW5kbHluYW1lIjoibWVldC13b3JsZC0xIiwid2Vic3RvcmUiOmZhbHNlLCJhZmZpbGlhdGUiOmZhbHNlLCJza2lwbGFuZGluZyI6ZmFsc2UsImZhc3RvbmJvYXJkIjp0cnVlLCJpYXQiOjE2ODU2NjkxOTQsImV4cCI6MTY4NTc1NTU5NCwiYXVkIjoiaHR0cHM6Ly9zdG9yZS5zYWdvbWluaS5jb206NDQzIiwiaXNzIjoiaHR0cHM6Ly9zdG9yZS5zYWdvbWluaS5jb206NDQzIiwic3ViIjoiMTczLjE4My4xMTkuMjE1In0.JREd3lVzpxgh4pm2LUmdP-QV9Wk4JO149efjlW3H2IKseyO06sEWTYEQHHMQRnEPMsXWmetvs2r9k1ddsCTmrw" />
+            <input type="hidden" name="printable" value="https://sagomini.com/printables" />
+            </form>        </div>
         <div>
             <img class="brand-awareness-footer-image desktop-only" src="/images/brand_awareness/BrandAwareness_World_Printables@3x.png" />
         </div>
