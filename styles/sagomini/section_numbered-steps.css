@@ -1,0 +1,122 @@
+.numbered-steps-section {
+    text-align: center;
+    max-width: 260px;
+    margin: auto;
+}
+
+.numbered-steps-section .robin {
+    width: 140px;
+}
+
+.numbered-steps-section h2 {
+    font-size: 24px;
+    font-family: 'VAGRound-Bold';
+    color: #55504F;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.numbered-steps-section .step {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.numbered-steps-section .step:last-child {
+    margin-bottom: 0;
+}
+
+.numbered-steps-section .number {
+    font-family: 'VAGRound-Light';
+    color: #FC7A38;
+    border: solid 1px #D8D7D7;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0;
+
+    width: 55px;
+    height: 55px;
+    min-height: 55px;
+    min-width: 55px;   
+    font-size: 32px;
+    margin-right: 18px;
+    line-height: 55px;
+}
+
+.numbered-steps-section .description {
+    font-family: 'VAGRound-Light';
+    color: #55504F;
+    line-height: 1.3em;
+    margin: 0;
+    font-size: 18px;
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .numbered-steps-section {
+        max-width: 465px;
+    }
+
+    .numbered-steps-section .robin {
+        width: 200px;
+    }
+
+    .numbered-steps-section h2 {
+        font-size: 32px;
+        margin: 30px 0;
+    }
+
+    .numbered-steps-section .step {
+        margin-bottom: 40px;
+        align-items: center;
+    }
+
+    .numbered-steps-section .number {
+        width: 65px;
+        height: 65px;
+        min-height: 65px;
+        min-width: 65px;   
+        font-size: 36px;
+        line-height: 65px;
+        margin-right: 25px;
+    }
+
+    .numbered-steps-section .description {
+        font-size: 23px;
+    }
+}
+
+
+@media only screen and (min-width:1024px) { 
+    .numbered-steps-section {
+        max-width: 695px;
+    }
+
+    .numbered-steps-section .robin {
+        width: 270px;
+    }
+
+    .numbered-steps-section h2 {
+        font-size: 48px;
+        margin: 55px 0 35px 0;
+    }
+
+    .numbered-steps-section .step {
+        margin-bottom: 45px;
+        align-items: center;
+    }
+
+    .numbered-steps-section .number {
+        width: 70px;
+        height: 70px;
+        min-height: 70px;
+        min-width: 70px;   
+        font-size: 40px;
+        line-height: 70px;
+        margin-right: 25px;
+    }
+
+    .numbered-steps-section .description {
+        font-size: 25px;
+    }
+}

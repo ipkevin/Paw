@@ -1,0 +1,747 @@
+/* Sago Mini World Brand Awareness Stylesheet */
+/* Use for styles for World Brand Awareness landing pages */
+@import '../../buttonStyles.css';
+
+h1, h2, h3 {
+    font-family: 'SagoMini Rounded Bold';
+}
+
+button.button {
+    font-family: 'SagoMini Rounded Bold';
+    line-height: 68px;
+}
+
+h1, h2, h3, p {
+    color: #727272;
+}
+
+div, input, span, p {
+    font-family: 'SagoMini Rounded Regular';
+}
+
+.hero-content h1 {
+    font-family: 'SagoMini Rounded Bold';
+}
+
+.font-bold {
+    font-family: 'SagoMini Rounded Bold';
+}
+
+.games-list-section .games-list-container .game h4 {
+    font-family: 'SagoMini Rounded Bold';
+}
+
+select {
+    font-family: 'SagoMini Rounded Regular';
+}
+
+.hero-content-section {
+    margin: 0;
+    height: 207px;
+}
+
+.hero-content-container video {
+    min-height: 207px;
+    max-height: 207px;
+}
+
+.hero-content-section .hero-content {
+    max-width: 275px;
+    padding: 34px 0;
+    margin: 0 auto;
+}
+
+.hero-content-section .hero-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    inset: 0;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.hero-content-section .hero-content .sagoWorld {
+    height: 54.6px;
+    width: 80.7px;
+}
+
+.hero-content-section .hero-content .hero-title {
+    margin-top: 6.4px;
+    font-size: 30px;
+    line-height: 34px;
+}
+
+.download-printable-section {
+    margin-top: 30.7px;
+}
+
+.section-subheader {
+    font-size: 26px;
+    line-height: 31.2px;
+    margin: auto;
+    text-align: center;
+}
+
+.simple-video-section {
+    text-align: center;
+    margin-top: 45.4px;
+}
+
+.simple-video-section .section-subheader {
+    max-width: 300px;
+    margin-bottom: 19.8px;
+}
+
+.simple-video-frame {
+    width: 315px;
+    height: 177.2px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.games-list-section {
+    margin: 40px 0 50.6px;
+    padding: 40.1px 0 45.1px;
+    background-color: #f2f9f9;
+}
+
+.games-list-section .section-subheader {
+    width: 350px;
+}
+
+.games-list-section .games-list-container {
+    padding: 0;
+    padding-top: 29.9px;
+    min-height: initial;
+}
+
+.games-list-section .games-list-container .game img {
+    margin-bottom: 19.9px;
+}
+
+.games-list-section .games-list-container .game p {
+    width: 175px;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: #727272;
+    margin: auto;
+}
+
+.simple-banner-image {
+    width: 100%;
+    object-fit: cover;
+    height: 203px;
+}
+
+.brand-awareness-features-section {
+    text-align: center;
+    margin: auto;
+}
+
+.brand-awareness-features-section .section-subheader {
+    margin-bottom: 30px;
+    max-width: 325px;
+}
+
+.brand-awareness-features-section .brand-awareness-feature {
+    margin-bottom: 40px;
+}
+
+.brand-awareness-features-section p {
+    width: 290px;
+    margin: auto;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #635f5e;
+}
+
+.brand-awareness-features-section .brand-awareness-screen-time {
+    width: 226px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 25px;
+}
+
+.brand-awareness-features-section .brand-awareness-characters {
+    width: 282px;
+    height: 188px;
+    margin-bottom: 6px;
+    object-fit: contain;
+}
+
+.brand-awareness-features-section .brand-awareness-explore {
+    width: 226px;
+    height: 150px;
+    margin-bottom: 25px;
+    object-fit: contain;
+}
+
+.brand-awareness-features-section .brand-awareness-emotions {
+    width: 226px;
+    height: 150px;
+    margin-bottom: 25px;
+    object-fit: contain;
+}
+
+.review-carousel-section {
+    margin-top: 50px;
+    margin-bottom: 34.6px;
+}
+
+.review-carousel-section .section-subheader {
+    width: 300px;
+}
+
+.review-carousel-section .review-carousel {
+    margin-top: 35px;
+}
+
+.review-carousel-section .review-carousel .review {
+    width: 198px;
+    height: 248px;
+    margin: 0 25px 0 0;
+    border: solid 2px #70707026;
+    background-color: white;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.review-carousel-section .review-carousel .review p {
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: #727272; 
+    margin: 0;
+}
+
+.review-carousel-section .review-carousel .review .author {
+    font-size: 18px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: #727272;
+    bottom: 23.6px;
+    left: 0;
+    right: 0;
+}
+
+.awards-section .awards div.circle {
+    max-width: 375px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.awards-section .awards div.circle img {
+    width: 139.5px;
+    height: 139.5px;
+    margin-bottom: 26.4px;
+    margin-right: 23.9px;
+}
+
+.awards-section .awards div.circle img:nth-child(even) {
+    margin-right: 0;
+}
+
+.awards-section .awards div.rect img {
+    width: 139.9px;
+    height: 56.2px;
+    object-fit: contain;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.awards-section .awards div.rect img:nth-child(even) {
+    margin-right: 0;
+}
+
+.brand-awareness-footer {
+    padding: 54.6px 30px 42px;
+    background-color: #37bb6c;
+}
+
+.brand-awareness-footer .download-printable-section {
+    margin: 0 auto;
+}
+
+.tablet-only {
+    display: none;
+}
+
+.desktop-only {
+    display: none;
+}
+
+.tablet-mobile-only {
+    display: block;
+}
+
+@media only screen and (min-width:768px) {
+    .hero-content-section {
+        height: 463px;
+    }
+
+    .hero-content-container video {
+        min-height: 463px;
+        max-height: 463px;
+    }
+
+    .hero-content-section .hero-content {
+        max-width: 486.9px;
+        padding: 86px 0;
+    }
+
+    .hero-content-section .hero-content .sagoWorld {
+        width: 160px;
+        height: 108.4px;
+    }
+
+    .hero-content-section .hero-content .hero-title {
+        margin-top: 14.6px;
+        font-size: 60px;
+        line-height: 1.2;
+    }
+
+    .simple-video-section {
+        text-align: center;
+        margin-top: 70.4px;
+    }
+
+    .simple-video-section .section-subheader {
+        max-width: initial;
+        margin-bottom: 35px;
+    }
+
+    .simple-video-frame {
+        width: 709.2px;
+        height: 398.9px;
+    }
+
+    .section-subheader {
+        font-size: 34px;
+    }
+
+    .games-list-section {
+        margin: 70.1px 0 80.7px;
+        padding: 60px 0 70px;
+        background-color: #f2f9f9;
+    }
+    
+    .games-list-section .section-subheader {
+        width: 582px;
+    }
+
+    .games-list-section .games-list-container {
+        padding-top: 45px;
+    }
+
+    .games-list-section .games-list-container .game {
+        width: 250px;
+        max-width: 250px;
+        margin-right: 40px;
+    }
+    
+    .games-list-section .games-list-container .game img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+    
+    .games-list-section .games-list-container .game p {
+        width: 220px;
+        font-size: 21px;
+        line-height: 1.14;
+        letter-spacing: 0.69px;
+    }
+
+    .simple-banner-image {
+        height: 319px;
+    }
+    
+    .brand-awareness-features-section .section-subheader {
+        margin-bottom: 50.3px;
+        max-width: initial;
+    }
+    
+    .brand-awareness-features-section .brand-awareness-feature {
+        margin-bottom: 40px;
+    }
+    
+    .brand-awareness-features-section p {
+        width: 300px;
+        font-size: 30px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: normal;
+        text-align: center;
+        color: #635f5e;
+        margin-top: 0;
+    }
+
+    .brand-awareness-features-section .brand-awareness-features-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 768px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .brand-awareness-features-section .brand-awareness-feature {
+        flex: 1;
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+    
+    .brand-awareness-features-section .brand-awareness-screen-time {
+        margin-bottom: 30px;
+    }
+    
+    .brand-awareness-features-section .brand-awareness-characters {
+        width: 282px;
+        height: 188px;
+        margin-bottom: 11px;
+        margin-top: -16px;
+    }
+    
+    .brand-awareness-features-section .brand-awareness-explore {
+        margin-bottom: 30px;
+    }
+    
+    .brand-awareness-features-section .brand-awareness-emotions {
+        margin-bottom: 30px;
+    }
+
+    .review-carousel-section {
+        margin-top: 79.7px;
+        margin-bottom: 50px;
+    }
+    
+    .review-carousel-section .section-subheader {
+        width: initial;
+    }
+    
+    .review-carousel-section .review-carousel {
+        margin-top: 50px;
+    }
+    
+    .review-carousel-section .review-carousel .review {
+        width: 209px;
+        height: 278px;
+        margin: 0 31px 0 0;
+        padding: 25px 10px;
+    }
+    
+    .review-carousel-section .review-carousel .review p {
+        font-size: 21px;
+        line-height: 1.15;
+    }
+    
+    .review-carousel-section .review-carousel .review .author {
+        font-size: 20px;
+        bottom: 28px;
+        left: 0;
+        right: 0;
+    }
+
+    .awards-section {
+        margin-bottom: 70px;
+    }
+
+    .awards-section .awards div.circle {
+        max-width: 375px;
+        margin: auto;
+        display: initial;
+    }
+    
+    .awards-section .awards div.circle img {
+        width: 137.8px;
+        height: 137.8px;
+        margin-bottom: 23.9px;
+        margin-right: 23.9px;
+    }
+    
+    .awards-section .awards div.circle img:nth-child(even) {
+        margin-right: 23.9px;
+    }
+
+    .awards-section .awards div.circle img:last-child {
+        margin-right: 0;
+    }
+    
+    .awards-section .awards div.rect img {
+        width: 218px;
+        height: 74px;
+        object-fit: contain;
+        margin: 0;
+    }
+    
+    .awards-section .awards div.rect img:nth-child(even) {
+        margin-right: 0;
+    }
+    
+    .brand-awareness-footer {
+        padding: 96.7px 182.1px 81.3px 198.9px;
+    }
+    
+    .brand-awareness-footer .download-printable-section {
+        margin: 0 auto;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .tablet-only {
+        display: block;
+    }
+    
+    .desktop-only {
+        display: none;
+    }
+
+    .tablet-mobile-only {
+        display: block;
+    }
+}
+
+@media only screen and (min-width:1366px) {
+    .hero-content-section {
+        height: 710px;
+    }
+
+    .hero-content-container video {
+        min-height: 710px;
+        max-height: 710px;
+    }
+
+    .hero-content-section .hero-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1024px;
+    }
+
+    .download-printable-section {
+        margin: 0;
+    }
+
+    .hero-content-section .hero-content .sagoWorld {
+        width: 192px;
+        height: 130px;
+    }
+
+    .hero-content-section .hero-content .hero-title {
+        width: 486.9px;
+        margin-top: 17.1px;
+        font-size: 72px;
+    }
+
+    .simple-video-section {
+        text-align: center;
+        margin-top: 90px;
+    }
+
+    .simple-video-section .section-subheader {
+        max-width: initial;
+        margin-bottom: 55px;
+    }
+
+    .simple-video-frame {
+        width: 1026.3px;
+        height: 578.2px;
+    }
+
+    .section-subheader {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .games-list-section {
+        margin: 80.3px 0 90px;
+        padding: 70px 0 75px;
+        background-color: #f2f9f9;
+    }
+    
+    .games-list-section .section-subheader {
+        width: initial;
+    }
+
+    .games-list-section .games-list-container {
+        padding-top: 55px;
+    }
+
+    .games-list-section .games-list-container .game {
+        width: 250px;
+        max-width: 250px;
+        margin-right: 30px;
+    }
+    
+    .games-list-section .games-list-container .game img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+    
+    .games-list-section .games-list-container .game p {
+        width: 220px;
+        font-size: 21px;
+        line-height: 1.14;
+        letter-spacing: 0.69px;
+    }
+
+    .simple-banner-image {
+        height: 603px;
+    }
+    
+    .brand-awareness-features-section .section-subheader {
+        margin-bottom: 65px;
+        max-width: initial;
+    }
+    
+    .brand-awareness-features-section .brand-awareness-feature {
+        margin-bottom: 65px;
+    }
+    
+    .brand-awareness-features-section p {
+        width: 300px;
+        font-size: 30px;
+        line-height: 1.1;
+        margin-top: 0;
+    }
+
+    .brand-awareness-features-section .brand-awareness-features-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 768px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .review-carousel-section {
+        margin-top: 90px;
+        margin-bottom: 79.8px;
+    }
+    
+    .review-carousel-section .review-carousel {
+        margin-top: 65px;
+    }
+    
+    .review-carousel-section .review-carousel .review {
+        width: 240px;
+        height: 292px;
+        margin: 0 31px 0 0;
+        padding: 31px 22px 32px;
+    }
+    
+    .review-carousel-section .review-carousel .review .author {
+        font-size: 21px;
+        bottom: 32px;
+        left: 0;
+        right: 0;
+    }
+
+    .awards-section {
+        margin-bottom: 79.8px;
+    }
+
+    .awards-section .awards div.circle {
+        max-width: 375px;
+        margin: auto;
+        display: initial;
+    }
+    
+    .awards-section .awards div.circle img {
+        width: 165px;
+        height: 165px;
+        margin-bottom: 41.7px;
+        margin-right: 17.9px;
+    }
+    
+    .awards-section .awards div.circle img:nth-child(even) {
+        margin-right: 17.9px;
+    }
+
+    .brand-awareness-footer {
+        padding-top: 107.5px;
+        padding-bottom: 78.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand-awareness-footer .brand-awareness-footer-image {
+        width: 630px;
+        height: 369.9px;
+        object-fit: contain;
+        margin-left: 50.2px;
+        margin-right: -50.2px;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .tablet-only {
+        display: none;
+    }
+    
+    .desktop-only {
+        display: block;
+    }
+
+    .tablet-mobile-only {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .brand-awareness-footer .brand-awareness-footer-image {
+        width: 705px;
+        height: 413.9px;
+        object-fit: contain;
+        margin-left: 111.6px;
+        margin-right: -150px;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .tablet-only {
+        display: none;
+    }
+    
+    .desktop-only {
+        display: block;
+    }
+
+    .tablet-mobile-only {
+        display: none;
+    }
+}

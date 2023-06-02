@@ -1,0 +1,203 @@
+.testimonies-section.single-testimony {
+    text-align: center;
+    max-width: 260px;
+    margin: auto;
+}
+
+.testimonies-section.single-testimony .testimony-headshot {
+    height: 90px;
+    margin-bottom: 15px;
+}
+
+.testimonies-section.single-testimony p {
+    font-size: 18px;
+    margin: 0px;
+    margin-bottom: 12px;
+    color: #635f5e;
+}
+
+.testimonies-section.single-testimony .testimony-meta {
+    margin: 0px;
+    font-size: 16px;
+    color: #b0aead;
+}
+
+.testimonies-carousel {
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Force carousel slides to have the same height so carousel dots positioning remains consistent */
+.testimonies-carousel .slick-list {
+    height: 385px !important;
+}
+
+.testimony {
+    position: relative;
+    text-align: center;
+}
+
+.testimony .testimony-headshot {
+    margin: auto;
+    width: 110px;
+}
+
+.testimony h4 {
+    font-family: 'VAGRound-Bold';
+    font-size: 18px;
+    color: #55504F;
+    max-width: 410px;
+    max-height: 184px;
+    line-height: 1.3em;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.testimony .testimonee {
+    font-size: 18px;
+    font-family: 'VAGRound-Light';
+    color: #55504F;
+    line-height: 1.3em;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.testimony .occupation {
+    font-size: 16px;
+    font-family: 'VAGRound-Light';
+    color: #55504F;
+    line-height: 1.3em;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+/* Styling the default Slick dots */
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    
+    border: none;
+    border-radius: 100%;
+    background-color:#DDDCDC;
+    
+    text-indent: -9999px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #72BE44;
+}
+
+/* Media Queries */
+@media only screen and (min-width:370px) and (max-width:768px) {
+    /* Force carousel slides to have the same height so carousel dots positioning remains consistent */
+    .testimonies-carousel .slick-list {
+        height: 350px !important;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .testimony h4 {
+        max-width: 410px;
+    }
+
+    .testimonies-section.single-testimony {
+        max-width: 715px;
+        display: flex;
+        text-align: left;
+    }
+
+    .testimonies-section.single-testimony .testimony-headshot {
+        height: 135px;
+        margin-bottom: 0px;
+        margin-right: 16px;
+    }
+
+    .testimonies-section.single-testimony p {
+        text-align: left;
+        font-size: 21px;
+        margin-bottom: 14px;
+    }
+
+    .testimonies-section.single-testimony .testimony-meta {
+        margin: 0px;
+        font-size: 21px;
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    .testimony .testimony-headshot {
+        margin: auto;
+        width: auto;
+    }
+
+    .testimony h4 {
+        font-size: 28px;
+        max-width: 715px;
+        margin-top: 40px;
+        margin-bottom: 35px;
+    }
+
+    .testimony .testimonee {
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+    
+    .testimony .occupation {
+        font-size: 21px;
+        margin-bottom: 35px;
+    }
+
+    .slick-dots button {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Force carousel slides to have the same height so carousel dots positioning remains consistent */
+    .testimonies-carousel .slick-list {
+        height: 575px !important;
+    }
+
+
+    .testimonies-section.single-testimony {
+        max-width: 995px;
+        display: flex;
+        text-align: left;
+    }
+
+    .testimonies-section.single-testimony .testimony-headshot {
+        height: 200px;
+        margin-bottom: 0px;
+        margin-right: 40px;
+    }
+
+    .testimonies-section.single-testimony p {
+        text-align: left;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .testimonies-section.single-testimony .testimony-meta {
+        margin: 0px;
+        font-size: 30px;
+        display: inline-block;
+        text-align: left;
+    }
+}

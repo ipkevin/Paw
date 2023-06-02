@@ -1,0 +1,349 @@
+/*
+@font-face {
+	font-family: "VAG Rounded W01 Bold";
+	src: url("../../fonts/9064823a-ffe2-46f1-8b16-da2407201487.woff2") format("woff2"), url("../../fonts/5b73c12f-4a5a-4d8c-81be-1babf4a3f3dd.woff") format("woff");
+}
+@font-face {
+	font-family:"VAG Rounded W01 Light";
+	src: url("../../fonts/VAGRoundedStd-Light.otf") format("opentype");
+}
+@font-face {
+	font-family: "Heisei Maru Go Std W8";
+	src: url("../../fonts/yUypTjNEhqRQ3p6J.woff") format("woff");
+}
+@font-face {
+	font-family: "Garuda Bold";
+	src: url("../../fonts/dQrhXzRtwzshkm42.woff") format("woff");
+}
+
+body {
+	padding: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: "VAG Rounded W01 Light";
+}
+
+input[name="confirm_email"] {
+	display: none !important;
+}
+*/
+
+@import './normalize.css';
+@import './icons.css';
+@import './fonts.css';
+@import './helpers.css';
+@import './header.css';
+@import './footer.css';
+@import './section_hero-content.css';
+@import './section_app-badges.css';
+@import './section_tablet-video.css';
+@import './section_benefits.css';
+@import './section_awards.css';
+@import './section_games-list.css';
+@import './section_instagram-list.css';
+@import './section_review-carousel.css';
+@import './section_cta-section.css';
+@import './section_testimonies.css';
+@import './section_icon-group.css';
+@import './section_feature-list-section.css';
+@import './section_app-info-cta.css';
+@import './section_vertical-reviews.css';
+@import './section_expandable-icon-card.css';
+@import './section_numbered-steps.css';
+@import './section_simple-card-selection.css';
+@import './section_download-printable.css';
+@import './index.css';
+@import '../colours.css';
+
+
+html {
+    color: #4A4C58;
+    width: 100%;
+    height: 100%;
+    font-family: 'VAGRound-Light';
+    letter-spacing: 0.5px;
+}
+
+div, input, span, p {
+    font-family: 'VAGRound-Light';
+}
+
+button {
+    font-family: 'VAGRound-Bold';
+}
+
+.font-bold {
+    font-family: 'VAGRound-Bold';
+}
+
+.color-green {
+    color: #72BE44;
+}
+
+a {
+    text-decoration: underline;
+    color: #4A4C58;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #4A4C58;
+}
+
+body {
+    margin: 0;
+}
+
+button.primary {
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    height: 35px;
+    padding: 0px 17px;
+    border-radius: 25px;
+    background-color: #FC69C3;
+}
+
+a.button.primary {
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    height: 35px;
+    padding: 0px 17px;
+    border-radius: 25px;
+    background-color: #FC69C3;
+    text-decoration: none;
+    line-height: 35px;
+    font-family: 'VAGRound-Bold';
+}
+
+a.button.primary:active {
+    background-color: #E35FAF;
+}
+
+button.primary:active {
+    background-color: #E35FAF;
+}
+
+button.green {
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    height: 35px;
+    padding: 0px 17px;
+    border-radius: 25px;
+    background-color: #72BE44;
+}
+
+a.button.green {
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    height: 35px;
+    padding: 0px 17px;
+    border-radius: 25px;
+    background-color: #72BE44;
+    text-decoration: none;
+    line-height: 35px;
+    font-family: 'VAGRound-Bold';
+}
+
+a.button.green.large {
+    height: 50px;
+    line-height: 50px;
+}
+
+a.button.green:active {
+    background-color: #66AA3D;
+}
+
+button.green:active {
+    background-color: #66AA3D;
+}
+
+.button.orange {
+
+}
+
+.simple-subtitle {
+    margin-top: 16px;
+    margin-bottom: 35px;
+    font-family: 'VAGRound-Light';
+    color: #635F5E;
+    font-size: 18px;
+    text-align: center;
+}
+
+.cta-section {
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+.simple-paragraph-section {
+    margin: 0px auto;
+}
+
+.simple-paragraph-section p {
+    margin: 0px auto;
+    font-family: 'VAGRound-Light';
+    color: #635F5E;
+    line-height: 1.3;
+    max-width: 295px;
+}
+
+.simple-paragraph-section h2 {
+    font-family: 'VAGRound-Bold';
+    line-height: 1.2;
+    margin: auto;
+    margin-bottom: 25px;
+    font-size: 30px;
+    max-width: 295px;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    button.primary {
+        font-size: 22px;
+        height: 50px;
+        padding: 0px 25px;
+    }
+
+    a.button.primary {
+        font-size: 22px;
+        height: 50px;
+        padding: 0px 25px;
+        line-height: 50px;
+    }
+
+    button.green {
+        font-size: 22px;
+        height: 50px;
+        padding: 0px 25px;
+    }
+
+    a.button.green {
+        font-size: 22px;
+        height: 50px;
+        padding: 0px 25px;
+        line-height: 50px;
+    }
+
+    a.button.green.large {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .simple-subtitle {
+        margin-top: 18px;
+        margin-bottom: 50px;
+        font-size: 23px;
+    }
+
+    .simple-paragraph-section h2 {
+        font-size: 46px;
+        max-width: 475px;
+    }
+
+    .simple-paragraph-section p {
+        font-size: 23px;
+        max-width: 475px;
+    }
+
+    .simple-paragraph-section .small {
+        font-size: 18px;
+        max-width: inherit;
+    }
+
+    .cta-section {
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    button.primary {
+        font-size: 30px;
+        height: 64px;
+        padding: 0px 30px;
+        border-radius: 32px;
+    } 
+
+    a.button.primary {
+        font-size: 30px;
+        height: 64px;
+        padding: 0px 30px;
+        border-radius: 32px;
+        line-height: 64px;
+    }
+
+    button.green {
+        font-size: 30px;
+        height: 64px;
+        padding: 0px 30px;
+        border-radius: 32px;
+    } 
+
+    a.button.green {
+        font-size: 30px;
+        height: 64px;
+        padding: 0px 30px;
+        border-radius: 32px;
+        line-height: 64px;
+    }
+
+    a.button.green.large {
+        height: 64px;
+        line-height: 64px;
+    }
+
+    .simple-subtitle {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+
+    .simple-paragraph-section h2 {
+        font-size: 60px;
+        margin-bottom: 40px;
+        max-width: 620px;
+    }
+
+    .simple-paragraph-section p {
+        font-size: 30px;
+        max-width: 666px;
+    }
+
+    a.button.primary {
+        height: 64px;
+        line-height: 64px;
+    }
+
+    .cta-section {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    .simple-paragraph-section .small {
+        font-size: 21px;
+    }
+
+}
+

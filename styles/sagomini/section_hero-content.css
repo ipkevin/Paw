@@ -1,0 +1,280 @@
+.hero-content-section {
+    position: relative;
+}
+
+.hero-content-container video {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    min-height: 265px;
+    max-height: 265px;
+    object-position: center;
+}
+
+.hero-content-container video.empty-content {
+    height: 210px;
+    min-height: 210px;
+    max-height: 210px;
+}
+
+.hero-content-container video.large {
+    min-height: 460px;
+    max-height: 460px;
+}
+
+.hero-content {
+    text-align: center;
+    padding-top: 29px;
+    max-width: 310px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content.empty-content {
+    padding-top: 150px;
+}
+
+.hero-content.large {
+    padding-top: 85px;
+}
+
+.hero-content h1 {
+    margin: 0px;
+    margin-top: 10px;
+    font-family: 'VAGRound-Bold';
+    color: white;
+    line-height: 1.05em;
+}
+
+.hero-content h2 {
+    margin: 0px;
+    margin-top: 13px;
+    font-family: 'VAGRound-Bold';
+    color: white;
+    line-height: 1.2em;
+    font-size: 18px;
+    max-width: 250px;
+}
+
+.hero-content .large-text {
+    margin: 0px;
+    margin-top: 10px;
+    font-family: 'VAGRound-Bold';
+    color: white;
+    line-height: 1.2em;
+    font-size: 48px;
+}
+
+.hero-content .large-text sup {
+    font-size: 2rem;
+}
+
+.hero-content .hero-icon {
+    width: 111px;
+    height: 111px;
+    margin: auto;
+    z-index: 9;
+}
+
+.hero-content .i--SagoMini-Icon-Spring {
+    margin-top: 24px;
+}
+
+.hero-content a.button.primary {
+    margin: 0px;
+    margin-top: 21px;
+    margin-bottom: 75px;
+}
+
+.hero-content a.button.green {
+    margin: 0px;
+    margin-top: 13px;
+    margin-bottom: 85px;
+}
+
+.hero-content .sagoWorld{
+    width: 122px;
+}
+
+.hero-content .fourstars{
+    width: 110px;
+    margin-top: 10px;
+    margin-bottom: 45px;
+}
+
+/* Media Queries */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .hero-content {
+        padding-top: 28px;
+        max-width: none;
+    }
+
+    .hero-content.large {
+        padding-top: 75px;
+    }
+
+    .hero-content.empty-content {
+        padding-top: 205px;
+    }
+
+    .hero-content-container video {
+        min-height: 290px;
+        max-height: 290px;
+    }
+
+    .hero-content-container video.empty-content {
+        height: 280px;
+        min-height: 280px;
+        max-height: 280px;
+    }    
+
+    .hero-content-container video.large {
+        min-height: 475px;
+        max-height: 475px;
+    }
+
+    .hero-content .sagoWorld{
+        width: 140px;
+    }
+
+    .hero-content h1 {
+        margin: 0px;
+        margin-top: 28px;
+        line-height: 1.2em;
+        font-size: 32px;
+    }
+
+    .hero-content h2 {
+        margin-top: 10px;
+        max-width: initial;
+    }
+
+    .hero-content .large-text {
+        font-size: 67px;
+    }
+
+    .hero-content .large-text sup {
+        top: -0.75em;
+    }
+
+    .hero-content a.button.primary {
+        margin-top: 35px;
+        margin-bottom: 55px;
+    }
+
+    .hero-content a.button.green {
+        margin: 0px;
+        margin-top: 15px;
+        margin-bottom: 75px;
+    }
+
+    .hero-content .hero-icon {
+        width: 136px;
+        height: 136px;
+        margin: auto;
+    }
+
+    .hero-content .i--SagoMini-Icon-Spring {
+        margin-top: 28px;
+    }
+
+    .hero-content .fourstars {
+        margin-bottom: 50px;
+        width: 135px;
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    .hero-content {
+        padding-top: 65px;
+        max-width: none;
+    }
+
+    .hero-content.large {
+        padding-top: 165px;
+    }
+
+    .hero-content.empty-content {
+        padding-top: 375px;
+    }
+
+    .hero-content .sagoWorld{
+        width: 222px;
+    }
+
+    .hero-content h1 {
+        margin: 0px;
+        margin-top: 30px;
+        line-height: 1.2em;
+        font-size: 48px;
+    }
+
+    .hero-content.large h1 {
+        margin-top: 50px;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+        margin-top: 30px;
+        max-width: initial;
+    }
+
+    .hero-content .large-text {
+        font-size: 120px;
+        margin-top: 15px;
+    }
+
+    .hero-content .large-text sup {
+        top: -1em;
+        font-size: 48px;
+    }
+
+    .hero-content a.button.primary {
+        margin-top: 50px;
+        margin-bottom: 130px;
+    }
+
+    .hero-content a.button.green {
+        margin: 0px;
+        margin-top: 50px;
+        margin-bottom: 155px;
+    }
+
+    .hero-content .hero-icon {
+        width: 241px;
+        height: 241px;
+        margin: auto;
+    }
+
+    .hero-content .i--SagoMini-Icon-Spring {
+        margin-top: 60px;
+    }
+
+    .hero-content-container video {
+        max-height: inherit;
+        height: 485px;
+    }
+
+    .hero-content-container video.empty-content {
+        height: 500px;
+        min-height: 500px;
+        max-height: 500px;
+    }    
+
+    .hero-content-container video.large {
+        max-height: inherit;
+        height: 820px;
+    }
+
+    .hero-content .fourstars {
+        margin-bottom: 120px;
+        margin-top: 15px;
+        width: 241px;
+    }
+}
+

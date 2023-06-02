@@ -1,0 +1,292 @@
+.vertical-reviews-section {
+    text-align: center;
+    margin-bottom: 65px;
+    position: relative;
+}
+
+.vertical-review-container.desktop {
+    display: none;
+}
+
+.vertical-reviews-section.expanded .vertical-review-container.desktop {
+    display: none;
+}
+
+.vertical-reviews-section.expanded {
+    padding-top: 35px;
+}
+
+.prevent-overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+}
+
+.vertical-reviews-section.expanded .prevent-overlay {
+    display: none;
+}
+
+.vertical-review-scroll-button.arrow-up {
+    background-color: red;
+    background-image: url('../../images/NavArrowUp.svg');
+}
+
+.vertical-review-container {
+    max-height: 210px;
+    overflow: hidden;
+    margin: 40px auto;
+    max-width: 270px;
+    text-align: left;
+    position: relative;
+}
+
+.vertical-review-container .slick-list {
+    max-height: 435px;
+}
+
+.vertical-reviews-section.expanded .vertical-review-container {
+    display: flex;
+    max-height: 550px;
+    flex-direction: column;
+}
+
+.vertical-reviews-section.expanded .vertical-review-container > img {
+    text-align: center;
+}
+
+.vertical-reviews-section .vertical-review-scroll-button {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.vertical-reviews-section.expanded .vertical-review-scroll-button.slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.vertical-reviews-section.expanded .vertical-review-scroll-button {
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.vertical-reviews-section .read-more-button {
+    color: #b0aead;
+    font-size: 18px;
+    text-decoration: underline;
+
+    margin: 0px;
+    margin-top: -100px;
+    line-height: 100px;
+    padding: 20px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    position: relative;
+}
+
+.vertical-reviews-section .faded-border-top,
+.vertical-reviews-section .faded-border-bottom { 
+    display: none;
+}
+
+.vertical-reviews-section.expanded .faded-border-top { 
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: -95px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    position: relative;
+    z-index: 998;
+    display: block;
+}
+
+.vertical-reviews-section.expanded .faded-border-bottom {
+    margin: 0px;
+    margin-top: -95px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    position: relative;
+    z-index: 998;
+    display: block;
+}
+
+.vertical-reviews-section.expanded .read-more-button {
+    display: none;
+}
+
+.vertical-review {
+    min-height: 435px; /* same as .vertical-review-container .slick-list */
+    padding: 30px 0px;
+}
+
+.vertical-review .fivestars {
+    width: 150px;
+}
+
+.vertical-review h4 {
+    margin: 0px;
+    margin-bottom: 7px;
+    line-height: 1.5em;
+    font-size: 18px;
+    font-family: 'VAGRound-Bold';
+}
+
+.vertical-review p {
+    margin: 0px;
+    margin-top: 13px;
+    max-width: 450px;
+    line-height: 1.5em;
+    font-size: 16px;
+}
+
+/* Media Queries */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .vertical-review-container {
+        max-height: 550px;
+        max-width: 410px;
+    }
+
+    .vertical-reviews-section.expanded .vertical-review-container.desktop {
+        display: none;
+    }
+
+    .vertical-review-container .slick-list {
+        max-height: 550px;
+    }
+
+    .vertical-review {
+        min-height: 550px; /* same as .vertical-review-container .slick-list */
+        padding: 30px 0px;
+    }
+
+    .vertical-reviews-section .read-more-button {
+        background: none;
+        margin-top: -130px;
+    }
+
+    .vertical-review .fivestars {
+        width: 180px;
+        margin-bottom: 25px;
+    }
+
+    .vertical-review p {
+        font-size: 21px;
+    }
+
+    .vertical-review h4 {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+    .vertical-review p.author {
+        margin-top: 30px;
+    }
+
+    .vertical-reviews-section.expanded .vertical-review-container {
+        max-height: 550px;
+    }
+
+    .vertical-reviews-section {
+        margin-bottom: 140px;
+        margin-top: 90px;
+    }
+
+    .vertical-reviews-section.expanded {
+        margin-bottom: 170px;
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    .vertical-review-container {
+        max-width: 960px;
+        min-height: 550px;
+    }
+
+    .vertical-review-container.mobile {
+        display: none;
+    }
+
+    .vertical-reviews-section.expanded .vertical-review-container.mobile {
+        display: none;
+    }
+
+    .vertical-review-container.desktop {
+        display: block;
+    }
+
+    .vertical-reviews-section.expanded .vertical-review-container.desktop {
+        display: flex;
+    }
+
+    .vertical-review-container .slick-list {
+        max-height: 550px;
+        min-height: 500px;
+    }
+
+    .vertical-review {
+        min-height: 550px; /* same as .vertical-review-container .slick-list */
+    }
+
+    .slick-vertical .slick-slide.vertical-review-item-container {
+        display: flex;
+        min-height: 550px;
+    }
+
+    .vertical-reviews-section .read-more-button {
+        background: none;
+        margin-top: -70px;
+    }
+
+    .vertical-review {
+        min-height: 450px;
+        flex: 50%;
+    }
+
+    .vertical-review .fivestars {
+        width: 180px;
+        margin-bottom: 25px;
+    }
+
+    .vertical-review p {
+        font-size: 21px;
+        margin-top: 0px;
+        margin-right: 0px;
+        max-width: inherit;
+    }
+
+    .vertical-review:nth-child(odd) {
+        padding-right: 40px;
+    }
+
+    .vertical-review:nth-child(even) {
+        padding-left: 40px;
+    }
+
+    .vertical-review h4 {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+    .vertical-review p.author {
+        margin-top: 30px;
+    }
+
+    .vertical-reviews-section.expanded .vertical-review-container {
+        max-height: 375px;
+    }
+
+    .vertical-reviews-section {
+        margin-bottom: 155px;
+    }
+}

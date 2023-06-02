@@ -1,0 +1,27 @@
+.app-badges {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-badges img {
+    width: 90px;
+    padding: 0px 3px;
+}
+
+/* Media Queries */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .app-badges img {
+        width: 145px;
+        padding: 0px 5px;
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    .app-badges img {
+        width: 185px;
+        padding: 0px 6px;
+    }
+}

@@ -1,0 +1,119 @@
+header {
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    background: white;
+    top: 0;
+    z-index: 999;
+}
+
+header .header-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 10px;
+    justify-content: center;
+}
+
+header .sagoLogo {
+    height: 18.5px;
+}
+
+header .freshebt {
+    height: 28.5px;
+    margin-left: 15px;
+}
+
+header a.button.primary {
+    margin-left: auto;
+}
+
+header .sub-header {
+    height: 24px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.sub-header-only {
+    height: 24px;
+}
+
+header .sub-header a {
+    margin: 0px;
+    font-size: 14px;
+    font-family: 'VAGRound-Bold';
+    line-height: 1.2em;
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    header {
+        height: 60px;
+    }
+
+    header .header-container {
+        margin: 0px 55px;
+        justify-content: start;
+    }
+
+    header .sagoLogo {
+        height: 25px;
+    }
+
+    header .freshebt {
+        height: 38px;
+        margin-left: 25px;
+    }
+
+    header .sub-header {
+        height: 30px;
+    }
+
+    header.sub-header-only {
+        height: 30px;
+    }
+
+    header .sub-header a {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    header {
+        height: 85px;
+    }
+
+    header .header-container {
+        margin: 0px 85px;
+        justify-content: start;
+    }
+
+    header .sagoLogo {
+        height: 40px;
+    }
+
+    header .freshebt {
+        height: 68px;
+        margin-left: 55px;
+    } 
+
+    header .sub-header {
+        height: 50px;
+    }
+
+    header.sub-header-only {
+        height: 50px;
+    }
+
+    header .sub-header a {
+        font-size: 30px;
+    }
+    
+}
+

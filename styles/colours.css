@@ -1,0 +1,127 @@
+/* TECH DEBT: Refactor, File separation */
+/* colors */
+/* #region */
+.background-green {
+    background-color: #72BE44;
+}
+
+.background-pink {
+    background-color: #FC69C3;
+}
+
+.background-teal {
+    background-color: #51BEB5;
+}
+
+.background-aqua {
+    background-color: #8AD7C9;
+}
+
+.background-light-yellow {
+    background-color: #FFC949;
+}
+
+.background-yellow {
+    background-color: #F4A01A;
+}
+
+.background-orange {
+    background-color: #FC7A38;
+}
+
+.active-background-orange:active {
+    background-color: #E67136;
+}
+
+.background-white {
+    background-color: #fff;
+}
+
+.background-purple {
+    background-color: #BB70BA;
+}
+
+.background-first-words-blue {
+    background-color: #3aa5b7;
+}
+
+.active-background-purple:active {
+    background-color: #A963A8;
+}
+
+.color-green {
+    color: #72BE44;
+}
+
+.active-background-green:active {
+    background-color: #68AB3D;
+}
+
+.color-pink {
+    color: #FC69C3;
+}
+
+.color-teal {
+    color: #51BEB5;
+}
+
+.color-yellow {
+    color: #F4A01A;
+}
+
+.color-grey {
+    color: #635F5E;
+}
+
+.color-lightgrey {
+    color: #8A8786;
+}
+
+.color-orange {
+    color: #FC7A38;
+}
+
+.color-purple {
+    color: #BB70BA;
+}
+
+.color-first-words-blue {
+    color: #3aa5b7;
+}
+
+.caret-green {
+    caret-color: #72BE44;
+}
+
+.caret-pink {
+    caret-color: #FC69C3;
+}
+
+.caret-teal {
+    caret-color: #51BEB5;
+}
+
+.caret-yellow {
+    caret-color: #F4A01A;
+}
+
+.caret-orange {
+    caret-color: #FC7A38;
+}
+
+.caret-first-words-blue {
+    caret-color: #3aa5b7;
+}
+
+.border-grey {
+    border: 1px solid #635F5E;
+}
+
+.active-border-purple:active {
+    border-color: #BB70BA;
+}
+
+.active-border-green:active {
+    border-color: #72BE44;
+}
+/* #endregion */

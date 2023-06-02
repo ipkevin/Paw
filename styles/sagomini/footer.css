@@ -1,0 +1,100 @@
+footer {
+    width: 100%;
+}
+
+footer > div {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+footer h1 {
+    color: white;
+    font-size: 32px;
+    font-family: 'VAGRound-Bold';
+    letter-spacing: 0.5px;
+    line-height: 1.25em;
+}
+
+footer .i--Astrid {
+    height: 125px;
+    width: 100%;
+    background-position: top right;
+}
+
+footer .i--Moonmole {
+    height: 100px;
+    width: 100%;
+    background-position: bottom left;
+}
+
+footer .app-badges {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    footer .i--Astrid {
+        height: 155px;
+    }
+
+    footer .i--Moonmole {
+        height: 123px;
+    }
+
+    footer > div {
+        max-width: 640px;
+    }
+
+    footer h1 {
+        font-size: 38px;
+        line-height: 1.23em;
+        margin-bottom: 22px;
+    }
+
+    footer .app-badges {
+        margin-top: 55px;
+    }
+
+    .footer-content {
+        max-width: 380px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    footer .i--Astrid {
+        height: 207px;
+    }
+
+    footer .i--Moonmole {
+        height: 164px;
+    }
+
+    .footer-content {
+        max-width: 650px;
+        margin: auto;
+    }
+
+    footer > div {
+        max-width: 834px;
+    }
+
+    footer h1 {
+        font-size: 48px;
+        line-height: 1.25em;
+        margin-bottom: 30px;
+    }
+
+    footer .app-badges {
+        margin-top: 55px;
+    }
+}

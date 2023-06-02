@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'VAGRound-Light';
+    src: url('/fonts/VAGRoundedStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VAGRound-Bold';
+    src: url('/fonts/VAGRoundedStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SagoMini Rounded Regular';
+    src: url('/fonts/SagoMiniRounded-Bold_v2.otf') format('otf'),
+         url('/fonts/SagoMiniRounded-Regular_v2.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SagoMini Rounded Bold';
+    src: url('/fonts/SagoMiniRounded-Bold_v2.otf') format('otf'),
+         url("/fonts/SagoMiniRounded-Bold_v2.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}

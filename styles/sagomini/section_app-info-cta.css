@@ -1,0 +1,110 @@
+.app-info-cta-section {
+    background-color: #f2f9f9;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-info-banner {
+    display: flex;
+    max-width: 310px;
+    margin: auto;
+}
+
+.app-info-banner img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.app-info-banner h1 {
+    font-family: 'VAGRound-Bold';
+    margin: 0px;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.app-info-banner p {
+    margin: 0px;
+    font-size: 16px;
+}
+
+.app-info-banner button {
+    height: 35px;
+}
+
+.app-info-banner .app-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-info-banner .app-info .button {
+    width: fit-content;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 7px;
+    font-size: 18px;
+}
+
+/* Media Queries */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .app-info-cta-section {
+        min-height: 320px;
+    }
+
+    .app-info-banner {
+        max-width: 575px;
+    }
+
+    .app-info-banner img {
+        width: 205px;
+        margin-right: 25px;
+    }
+
+    .app-info-banner h1 {
+        font-size: 36px;
+        margin: 0px;
+    }
+
+    .app-info-banner p {
+        font-size: 23px;
+    }
+
+    .app-info-banner .app-info .button {
+        height: 50px;
+        line-height: 50px;
+        font-size: 23px;
+        margin-top: 16px;
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    .app-info-cta-section {
+        min-height: 320px;
+    }
+
+    .app-info-banner {
+        max-width: 665px;
+    }
+
+    .app-info-banner img {
+        width: 230px;
+        margin-right: 25px;
+    }
+
+    .app-info-banner h1 {
+        font-size: 45px;
+        margin: 0px;
+    }
+
+    .app-info-banner p {
+        font-size: 24px;
+    }
+
+    .app-info-banner .app-info .button {
+        height: 64px;
+        line-height: 64px;
+        font-size: 30px;
+        margin-top: 15px;
+    }
+}

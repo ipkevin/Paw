@@ -1,0 +1,119 @@
+.instagram-list-container {
+    min-height: 390px;
+    padding: 60px 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.vertical-reviews-section.expanded .vertical-review-container::-webkit-scrollbar {
+    display: none;
+}
+
+.vertical-reviews-section.expanded .vertical-review-container {
+    -ms-overflow-style: none;
+}
+
+/* INSTAGRAM CAROUSEL */
+.instagram-carousel {
+    width: 100%;
+    overflow: scroll;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.instagram-carousel .slick-list {
+    overflow: visible;
+    margin-left: 23px;
+}
+
+.instagram-carousel.slick-slider .slick-track {
+    display: flex;
+    max-width: 850px;
+}
+
+.instagram-carousel::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE and Edge */
+.instagram-carousel {
+-ms-overflow-style: none;
+}
+
+.instagram-carousel .instagram {
+    max-width: 250px;
+    margin-right: 23px;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+    cursor: grab;
+}
+
+.instagram-carousel .instagram:active {
+    cursor: grabbing;
+}
+
+.instagram-carousel .instagram img {
+    width: 100%;
+    height: auto;
+}
+
+.instagram-carousel .instagram img::selection {
+    color: none;
+    background: none;
+}
+
+.instagram-carousel .instagram p {
+    margin: 0px;
+    line-height: 1.5em;    
+    color: #55504F;
+    font-size: 18px;
+    pointer-events: none;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.instagram-carousel .instagram p::selection {
+    color: none;
+    background: none;
+}
+
+/* Media Queries */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .instagram-carousel .instagram {
+        max-width: 285px;
+        width: 285px;
+        min-width: 285px;
+        margin-right: 30px;
+    }
+
+    .instagram-carousel .slick-list {
+        margin-left: 60px;
+    }
+
+    .instagram-carousel .instagram p {
+        margin-top: 6px;
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    .instagram-carousel .instagram img {
+        height: 385px;
+        width: 385px;
+        margin-bottom: 10px;
+    }
+
+    .instagram-carousel .instagram {
+        margin-right: 35px;
+        max-width: 385px;
+    }
+
+    .instagram-carousel.slick-slider .slick-track {
+        display: flex;
+        max-width: 1240px;
+        pointer-events: none;
+    }
+}

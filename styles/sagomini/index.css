@@ -1,0 +1,215 @@
+.hero-content-section {
+    margin-top: calc(40px + 24px); /* header and sub header */
+}
+
+.hero-content-section.sub-header-only {
+    margin-top: 24px; /* sub header */
+}
+
+.app-badges-section {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.sago-group-section {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.sago-group-section img {
+    height: 140px; 
+}
+
+.games-list-section {
+    margin-bottom: 25px;
+}
+
+.harvey-dancing-section {
+    text-align: center;
+    margin: 45px 0px;
+}
+
+.harvey-dancing-section img {
+    height: 140px;
+}
+
+.simple-text-section {
+    margin-top: 50px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.simple-text-section h2 {
+    color: #55504F;
+    font-family: 'VAGRound-Bold';
+    max-width: 280px;
+    line-height: 1.2em;
+    font-size: 24px;
+    margin: auto;
+}
+
+.simple-paragraph-section {
+    font-size: 18px;
+    color: #55504F;
+    text-align: center;
+    line-height: 1.3em;
+    margin: 50px auto;
+    max-width: 315px;;
+}
+
+.awards-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.review-carousel-section {
+    margin-top: 25px;
+}
+
+.cta-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonies-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.section-header-section > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-header-section .checkmark {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.section-header-section h2 {
+    font-size: 24px;
+    line-height: 1.1em;
+    color: #635F5E;
+    font-family: 'VAGRound-Bold';
+}
+
+.section-header-section p {
+    font-size: 18px;
+    line-height: 1.3em;
+    color: #635F5E;
+    margin: 0px;
+    margin-top: 8px;
+    text-align: center;
+    margin: auto;
+}
+
+/* Media Queries */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .hero-content-section {
+        margin-top: calc(60px + 30px); /* header and sub header */
+    }
+
+    .hero-content-section.sub-header-only {
+        margin-top: 30px; /* sub header */
+    }
+
+    .app-badges-section {
+        margin-top: 40px;
+    }
+    
+    .sago-group-section img {
+        height: 200px;
+    }
+
+    .simple-text-section {
+        margin-top: 90px;
+        margin-bottom: 40px;
+    }
+
+    .simple-text-section h2 {
+        font-size: 27px;
+    }
+
+    .awards-section {
+        margin-bottom: 90px;
+    }
+
+    .cta-section {
+        margin-bottom: 40px;
+    }
+
+    .simple-paragraph-section {
+        max-width: 556px; /* Same width as tablet: see: tablet video section */
+        margin: 65px auto;
+    }
+
+    .harvey-dancing-section {
+        margin: 60px 0px;
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    .hero-content-section {
+        margin-top: calc(85px + 50px); /* header and sub header */
+    }
+
+    .hero-content-section.sub-header-only {
+        margin-top: 50px; /* sub header */
+    }
+
+    .app-badges-section {
+        margin-top: 55px;
+        margin-bottom: 85px;
+    }
+
+    .sago-group-section img {
+        height: 380px;
+    }
+
+    .sago-group-section {
+        margin-bottom: 85px;
+    }
+
+    .games-list-section {
+        margin-bottom: 95px;
+    }
+
+    .harvey-dancing-section {
+        margin-top: 85px;
+    }
+
+    .harvey-dancing-section img {
+        height: 230px;
+    }
+
+    .review-carousel-section {
+        margin-top: 95px;
+    }
+
+    .simple-text-section {
+        margin-top: 95px;
+        margin-bottom: 85px;
+    }
+
+    .simple-text-section h2 {
+        font-size: 48px;
+        max-width: 680px;
+    }
+
+    .awards-section {
+        margin-bottom: 95px;
+    }
+
+    .cta-section {
+        margin-top: 25px;
+        margin-bottom: 75px;
+    }
+
+    .simple-paragraph-section {
+        max-width: 925px; /* Same width as tablet: see: tablet video section */
+        margin: 65px auto;
+        font-size: 21px;
+    }
+}

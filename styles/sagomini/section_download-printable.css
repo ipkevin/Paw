@@ -1,0 +1,96 @@
+.download-printable-section {
+    width: 314px;
+    height: 531.9px;
+    padding: 34.8px 25.4px 41.6px 26.9px;
+    border-radius: 10px;
+    border: solid 1px #d8d7d7;
+    background-color: white;
+    margin: auto;
+}
+
+.download-printable-section h1 {
+    margin: 0;
+    margin-bottom: 20.9px;
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+    color: #727272;
+}
+
+.download-printable-section .sagoWorld {
+    display: none;
+}
+
+.download-printable-section .printables-subscribe-section {
+    margin-top: 24.3px;
+    display: flex;
+    text-align: left;
+}
+
+.download-printable-section .printables-subscribe-section.sago-school .custom-checkbox input:checked + label:before {
+    background-image: url(/images/checkbox_small_on_green.svg);
+}
+
+.download-printable-section .printables-subscribe-section.sago-world .custom-checkbox input:checked + label:before {
+    background-image: url(/images/checkbox_small_on_pink.svg);
+}
+
+.download-printable-section .printables-subscribe-section p {
+    margin: 0;
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+.download-printable-section .button-download-container {
+    text-align: center;
+}
+
+.download-printable-section .download-link {
+    color: white;
+    text-decoration: none;
+}
+
+.download-printable-section .button-download {
+    width: 250.7px;
+    height: 64px;
+    margin: 19.4px 0 0;
+    border-radius: 100px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.download-printable-section .button-download.sago-world {
+    background-color: #f669bd;
+}
+
+.download-printable-section .button-download.sago-school {
+    background-color: #72be44;
+}
+
+.download-printable-section .button-download:disabled {
+    background-color: #efefef;
+}
+
+div.error, input.error, select.error {
+    color: #FF593E !important;
+}
+
+input.error::placeholder {
+    color: #FF593E;
+}
+
+@media only screen and (min-width:768px) {
+    .download-printable-section {
+        width: 385.8px;
+        height: 522.8px;
+        padding: 34.8px 34.6px 42.5px 34.6px;
+    }
+}
+
+@media only screen and (min-width:1366px) {
+    .download-printable-section {
+        width: 385.8px;
+        height: 522.9px;
+        padding: 34.8px 34.6px 42.6px 34.6px;
+    }
+}

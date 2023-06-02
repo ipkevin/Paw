@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sago Mini</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="facebook-domain-verification" content="c70l84jiqaivyckzltdujgb9ua9g2p" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<link href="/styles/sagomini/style.css" rel="stylesheet">
+    <link href="/styles/sagomini/forms.css" rel="stylesheet">
+	<link href="/styles/sagomini/brandawareness/sagoWorldBrandAwareness.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{#ifEnv "NODE_ENV" "production"}}G-PQ2L5XECW2{{else}}G-EJZKH5MY78{{/ifEnv}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{#ifEnv "NODE_ENV" "production"}}G-PQ2L5XECW2{{else}}G-EJZKH5MY78{{/ifEnv}}');
+
+        window.dataLayer.push({
+            'event': 'Pageview',
+            'pagePath': '{{gtagPagePath}}',
+            'pageTitle': '{{gtagPageTitle}}'
+        });
+    </script>
+    -->
+
+    <!-- Facebook Pixel Code - sagominiworld.com -->
+    <!--
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3331269340438534');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1"
+        src="https://www.facebook.com/tr?id=3331269340438534&ev=PageView&noscript=1"
+    /></noscript>
+    -->
+    <!-- End Facebook Pixel Code -->
+</head>
+<body>
+    <!-- ***** HERO HEADER ***** -->
+    <section class="hero-content-section tablet-mobile-only">
+        <div class="hero-content-container">
+            
+           <video preload="auto" autoplay="" loop="" muted="" playsinline="">
+                <source src="/images/header_videos/World_Header_Video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">    
+                <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
+                <h1 class="hero-title">Giggles that help kids grow.</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** HERO HEADER (DESKTOP) ***** -->
+    <section class="hero-content-section desktop-only">
+        <div class="hero-content-container">
+           <video preload="auto" autoplay="" loop="" muted="" playsinline="">
+                <source src="/images/header_videos/World_Header_Video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">    
+                <div>
+                    <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
+                    <h1 class="hero-title">Giggles that help kids grow.</h1>
+                </div>
+                <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
+               <!-- {{> downloadprintableworld }} -->
+                <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
+                <form action="/printables/download" method="POST" target="_blank">
+                    <section class="download-printable-section">
+                        <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
+                        <h1>Download a <span class="color-pink font-bold">free printable activity</span> for your kiddo!</h1>
+                        <div class="input-container">
+                            <input id="emailCreate" name="email" class="text-input caret-pink" type="email" placeholder="email address"></input>
+                        </div>
+                        <!-- ***** Age Group Select (Mobile) ***** -->
+                        <div class="input-container mobile-select age-select">
+                            <select aria-placeholder="select an age group" class="mobile-select">
+                                <option value="default" disabled selected>select an age group</option>
+                                <option value="toddler">Toddler (1 - 3 years old)</option>
+                                <option value="preschooler">Preschooler (3 - 5 years old)</option>
+                                <option value="schoolaged">School-aged (6+ years old)</option>
+                            </select>
+                        </div>
+                    
+                        <!-- ***** Age Group Select (Desktop) ***** -->
+                        <div class="desktop-custom-select">
+                            <div class="select">
+                            <input aria-placeholder="select an age group" 
+                                    class="select-input age-input"
+                                    name="age-input"
+                                    type="hidden"
+                                    value="default" />
+                            <div class="custom-select-label age-input-label">select an age group</div>
+                                <ul class="select-list">
+                                    <li class="select-item" onclick="selectCustomDropdownItem(this)" data-value="default" disabled selected>select an age group</li>
+                                    <li class="select-item" data-value="toddler">Toddler (1 - 3 years old)</li>
+                                    <li class="select-item" data-value="preschooler">Preschooler (3 - 5 years old)</li>
+                                    <li class="select-item" data-value="schoolaged">School-aged (6+ years old)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <!-- ***** Interest Select (Mobile) ***** -->
+                        <div class="input-container mobile-select interest-select">
+                            <select aria-placeholder="what does your kiddo like?" name="interest-select" class="mobile-select">
+                                <option value="default" disabled selected>what does your kiddo like?</option>
+                                <option value="outdoors">Exploring the outdoors</option>
+                                <option value="resto">Running a restaurant</option>
+                                <option value="puppet">Hosting a puppet show</option>
+                                <option value="characters">Designing characters</option>
+                            </select>
+                        </div>
+                    
+                        <!-- ***** Interest Select (Desktop) ***** -->
+                        <div class="desktop-custom-select">
+                            <div class="select">
+                            <input aria-placeholder="what does your kiddo like?" 
+                                class="select-input interest-input" 
+                                name="interest-input"
+                                type="hidden" />
+                            <div class="custom-select-label interest-input-label">what does your kiddo like?</div>
+                                <ul class="select-list">
+                                    <li class="select-item interest-select-item" data-value="outdoors">Exploring the outdoors</li>
+                                    <li class="select-item interest-select-item" data-value="resto">Making pretend food</li>
+                                    <li class="select-item interest-select-item" data-value="puppet">Hosting a puppet show</li>
+                                    <li class="select-item interest-select-item" data-value="characters">Designing characters</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <!-- ***** PRINTABLES SUBSCRIBE SECTION ***** -->
+                        <div class="printables-subscribe-section sago-world">
+                            <div class="custom-checkbox">
+                                <input checked
+                                    class="subscribe-checkbox"
+                                    type="checkbox"></input>
+                                <label class="subscribe-label"></label>
+                            </div>
+                            <p>Yes, I would like free printables and promotions emailed to me every week.</p>
+                        </div>
+                    
+                        <div class="button-download-container">
+                            <button class="button-download sago-world button background-pink">Download</button>
+                        </div>
+                    </section>
+                    <input type="hidden" name="token" value="{{tokens.[0]}}" />
+                    <input type="hidden" name="printable" value="https://sagomini.com/printables" />
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
+    <div class="tablet-mobile-only">
+        <!-- {{> downloadprintableworld }} -->
+        <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
+            <form action="/printables/download" method="POST" target="_blank">
+                <section class="download-printable-section">
+                    <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
+                    <h1>Download a <span class="color-pink font-bold">free printable activity</span> for your kiddo!</h1>
+                    <div class="input-container">
+                        <input id="emailCreate" name="email" class="text-input caret-pink" type="email" placeholder="email address"></input>
+                    </div>
+                    <!-- ***** Age Group Select (Mobile) ***** -->
+                    <div class="input-container mobile-select age-select">
+                        <select aria-placeholder="select an age group" class="mobile-select">
+                            <option value="default" disabled selected>select an age group</option>
+                            <option value="toddler">Toddler (1 - 3 years old)</option>
+                            <option value="preschooler">Preschooler (3 - 5 years old)</option>
+                            <option value="schoolaged">School-aged (6+ years old)</option>
+                        </select>
+                    </div>
+                
+                    <!-- ***** Age Group Select (Desktop) ***** -->
+                    <div class="desktop-custom-select">
+                        <div class="select">
+                        <input aria-placeholder="select an age group" 
+                                class="select-input age-input"
+                                name="age-input"
+                                type="hidden"
+                                value="default" />
+                        <div class="custom-select-label age-input-label">select an age group</div>
+                            <ul class="select-list">
+                                <li class="select-item" onclick="selectCustomDropdownItem(this)" data-value="default" disabled selected>select an age group</li>
+                                <li class="select-item" data-value="toddler">Toddler (1 - 3 years old)</li>
+                                <li class="select-item" data-value="preschooler">Preschooler (3 - 5 years old)</li>
+                                <li class="select-item" data-value="schoolaged">School-aged (6+ years old)</li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <!-- ***** Interest Select (Mobile) ***** -->
+                    <div class="input-container mobile-select interest-select">
+                        <select aria-placeholder="what does your kiddo like?" name="interest-select" class="mobile-select">
+                            <option value="default" disabled selected>what does your kiddo like?</option>
+                            <option value="outdoors">Exploring the outdoors</option>
+                            <option value="resto">Running a restaurant</option>
+                            <option value="puppet">Hosting a puppet show</option>
+                            <option value="characters">Designing characters</option>
+                        </select>
+                    </div>
+                
+                    <!-- ***** Interest Select (Desktop) ***** -->
+                    <div class="desktop-custom-select">
+                        <div class="select">
+                        <input aria-placeholder="what does your kiddo like?" 
+                            class="select-input interest-input" 
+                            name="interest-input"
+                            type="hidden" />
+                        <div class="custom-select-label interest-input-label">what does your kiddo like?</div>
+                            <ul class="select-list">
+                                <li class="select-item interest-select-item" data-value="outdoors">Exploring the outdoors</li>
+                                <li class="select-item interest-select-item" data-value="resto">Making pretend food</li>
+                                <li class="select-item interest-select-item" data-value="puppet">Hosting a puppet show</li>
+                                <li class="select-item interest-select-item" data-value="characters">Designing characters</li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <!-- ***** PRINTABLES SUBSCRIBE SECTION ***** -->
+                    <div class="printables-subscribe-section sago-world">
+                        <div class="custom-checkbox">
+                            <input checked
+                                class="subscribe-checkbox"
+                                type="checkbox"></input>
+                            <label class="subscribe-label"></label>
+                        </div>
+                        <p>Yes, I would like free printables and promotions emailed to me every week.</p>
+                    </div>
+                
+                    <div class="button-download-container">
+                        <button class="button-download sago-world button background-pink">Download</button>
+                    </div>
+                </section>
+                <input type="hidden" name="token" value="{{tokens.[0]}}" />
+                <input type="hidden" name="printable" value="https://sagomini.com/printables" />
+            </form>
+    </div>
+
+    <!-- ***** SIMPLE VIDEO SECTION ***** -->
+    <section class="simple-video-section">
+         <h2 class="section-subheader">Unlimited play in the palm of your hand
+        </h2>
+        <div>
+            <iframe 
+                id="youtube"
+                class="simple-video-frame"
+                src="https://www.youtube.com/embed/y0Bujh6bM4k?rel=0&enablejsapi=1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- ***** GAMES LIST SECTION (MOBILE) ***** -->
+    <section class="games-list-section mobile-only">
+        <h2 class="section-subheader">
+            Over 100+ award winning activities, all in one app
+        </h2>
+        <div class="games-list-container">
+            <div class="games-carousel games-carousel-centered">
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_1_SpaceExplorer@3x.png" />
+                    <p>Blast into space with Harvey and friends</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_2_Farm@3x.png" />
+                    <p>Find out what animals live on a farm and help care for them</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_3_Planes@3x.png" />
+                    <p>Take flight and explore new and exciting places</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_4_SpaceJuice@3x.png" />
+                    <p>Mix up wacky beverage concoctions!</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_5_Toolbox@3x.png" />
+                    <p>Tinker with tools and explore cause and effect in Toolbox</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_6_Village@3x.png" />
+                    <p>Make a village for 
+                    <br/>your gnome buddies 
+                    <br/>to live in</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_7_WinterCity@3x.png" />
+                    <p>Wander festive city streets and interact with new friends</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_8_Babies@3x.png" />
+                    <p>Practice empathy while caring for Sago Mini babies</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_9_CharacterCreator@3x.png" />
+                    <p>Customize characters with a wide range of inclusive options</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_10_Superheropng@3x.png" />
+                    <p>Help Super Jack do good deeds!</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_11_Friends@3x.png" />
+                    <p>Practice social skills like taking turns and sharing</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_12_Boats@3x.png" />
+                    <p>Set sail and see what you’ll discover at sea</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_13_TrucksAndDiggers@3x.png" />
+                    <p>Get ready for loads of constructive play with Rosie</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_14_OceanExplorer@3x.png" />
+                    <p>Dive in for an underwater adventure with Fins</p>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_15_Dinosaurs@3x.png" />
+                    <p>Go on a prehistoric adventure with your dino friends</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** GAMES LIST SECTION (TABLET) ***** -->
+    <section class="games-list-section tablet-only">
+        <h2 class="section-subheader">
+            Over 100+ award winning activities, all in one app
+        </h2>
+        <div class="games-list-container">
+            <div class="games-carousel games-carousel-centered">
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_1_SpaceExplorer@3x.png" />
+                        <p>Blast into space with Harvey and friends</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_2_Farm@3x.png" />
+                        <p>Find out what animals live on a farm and help care for them</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_3_Planes@3x.png" />
+                        <p>Take flight and explore new and exciting places</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_4_SpaceJuice@3x.png" />
+                        <p>Mix up wacky beverage concoctions!</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_5_Toolbox@3x.png" />
+                        <p>Tinker with tools and explore cause and effect in Toolbox</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_6_Village@3x.png" />
+                        <p>Make a village for 
+                        <br/>your gnome buddies 
+                        <br/>to live in</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_7_WinterCity@3x.png" />
+                        <p>Wander festive city streets and interact with new friends</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_8_Babies@3x.png" />
+                        <p>Practice empathy while caring for Sago Mini babies</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_9_CharacterCreator@3x.png" />
+                        <p>Customize characters with a wide range of inclusive options</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_10_Superheropng@3x.png" />
+                        <p>Help Super Jack do good deeds!</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_11_Friends@3x.png" />
+                        <p>Practice social skills like taking turns and sharing</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_12_Boats@3x.png" />
+                        <p>Set sail and see what you’ll discover at sea</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_13_TrucksAndDiggers@3x.png" />
+                        <p>Get ready for loads of constructive play with Rosie</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_14_OceanExplorer@3x.png" />
+                        <p>Dive in for an underwater adventure with Fins</p>
+                    </div>
+                </div>
+                <div class="game">
+                    <img src="/images/games/BrandAwareness_World_GameIcon_15_Dinosaurs@3x.png" />
+                    <p>Go on a prehistoric adventure with your dino friends</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** GAMES LIST SECTION (DESKTOP) ***** -->
+    <section class="games-list-section desktop-only">
+        <h2 class="section-subheader">
+            Over 100+ award winning activities, all in one app
+        </h2>
+        <div class="games-list-container">
+            <div class="games-carousel games-carousel-centered">
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_1_SpaceExplorer@3x.png" />
+                        <p>Blast into space with Harvey and friends</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_2_Farm@3x.png" />
+                        <p>Find out what animals live on a farm and help care for them</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_3_Planes@3x.png" />
+                        <p>Take flight and explore new and exciting places</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_4_SpaceJuice@3x.png" />
+                        <p>Mix up wacky beverage concoctions!</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_5_Toolbox@3x.png" />
+                        <p>Tinker with tools and explore cause and effect in Toolbox</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_6_Village@3x.png" />
+                        <p>Make a village for 
+                        <br/>your gnome buddies 
+                        <br/>to live in</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_7_WinterCity@3x.png" />
+                        <p>Wander festive city streets and interact with new friends</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_8_Babies@3x.png" />
+                        <p>Practice empathy while caring for Sago Mini babies</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_9_CharacterCreator@3x.png" />
+                        <p>Customize characters with a wide range of inclusive options</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_10_Superheropng@3x.png" />
+                        <p>Help Super Jack do good deeds!</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_11_Friends@3x.png" />
+                        <p>Practice social skills like taking turns and sharing</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_12_Boats@3x.png" />
+                        <p>Set sail and see what you’ll discover at sea</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_13_TrucksAndDiggers@3x.png" />
+                        <p>Get ready for loads of constructive play with Rosie</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_14_OceanExplorer@3x.png" />
+                        <p>Dive in for an underwater adventure with Fins</p>
+                    </div>
+                    <div class="game">
+                        <img src="/images/games/BrandAwareness_World_GameIcon_15_Dinosaurs@3x.png" />
+                        <p>Go on a prehistoric adventure with your dino friends</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** BRAND AWARENESS FEATURES SECTION ***** -->
+    <section class="brand-awareness-features-section">
+        <h2 class="section-subheader">Creative playtime designed for preschoolers
+        </h2>
+        <div class="brand-awareness-features-container">
+            <div class="brand-awareness-feature">
+                <img class="brand-awareness-screen-time" src="/images/brand_awareness/BrandAwareness_World_PlayIcon_1_ScreenTime@3x.png" />
+                <p>Positive screen time that sparks imagination</p>
+            </div>
+            <div class="brand-awareness-feature">
+                <img class="brand-awareness-characters" src="/images/brand_awareness/BrandAwareness_World_PlayIcon_2_Characters@3x.png" />
+                <p>Inclusive, customizable characters</p>
+            </div>
+            <div class="brand-awareness-feature">
+                <img class="brand-awareness-explore" src="/images/brand_awareness/BrandAwareness_World_PlayIcon_3_Explore@3x.png" />
+                <p>Little ones explore and play at 
+                    their own pace</p>
+            </div>
+            <div class="brand-awareness-feature">
+                <img class="brand-awareness-emotions" src="/images/brand_awareness/BrandAwareness_World_PlayIcon_4_Emotions@3x.png" />
+                <p>Encourages self-expression, empathy, and confidence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** SIMPLE BANNER IMAGE ***** -->
+    <section>
+        <img class="simple-banner-image" src="/images/brand_awareness/BrandAwareness_World_KidsImage.png"/>
+    </section>
+
+    <!-- ***** REVIEW CAROUSEL SECTION ***** -->
+    <section class="review-carousel-section">
+        <h2 class="section-subheader">Loved by parents. Adored by kids.</h2>
+        <div class="review-carousel">
+            <div class="review">
+                <p>“Each game has open-ended play that encourages creativity and lateral thinking.”</p>
+                <p class="author font-bold">— Overlea
+                <br />App Store Review</p>
+            </div>
+            <div class="review">
+                <p>“Thank you creators of Sago Mini World for giving my daughter an environment she can learn and grow with!</p>
+                <p class="author font-bold">— Letha
+                <br />App Store Review</p>
+            </div>
+            <div class="review">
+                <p>“My son loves all the Sago Mini Characters. They are like family to him.”</p>
+                <p class="author font-bold">— Knifty
+                <br />App Store Review</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** AWARDS SECTION ***** -->
+    <section class="awards-section">
+        <div class="awards">
+            <div class="circle">
+                <img src="/images/awards/World_Propel_WebLandingPage_Spec_Kidscreen.png"/>
+                <img src="/images/awards/World_Propel_WebLandingPage_Spec_ParentChoice.png"/>
+                <img src="/images/awards/World_Propel_WebLandingPage_Spec_AcademicsChoice.png"/>
+                <img src="/images/awards/World_Propel_WebLandingPage_Spec_W3.png"/>
+            </div>
+            <div class="rect">
+                <img src="/images/awards/World_Propel_WebLandingPage_Spec_COPPA.png"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** DOWNLOAD PRINTABLE SECTION (FOOTER) ***** -->
+    <div class="brand-awareness-footer">
+        <div>
+            {{> downloadprintableworld }}
+        </div>
+        <div>
+            <img class="brand-awareness-footer-image desktop-only" src="/images/brand_awareness/BrandAwareness_World_Printables@3x.png" />
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="/js/carousel.js"></script>
+    <script type="text/javascript" src="/js/download-printable.js"></script>
+    <script type="text/javascript" src="/js/video-variant.js"></script>
+    <script type="text/javascript" src="/js/actions.js"></script>
+
+</body>
+</html>

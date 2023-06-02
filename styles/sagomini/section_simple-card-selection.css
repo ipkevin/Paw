@@ -1,0 +1,81 @@
+.card-selection .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    border: solid 1px #D8D7D7;
+    padding: 18px 16px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    position: relative;
+    width: 270px;
+    height: 115px;
+}
+
+.card-selection .card.active {
+    border-color: #FC7A38;
+}
+
+.card-selection .card img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.card-selection .card p {
+    font-size: 20px;
+    font-family: 'VAGRound-Bold';
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .card-selection .card {
+        width: 320px;
+        margin-bottom: 30px;
+        height: 130px;
+    }
+
+    .card-selection .card img {
+        width: 110px;
+    }
+
+    .card-selection .card p {
+        font-size: 21px;
+        font-family: 'VAGRound-Bold';
+    }
+}
+
+@media only screen and (min-width:1024px) { 
+    .card-selection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-selection .card {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+
+        width: 300px;
+        height: 250px;
+    }
+
+    .card-selection .card {
+        margin-right: 60px;
+    }
+
+    .card-selection .card img {
+        width: 150px;
+    }
+
+    .card-selection .card:last-child {
+        margin-right: 0;
+    }
+
+    .card-selection .card p {
+        margin: 0;
+        margin-top: 15px;
+        font-size: 28px;
+        font-family: 'VAGRound-Bold';
+    }
+}

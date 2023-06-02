@@ -1,0 +1,21 @@
+.icon-group-section .icon-group {
+    display: flex;
+    margin-top: -40px;
+    justify-content: center;
+}
+
+.icon-group-section .icon-group .icon {
+    height: 80px;
+    width: 80px;
+}
+
+.icon-group-section .icon-group .icon-container:first-child {
+    margin-right: 18px;
+}
+
+.icon-group-section .icon-group .icon-container p {
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 0px;
+    font-size: 18px;
+}
