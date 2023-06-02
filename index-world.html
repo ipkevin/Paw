@@ -53,9 +53,32 @@
     <!-- ***** HERO HEADER ***** -->
     <section class="hero-content-section tablet-mobile-only">
         <div class="hero-content-container">
-            <div class="hero-content">    
-                <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
-                <h1 class="hero-title">Giggles that help kids grow.</h1>
+            <div class="hero-content" style="padding:0;">    
+    
+                <!-- <h1 class="hero-title game-title-highlighted" style="font-size:2rem; color: #FC69C3;">PAW Patrol Academy</h1> -->
+                
+                <!-- V1 Everything in expected order-->
+                <h2 class="hero-title hero-title-h2" style="font-size:1.625rem; color: #00a3e0; margin-bottom: 1rem; text-transform: uppercase;">Coming Soon</h2>
+                <img class="sagoWorld" style="width: 100px; height: auto;" src="/images/propel_landing/logo-paw-patrol-academy.png" alt="PAW Patrol Academy logo" />
+                <h2 class="hero-title hero-title-h2" style="max-width: 315px; margin-bottom: 0.5rem; font-size: 1.3rem; line-height: 1.7rem;">Heroic missions.<br />REAL educational content.<br />
+                    It's learning... unleashed!
+                </h2> 
+                <img style="width: 315px; object-fit: contain; margin: 1rem 0;" src="/images/header_videos/video-placeholder-paw.png" alt="video screenshot" />
+    
+                <!-- V2 Everything but reordered-->
+                <!-- <h2 class="hero-title hero-title-h2" style="font-size:1.625rem; color: #00a3e0; margin-bottom: 1rem; text-transform: uppercase;">Coming Soon</h2>
+                <img class="sagoWorld" style="width: 100px; height: auto;" src="/images/propel_landing/logo-paw-patrol-academy.png" alt="PAW Patrol Academy logo" />
+                <h2 class="hero-title hero-title-h2" style="max-width: 315px; margin-bottom: 0.5rem; font-size: 1.3rem; line-height: 1.7rem;">Heroic missions.<br />REAL educational content.<br /></h2> 
+                <img style="width: 315px; object-fit: contain; margin: 1rem 0;" src="/images/header_videos/video-placeholder-paw.png" alt="video screenshot" />
+                <h2 class="hero-title hero-title-h2" style="max-width: 315px; margin-bottom: 0.5rem; font-size: 1.3rem; line-height: 1.7rem;"><span style="text-transform: uppercase;">It's learning... unleashed!</span></h2> -->
+                
+                <!-- V3 Minimal-->
+                <!-- <h2 class="hero-title hero-title-h2" style="font-size:1.625rem; color: #00a3e0; margin-bottom: 1rem; text-transform: uppercase;">Coming Soon</h2>
+                <img class="sagoWorld" style="width: 100px; height: auto;" src="/images/propel_landing/logo-paw-patrol-academy.png" alt="PAW Patrol Academy logo" />
+                <img style="width: 315px; object-fit: contain; margin: 1rem 0;" src="/images/header_videos/video-placeholder-paw.png" alt="video screenshot" />
+                <h2 class="hero-title hero-title-h2" style="max-width: 315px; margin-bottom: 0.5rem; font-size: 1.3rem; line-height: 1.7rem;"><span style="text-transform: uppercase;">It's learning... unleashed!</span></h2> -->
+
+
             </div>
         </div>
     </section>
@@ -126,7 +149,7 @@
     </section>
 
     <!-- ***** SIMPLE VIDEO SECTION ***** -->
-    <section class="simple-video-section tablet-mobile-only">
+    <!-- <section class="simple-video-section tablet-mobile-only">
         <div>
             <iframe 
                 id="youtube-mobile"
@@ -136,7 +159,7 @@
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen></iframe>
         </div>
-    </section>
+    </section> -->
 
     <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
     <div class="tablet-mobile-only">
@@ -144,79 +167,31 @@
         <form action="/printables/download" method="POST" target="_blank">
         <section class="download-printable-section">
             <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
-            <h1>Download a <span class="color-pink font-bold">free printable activity</span> for your kiddo!</h1>
+            <h1 style="font-size: 1.5rem; margin-bottom: 0;">Sign up to learn more</h1>
+            <h1><span class="color-pink font-bold" style="color: #00a3e0; font-size: 1.3rem; line-height: 1rem; margin-top:0;padding-top:0;">For iOS and Android</span></h1>
             <div class="input-container">
                 <input id="emailCreate" name="email" class="text-input caret-pink" type="email" placeholder="email address"></input>
             </div>
-            <!-- ***** Age Group Select (Mobile) ***** -->
-            <div class="input-container mobile-select age-select">
-                <select aria-placeholder="select an age group" class="mobile-select">
-                    <option value="default" disabled selected>select an age group</option>
-                    <option value="toddler">Toddler (1 - 3 years old)</option>
-                    <option value="preschooler">Preschooler (3 - 5 years old)</option>
-                    <option value="schoolaged">School-aged (6+ years old)</option>
-                </select>
+            <div class="input-container">
+                <input id="emailCreate" name="email" class="text-input caret-pink" type="email" placeholder="Parent's First Name"></input>
+            </div>
+            <div class="input-container">
+                <input id="emailCreate" name="email" class="text-input caret-pink" type="email" placeholder="Parent's Last Name"></input>
             </div>
         
-            <!-- ***** Age Group Select (Desktop) ***** -->
-            <div class="desktop-custom-select">
-                <div class="select">
-                <input aria-placeholder="select an age group" 
-                        class="select-input age-input"
-                        name="age-input"
-                        type="hidden"
-                        value="default" />
-                <div class="custom-select-label age-input-label">select an age group</div>
-                    <ul class="select-list">
-                        <li class="select-item" onclick="selectCustomDropdownItem(this)" data-value="default" disabled selected>select an age group</li>
-                        <li class="select-item" data-value="toddler">Toddler (1 - 3 years old)</li>
-                        <li class="select-item" data-value="preschooler">Preschooler (3 - 5 years old)</li>
-                        <li class="select-item" data-value="schoolaged">School-aged (6+ years old)</li>
-                    </ul>
-                </div>
-            </div>
-        
-            <!-- ***** Interest Select (Mobile) ***** -->
-            <div class="input-container mobile-select interest-select">
-                <select aria-placeholder="what does your kiddo like?" name="interest-select" class="mobile-select">
-                    <option value="default" disabled selected>what does your kiddo like?</option>
-                    <option value="outdoors">Exploring the outdoors</option>
-                    <option value="resto">Running a restaurant</option>
-                    <option value="puppet">Hosting a puppet show</option>
-                    <option value="characters">Designing characters</option>
-                </select>
-            </div>
-        
-            <!-- ***** Interest Select (Desktop) ***** -->
-            <div class="desktop-custom-select">
-                <div class="select">
-                <input aria-placeholder="what does your kiddo like?" 
-                       class="select-input interest-input" 
-                       name="interest-input"
-                       type="hidden" />
-                <div class="custom-select-label interest-input-label">what does your kiddo like?</div>
-                    <ul class="select-list">
-                        <li class="select-item interest-select-item" data-value="outdoors">Exploring the outdoors</li>
-                        <li class="select-item interest-select-item" data-value="resto">Making pretend food</li>
-                        <li class="select-item interest-select-item" data-value="puppet">Hosting a puppet show</li>
-                        <li class="select-item interest-select-item" data-value="characters">Designing characters</li>
-                    </ul>
-                </div>
-            </div>
-        
-            <!-- ***** PRINTABLES SUBSCRIBE SECTION ***** -->
+                <!-- ***** PRINTABLES SUBSCRIBE SECTION ***** -->
             <div class="printables-subscribe-section sago-world">
                 <div class="custom-checkbox">
                     <input checked
-                           class="subscribe-checkbox"
-                           type="checkbox"></input>
+                            class="subscribe-checkbox"
+                            type="checkbox"></input>
                     <label class="subscribe-label"></label>
                 </div>
-                <p>Yes, I would like free printables and promotions emailed to me every week.</p>
+                <p>Yes, please notify me about news and promotions.</p>
             </div>
         
             <div class="button-download-container">
-                <button class="button-download sago-world button background-pink">Download</button>
+                <button class="button-download sago-world button background-pink" style="background-color:#00a3e0;">Sign Up</button>
             </div>
         </section>
         <input type="hidden" name="token" value="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYW1wYWlnbiI6ImJyYW5kYXdhcmVuZXNzIiwidmFyaWFudCI6ImJhLXdvcmxkLWIiLCJwbGFuIjoiY29tLnNhZ29zYWdvLldvcmxkLnByb21vLnN1YnNjcmlwdGlvbi5vbmVfbW9udGgiLCJwcm9kdWN0bGluZSI6InNhZ29taW5pLXdvcmxkIiwiZnJpZW5kbHluYW1lIjoibWVldC13b3JsZC0xIiwid2Vic3RvcmUiOmZhbHNlLCJhZmZpbGlhdGUiOmZhbHNlLCJza2lwbGFuZGluZyI6ZmFsc2UsImZhc3RvbmJvYXJkIjp0cnVlLCJpYXQiOjE2ODU2NjkxOTQsImV4cCI6MTY4NTc1NTU5NCwiYXVkIjoiaHR0cHM6Ly9zdG9yZS5zYWdvbWluaS5jb206NDQzIiwiaXNzIjoiaHR0cHM6Ly9zdG9yZS5zYWdvbWluaS5jb206NDQzIiwic3ViIjoiMTczLjE4My4xMTkuMjE1In0.JREd3lVzpxgh4pm2LUmdP-QV9Wk4JO149efjlW3H2IKseyO06sEWTYEQHHMQRnEPMsXWmetvs2r9k1ddsCTmrw" />
