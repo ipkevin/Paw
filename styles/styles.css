@@ -1,0 +1,59 @@
+/* 
+* common spacing per styleguide
+* assumed 16px default font size
+*/
+@font-face {
+  font-family: "PPBango";
+  src: url("../assets/fonts/PPBango-Regular.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bango Pro";
+  src: url("../assets/fonts/bangopro.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, h1, h2, h3 {
+  font-family: "PPBango", "Bango Pro", Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.header__info {
+  max-width: 20rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.header__info-title {
+  display: none;
+}
+.header__info-content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.header__info-subtitle-group {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.header__info-subtitle--last {
+  text-transform: uppercase;
+}
+.header__form {
+  border: 1px solid blue;
+  border-radius: 10px;
+  margin: 1rem 0;
+}/*# sourceMappingURL=styles.css.map */

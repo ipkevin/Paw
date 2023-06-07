@@ -56,6 +56,10 @@ input[name="confirm_email"] {
 @import './index.css';
 @import '../colours.css';
 
+.removed-form-fields {
+    display: none;
+    outline: 2px solid blue;
+}
 
 html {
     color: #4A4C58;

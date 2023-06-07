@@ -1,0 +1,30 @@
+/* 
+* common spacing per styleguide
+* assumed 16px default font size
+*/
+
+$font-section-title-mobile: 1.625rem;
+$font-activity-mobile: .9375rem;
+$font-feature-mobile: 1.25rem;
+$font-date-mobile: 1.5234rem;
+$font-subtitle-mobile: 1.2188rem;
+$font-form-title-mobile: 1.4063rem;
+$font-form-copy-mobile: 1rem;
+
+
+$space-mobile-between: 1rem;
+$space-mobile-prehead: 1.5rem;
+$space-mobile-posthead: 1rem;
+
+$space-tablet-between: 1.5rem;
+$space-tablet-prehead: 2.25rem;
+$space-tablet-posthead: 1.5rem;
+
+$space-desktop-sides: 8.4rem;
+
+$padding-tablet-button: 2rem;
+
+$max-content-width: 112.5rem; // 1800px
+
+$max-video-width-desktop: $max-content-width - calc($space-desktop-sides *1.5);
+
