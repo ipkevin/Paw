@@ -9,7 +9,10 @@
     margin: 0; // If i put this in body selector, then h1 had top margin for some reason
 }
 body,h1,h2,h3 {
-    font-family: "PPBango","Bango Pro", Arial, Helvetica, sans-serif;
+    font-family: "Bango Pro", "PPBango", Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    // line-height: 1.3;
+    color: rgb(114,114,114);
 }
 
 .header {
@@ -18,21 +21,44 @@ body,h1,h2,h3 {
     align-items: center;
 
     &__info {
-        max-width: 20rem;
+        max-width: $space-max-width-mobile;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        justify-content: center;
+        gap: 15px;
+        padding: $space-mobile-between 0;
+        // justify-content: space-between;
 
+        // Coming Soon
+        &-date {
+            font-weight: normal;
+            font-size: $font-date-mobile;
+            color: $col-brand-primary;
+            text-transform: uppercase;
+        }
+        // title is replaced by logo on mobile devices
         &-title {
             display: none;
         }
+        &-logo {
+            width: 6.25rem;
+            object-fit: contain;
+        }
+        // header copy and video area
         &-content {
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
+            gap: $space-mobile-between;
+        }
+        &-video {
+            width: 100%;
+            object-fit: contain;
+            margin: calc($space-mobile-between/2) 0;
         }
         &-subtitle {
+            font-size: $font-subtitle-mobile;
+            line-height: 1.3;
             &-group {
                 display: flex;
                 flex-flow: column wrap;
