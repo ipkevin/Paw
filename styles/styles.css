@@ -41,6 +41,7 @@ h1, h2, h3 {
     flex-flow: row nowrap;
     align-items: flex-start;
     justify-content: center;
+    gap: 40px;
   }
 }
 .header__info {
@@ -179,8 +180,93 @@ h1, h2, h3 {
   font-size: 1.25rem;
 }
 
-.simple-banner-image, .brand-awareness-footer-image {
+.lifestyle__image {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 203px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .lifestyle__image {
+    height: 319px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .lifestyle__image {
+    height: 603px;
+  }
+}
+
+.bottom-form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+@media screen and (min-width: 1023px) {
+  .bottom-form {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}
+.bottom-form__image {
+  display: none;
+}
+@media screen and (min-width: 1023px) {
+  .bottom-form__image {
+    display: initial;
+    max-width: 500px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.footer__social {
+  background-color: black;
+  padding: 0.9375rem;
+  width: 100%;
+  text-align: center;
+}
+.footer__social-title {
+  color: white;
+}
+.footer__social-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+.footer__social-link {
+  text-decoration: none;
+}
+.footer__social-icon {
+  height: 30px;
+}
+.footer__links {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+}
+.footer__links-item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  color: rgb(114, 114, 114);
+}
+.footer__legal {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+  max-width: 50%;
+  text-align: center;
+}
+.footer__logos {
+  margin-top: 1rem;
+  padding: 0;
 }/*# sourceMappingURL=styles.css.map */

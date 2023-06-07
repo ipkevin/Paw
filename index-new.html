@@ -202,101 +202,54 @@
     </section> -->
 
 
+
     <!-- ***** SIMPLE BANNER IMAGE ***** -->
-    <section>
-        <img class="simple-banner-image" src="/images/brand_awareness/LandingPage-KidWithApp.jpg"/>
+    <section class="lifestyle">
+        <img class="lifestyle__image" src="/images/brand_awareness/LandingPage-KidWithApp.jpg"/>
     </section>
 
-    <div class="brand-awareness-footer">
-        <div>
-            <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
-            <form action="/printables/download" method="POST" target="_blank">
-            <section class="download-printable-section">
-                
-                <h1>Download a <span class="color-pink font-bold">free printable activity</span> for your kiddo!</h1>
-                <div class="input-container">
-                    <input id="emailCreate" name="email" class="text-input caret-pink" type="email" placeholder="email address"></input>
-                </div>
-                <!-- ***** Age Group Select (Mobile) ***** -->
-                <div class="input-container mobile-select age-select">
-                    <select aria-placeholder="select an age group" class="mobile-select">
-                        <option value="default" disabled selected>select an age group</option>
-                        <option value="toddler">Toddler (1 - 3 years old)</option>
-                        <option value="preschooler">Preschooler (3 - 5 years old)</option>
-                        <option value="schoolaged">School-aged (6+ years old)</option>
-                    </select>
-                </div>
-            
-                <!-- ***** Age Group Select (Desktop) ***** -->
-                <div class="desktop-custom-select">
-                    <div class="select">
-                    <input aria-placeholder="select an age group" 
-                            class="select-input age-input"
-                            name="age-input"
-                            type="hidden"
-                            value="default" />
-                    <div class="custom-select-label age-input-label">select an age group</div>
-                        <ul class="select-list">
-                            <li class="select-item" onclick="selectCustomDropdownItem(this)" data-value="default" disabled selected>select an age group</li>
-                            <li class="select-item" data-value="toddler">Toddler (1 - 3 years old)</li>
-                            <li class="select-item" data-value="preschooler">Preschooler (3 - 5 years old)</li>
-                            <li class="select-item" data-value="schoolaged">School-aged (6+ years old)</li>
-                        </ul>
-                    </div>
-                </div>
-            
-                <!-- ***** Interest Select (Mobile) ***** -->
-                <div class="input-container mobile-select interest-select">
-                    <select aria-placeholder="what does your kiddo like?" name="interest-select" class="mobile-select">
-                        <option value="default" disabled selected>what does your kiddo like?</option>
-                        <option value="outdoors">Exploring the outdoors</option>
-                        <option value="resto">Running a restaurant</option>
-                        <option value="puppet">Hosting a puppet show</option>
-                        <option value="characters">Designing characters</option>
-                    </select>
-                </div>
-            
-                <!-- ***** Interest Select (Desktop) ***** -->
-                <div class="desktop-custom-select">
-                    <div class="select">
-                    <input aria-placeholder="what does your kiddo like?" 
-                           class="select-input interest-input" 
-                           name="interest-input"
-                           type="hidden" />
-                    <div class="custom-select-label interest-input-label">what does your kiddo like?</div>
-                        <ul class="select-list">
-                            <li class="select-item interest-select-item" data-value="outdoors">Exploring the outdoors</li>
-                            <li class="select-item interest-select-item" data-value="resto">Making pretend food</li>
-                            <li class="select-item interest-select-item" data-value="puppet">Hosting a puppet show</li>
-                            <li class="select-item interest-select-item" data-value="characters">Designing characters</li>
-                        </ul>
-                    </div>
-                </div>
-            
-                <!-- ***** PRINTABLES SUBSCRIBE SECTION ***** -->
-                <div class="printables-subscribe-section sago-world">
-                    <div class="custom-checkbox">
-                        <input checked
-                               class="subscribe-checkbox"
-                               type="checkbox"></input>
-                        <label class="subscribe-label"></label>
-                    </div>
-                    <p>Yes, I would like free printables and promotions emailed to me every week.</p>
-                </div>
-            
-                <div class="button-download-container">
-                    <button class="button-download sago-world button background-pink">Download</button>
-                </div>
-            </section>
-            <input type="hidden" name="token" value="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYW1wYWlnbiI6ImJyYW5kYXdhcmVuZXNzIiwidmFyaWFudCI6ImJhLXdvcmxkLWIiLCJwbGFuIjoiY29tLnNhZ29zYWdvLldvcmxkLnByb21vLnN1YnNjcmlwdGlvbi5vbmVfbW9udGgiLCJwcm9kdWN0bGluZSI6InNhZ29taW5pLXdvcmxkIiwiZnJpZW5kbHluYW1lIjoibWVldC13b3JsZC0xIiwid2Vic3RvcmUiOmZhbHNlLCJhZmZpbGlhdGUiOmZhbHNlLCJza2lwbGFuZGluZyI6ZmFsc2UsImZhc3RvbmJvYXJkIjp0cnVlLCJpYXQiOjE2ODU2NjkxOTQsImV4cCI6MTY4NTc1NTU5NCwiYXVkIjoiaHR0cHM6Ly9zdG9yZS5zYWdvbWluaS5jb206NDQzIiwiaXNzIjoiaHR0cHM6Ly9zdG9yZS5zYWdvbWluaS5jb206NDQzIiwic3ViIjoiMTczLjE4My4xMTkuMjE1In0.JREd3lVzpxgh4pm2LUmdP-QV9Wk4JO149efjlW3H2IKseyO06sEWTYEQHHMQRnEPMsXWmetvs2r9k1ddsCTmrw" />
-            <input type="hidden" name="printable" value="https://sagomini.com/printables" />
-            </form>        </div>
-        <div>
-            <img class="brand-awareness-footer-image desktop-only" src="/images/brand_awareness/bottom-banner-paw.png" />
+    <section class="bottom-form">
+        <div class="header__form bottom-form__form">
+            <img class="header__form-logo" src="#" alt="PAW Patrol Academy logo" />
+            <div class="header__form-container">
+                <h2 class="header__form-title">Sign up to learn more</h2>
+                <h3 class="header__form-subtitle">For iOS and Android devices</h3>
+                <!-- form embed -->
+                <script src="//r2.dotdigital-pages.com/resources/sharing/embed.js?sharing=lp-embed&domain=r2.dotdigital-pages.com&id=7LSV-76S%2Fthank-you%22"></script>
+            </div>
         </div>
-    </div>
+        <img class="bottom-form__image" src="./images/brand_awareness/bottom-banner-paw.png" alt="PAW Patrol Academy Artwork" />
+    </section>
 
-                <img src="/images/awards/World_Propel_WebLandingPage_Spec_COPPA.png"/>
+    <footer class="footer">
+        <div class="footer__social">
+            <h3 class="footer__social-title">Follow us on social</h3>
+            <div class="footer__social-box">
+                <a href="#" class="footer__social-link">
+                    <img src="./assets/images/social/icon-facebook.svg" class="footer__social-icon" />
+                </a>
+                <a href="#" class="footer__social-link">
+                    <img src="./assets/images/social/icon-instagram.svg" class="footer__social-icon" />
+                </a>
+                <a href="#" class="footer__social-link">
+                    <img src="./assets/images/social/icon-twitter.svg" class="footer__social-icon" />
+                </a>
+            </div>
+        </div>
+        <div class="footer__links">
+            <a href="#" class="footer__links-item">Privacy Policy</a>
+            <a href="#" class="footer__links-item">Legal Notices</a>
+            <a href="#" class="footer__links-item">Terms of Use</a>
+            <a href="#" class="footer__links-item">EULA</a>
+        </div>
+        
+        <div class="footer__logos">
+            <img src="/images/awards/World_Propel_WebLandingPage_Spec_COPPA.png"/>
+        </div>
+        <p class="footer__legal">Sago Mini is certified by the Children’s Online Privacy Protection Rule (COPPA).</p>
+    </footer>
+
+                
 
 
     <script type="text/javascript" src="/js/carousel.js"></script>
