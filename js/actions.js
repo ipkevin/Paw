@@ -17,22 +17,22 @@ $.fn.dragHorizontally = function () {
     });
 }
 
-function tweakForm() {
-    let iframe = document.getElementById("7LSV-76A");
-    console.log(iframe.contentWindow.document);
-    let formElems = iframe.contentWindow.document.getElementsByTagName("body")[0]
-    console.log(formElems);
-    formElems.style.backgroundColor = "red";
-    // let formElems = iframe.contentWindow.document.querySelectorAll(".removed-form-fields");
-    // const formElems = document.querySelectorAll(".brand-awareness-feature");
-    // formElems.forEach(element => {
-    //     element.style.display = "none";
-    // })
-    console.dir(formElems);
-}
+// function tweakForm() {
+//     let iframe = document.getElementById("7LSV-76A");
+//     console.log(iframe.contentWindow.document);
+//     let formElems = iframe.contentWindow.document.getElementsByTagName("body")[0]
+//     console.log(formElems);
+//     formElems.style.backgroundColor = "red";
+//     // let formElems = iframe.contentWindow.document.querySelectorAll(".removed-form-fields");
+//     // const formElems = document.querySelectorAll(".brand-awareness-feature");
+//     // formElems.forEach(element => {
+//     //     element.style.display = "none";
+//     // })
+//     console.dir(formElems);
+// }
 
 $(document).ready(function () {
     $(".games-container").dragHorizontally();
 });
 
-tweakForm();
+// tweakForm();

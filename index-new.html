@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAW Patrol Academy</title>
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="facebook-domain-verification" content="c70l84jiqaivyckzltdujgb9ua9g2p" />
 	<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	 -->
@@ -81,13 +80,44 @@
     </header>
 
     <!-- ***** GAMES LIST SECTION (DESKTOP) ***** -->
-    <section class="games-list-section desktop-only">
-        <h2 class="section-subheader">
+    <!-- <section class="games-list-section desktop-only"> -->
+    <section class="activities">
+        <h2 class="activities__title">
             So many inspiring, interactive activities in one app
         </h2>
-        <div class="games-list-container">
-            <div class="games-carousel games-carousel-centered">
-                <div>
+        <!-- <div class="games-list-container"> -->
+            <!-- <div class="games-carousel games-carousel-centered"> -->
+        <div class="activities__carousel-wrapper">
+            <div class="activities__carousel">
+                    <div class="activities__item">
+                        <img class="activities__item-image" src="/images/games/learn-vocab.png" alt="Learn vocabulary with chase" />
+                        <p class="activities__item-desc">Learn vocabulary with Chase's ABCs</p>
+                    </div>
+                    <div class="activities__item">
+                        <img class="activities__item-image" src="/images/games/practice-letter-writing-with-rubble.png" />
+                        <p class="activities__item-desc">Practice letter-writing with Rubble</p>
+                    </div>
+                    <div class="activities__item">
+                        <img class="activities__item-image" src="/images/games/master-umbers-with-marshall.png" />
+                        <p class="activities__item-desc">Master numbers with Marshall</p>
+                    </div>
+                    <div class="activities__item">
+                        <img class="activities__item-image" src="/images/games/uncover-shapes-with-rocky.png" />
+                        <p class="activities__item-desc">Uncover shapes with Rocky</p>
+                    </div>
+                    <div class="activities__item">
+                        <img class="activities__item-image" src="/images/games/art-with-zuma.png" />
+                        <p class="activities__item-desc">Explore art with Zuma</p>
+                    </div>
+                    <div class="activities__item">
+                        <img class="activities__item-image" src="/images/games/make-music-with-skye.png" />
+                        <p class="activities__item-desc">Make music with Skye</p>
+                    </div>
+                    <div class="activities__item">
+                        <img class="activities__item-image" src="/images/games/ryder-at-the-lookout.png" />
+                        <p class="activities__item-desc">Join Ryder at the Lookout</p>
+                    </div>
+                <!-- <div>
                     <div class="game">
                         <img src="/images/games/learn-vocab.png" alt="Learn vocabulary with chase" />
                         <p>Learn vocabulary with Chase's ABCs</p>
@@ -118,13 +148,37 @@
                         <img src="/images/games/ryder-at-the-lookout.png" />
                         <p>Join Ryder at the Lookout</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
+        <!-- </div> -->
     </section>
 
     <!-- ***** BRAND AWARENESS FEATURES SECTION ***** -->
-    <section class="brand-awareness-features-section">
+    <section class="features">
+        <h2 class="features__title">Why parents will love PAW Patrol Academy
+        </h2>
+        <div class="features__item-box">
+            <div class="features__item">
+                <img class="features__item-image" src="/images/brand_awareness/a-plus-content.png" />
+                <p class="features__item-desc">A+ content featuring your child’s best friends</p>
+            </div>
+            <div class="features__item">
+                <img class="features__item-image" src="/images/brand_awareness/rewarding-challenges.png" />
+                <p class="features__item-desc">Rewarding challenges for growing minds</p>
+            </div>
+            <div class="features__item">
+                <img class="features__item-image" src="/images/brand_awareness/well-earned-free-time.png" />
+                <p class="features__item-desc">Well-earned free time for parents as kids learn</p>
+            </div>
+            <div class="features__item">
+                <img class="features__item-image" src="/images/brand_awareness/free-trial-offer-lookout.png" />
+                <p class="features__item-desc">Free trial offer. Sign up today!</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- <section class="brand-awareness-features-section">
         <h2 class="section-subheader">Why parents will love PAW Patrol Academy
         </h2>
         <div class="brand-awareness-features-container">
@@ -145,7 +199,8 @@
                 <p>Free trial offer. Sign up today!</p>
             </div>
         </div>
-    </section>
+    </section> -->
+
 
     <!-- ***** SIMPLE BANNER IMAGE ***** -->
     <section>
@@ -157,7 +212,7 @@
             <!-- ***** DOWNLOAD PRINTABLE SECTION ***** -->
             <form action="/printables/download" method="POST" target="_blank">
             <section class="download-printable-section">
-                <img class="sagoWorld" src="/images/propel_landing/sagomini-world.svg" />
+                
                 <h1>Download a <span class="color-pink font-bold">free printable activity</span> for your kiddo!</h1>
                 <div class="input-container">
                     <input id="emailCreate" name="email" class="text-input caret-pink" type="email" placeholder="email address"></input>
