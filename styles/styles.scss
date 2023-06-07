@@ -88,9 +88,9 @@ h1,h2,h3 {
         border-radius: 10px;
         
         margin: calc($space-mobile-between/2) 0;
-
         padding: calc($space-mobile-between * 2) calc(2*$space-mobile-between);
 
+        background-color: white;
         &-logo {
             display: none;
         }
@@ -203,6 +203,9 @@ h1,h2,h3 {
             height: 603px;
         }
     }
+    margin: 0;
+    padding: 0;
+    border: 0;
     // 203, 319, 603
 }
 
@@ -210,6 +213,8 @@ h1,h2,h3 {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+
+    background-color: #004b87;
 
     padding: $space-section-padding-mobile 0;
 
@@ -238,8 +243,8 @@ h1,h2,h3 {
     align-items: center;
     
     &__social {
-        background-color: black;
-        padding: $space-mobile-between;
+        background-color:  #898d8d; // #b2b4b2;
+        padding: $space-mobile-between*1.5;
         width: 100%;
         text-align: center;
 
@@ -251,9 +256,9 @@ h1,h2,h3 {
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
-            gap: 1.5rem;
+            gap: $space-mobile-between*1.5;
 
-            margin-top: 0.5rem;
+            margin-top: $space-mobile-between;
         }
         &-link {
             text-decoration: none;
@@ -261,10 +266,15 @@ h1,h2,h3 {
         &-icon {
             // color: rgb(207, 207, 207);
             height: 30px;
+            object-fit: contain;
+
+            &--yt {
+                filter: invert(100%) sepia(14%) saturate(602%) hue-rotate(232deg) brightness(118%) contrast(100%);
+            }
         }
     }
     &__links {
-        display: flex;
+        display: none; // flex;
         flex-flow: row nowrap;
         gap: 0.5rem;
 
@@ -278,74 +288,13 @@ h1,h2,h3 {
     &__legal {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.7rem;
-        margin-bottom: 1rem;
-        max-width: 50%;
+        margin: 1rem;
+        
         text-align: center;
     }
     &__logos {
+        display: none;
         margin-top: 1rem;
         padding: 0;
     }
 }
-
-
-
-// h1 {
-//     font-size: 1.5rem;
-//     line-height: 2rem;
-//     font-weight: 700;
-
-//     @include tablet-query {
-//         font-size: 2.06rem;
-//         line-height: 2.75rem;
-//         font-weight: 700;
-//     }
-// }
-// p,
-// h2,
-// h3 {
-//     font-size: 0.8125rem;
-//     line-height: 1.125rem;
-//     font-weight: normal;
-//     color: $col-text-primary;
-//     @include tablet-query {
-//         font-size: 0.875rem;
-//         line-height: 1.375rem;
-//     }
-// }
-
-// .button {
-//     border: 0;
-//     border-radius: 0.25rem;
-//     color: $col-background;
-//     background-color: $col-cta-primary;
-
-//     height: 2.5rem;
-
-//     text-transform: uppercase;
-//     font-family: "AvenirNext";
-//     font-size: 0.75rem;
-//     font-weight: 600;
-
-//     &:hover {
-//         background-color: $col-cta-hover;
-//     }
-// }
-
-// .flex-wrapper {
-//     padding: $space-mobile-between;
-
-//     @include tablet-query {
-//         padding: $space-tablet-prehead;
-//         padding-top: $space-mobile-prehead;
-//     }
-//     @include desktop-query {
-//         padding: 0 $space-desktop-sides;
-
-//         display: flex;
-//         flex-flow: row nowrap;
-
-//         max-width: $max-content-width;
-//         margin: 0 auto;
-//     }
-// }
