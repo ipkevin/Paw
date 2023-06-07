@@ -143,7 +143,6 @@ h1, h2, h3 {
 }
 
 .features {
-  padding: 2.5rem 0;
   margin: 2.5rem 0;
   display: flex;
   flex-direction: column;
@@ -152,10 +151,32 @@ h1, h2, h3 {
   overflow: hidden;
 }
 .features__title {
-  width: 21.875rem;
+  width: 20rem;
   font-size: 1.625rem;
   text-align: center;
   line-height: 1.15;
+}
+.features__item {
+  width: 18.125rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.features__item-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2.34375rem;
+}
+.features__item-image {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.features__item-desc {
+  text-align: center;
+  font-size: 1.25rem;
 }
 
 .simple-banner-image, .brand-awareness-footer-image {

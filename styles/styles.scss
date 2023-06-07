@@ -147,7 +147,7 @@ h1,h2,h3 {
 }
 
 .features {
-    padding: $space-section-padding-mobile 0;
+    // padding: $space-section-padding-mobile 0;
     margin:  $space-section-padding-mobile 0;
     display: flex;
     flex-direction: column;
@@ -157,12 +157,35 @@ h1,h2,h3 {
     overflow: hidden;
 
     &__title {
-        width: 21.875rem;
+        width: 20rem;
         
         font-size: $font-section-title-mobile;
         text-align: center;
 
         line-height: 1.15;
+    }
+    &__item {
+        &-box {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: $space-mobile-between*2.5;
+        }
+
+        width: 18.125rem;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: $space-mobile-between;
+
+        &-image {
+            max-width: 100%;
+            object-fit: contain;
+        }
+        &-desc {
+            text-align: center;
+            font-size: $font-feature-mobile;
+        }
     }
 }
 // GET RID OF THESE LATER, PLACEHOLDER TO CONTAIN IMG WIDTHS
