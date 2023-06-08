@@ -47,6 +47,10 @@ h1,h2,h3 {
             gap: $space-tablet-between;
         }
 
+        @include desktop-query {
+            max-width: 600px;
+        }
+
         // Coming Soon
         &-date {
             font-weight: normal;
@@ -103,14 +107,27 @@ h1,h2,h3 {
             @include tablet-query {
                 font-size: $font-subtitle-tablet;
             }
+            @include desktop-query {
+                //font-size: 25px; // Adjust to ensure 1st 2 subs on same line for desktop.
+            }
 
             &-group {
                 display: flex;
                 flex-flow: column wrap;
                 align-items: center;
+                @include desktop-query {
+                    order: 1;
+                    flex-flow: row nowrap;
+                    gap: 0.5rem;
+                    // flex-basis: 1px;
+                    // flex-grow: 1;
+                }
             }
             &--last {
                 text-transform: uppercase;
+                @include desktop-query {
+                    order: 1;
+                }
             }
         }   
     }

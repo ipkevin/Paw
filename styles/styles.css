@@ -59,6 +59,11 @@ h1, h2, h3 {
     gap: 1.4rem;
   }
 }
+@media screen and (min-width: 1023px) {
+  .header__info {
+    max-width: 600px;
+  }
+}
 .header__info-date {
   font-weight: normal;
   font-size: 1.5234rem;
@@ -127,8 +132,20 @@ h1, h2, h3 {
   flex-flow: column wrap;
   align-items: center;
 }
+@media screen and (min-width: 1023px) {
+  .header__info-subtitle-group {
+    order: 1;
+    flex-flow: row nowrap;
+    gap: 0.5rem;
+  }
+}
 .header__info-subtitle--last {
   text-transform: uppercase;
+}
+@media screen and (min-width: 1023px) {
+  .header__info-subtitle--last {
+    order: 1;
+  }
 }
 .header__form {
   max-width: 20rem;
