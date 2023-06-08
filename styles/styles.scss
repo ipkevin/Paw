@@ -228,6 +228,11 @@ h1,h2,h3 {
             width: 36.375rem;
             font-size: $font-section-title-tablet;
             margin-bottom: $space-section-padding-mobile;
+            
+        }
+        @include desktop-query {
+            width: auto; 
+            padding: 0 2rem;
         }
     }
     &__item {
@@ -260,6 +265,42 @@ h1,h2,h3 {
     }
 }
 
+// Dots navigation on the Activities carousel
+.slick-dots {
+    display: flex !important; // override app's built-in inline styling
+    justify-content: center;
+    gap: 1.5rem;
+    
+    list-style: none;
+    margin-top: $space-mobile-between*1.5;
+    
+    @include tablet-query {
+        margin-top: $space-mobile-between*2;
+    }
+
+    & li button {
+        font-size: 0;
+        line-height: 0;
+        color: $col-grey-mid;
+
+        border-radius: 100%;
+        height: 0.7rem;
+        width: 0.7rem;
+
+        border: none;
+        background-color: $col-grey-mid;
+
+        @include tablet-query {
+            height: 1rem;
+            width: 1rem;
+        }
+    }
+    & li.slick-active button {
+        background-color:  $col-brand-primary;
+        color: $col-brand-primary;
+    }
+}
+
 .features {
     // padding: $space-section-padding-mobile 0;
     margin:  $space-section-padding-mobile 0;
@@ -279,7 +320,8 @@ h1,h2,h3 {
         line-height: 1.15;
 
         @include tablet-query{
-            width: 29rem;
+            width: auto;
+            margin: 0 2rem;
             font-size: $font-section-title-tablet;
         }
     }

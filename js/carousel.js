@@ -1,5 +1,6 @@
 $('.activities__carousel').slick({
   arrows: false,
+  dots: true,
   centerMode: false,
   infinite: true,
   centerPadding: '140px',
