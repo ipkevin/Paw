@@ -440,7 +440,7 @@ h1,h2,h3 {
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
-            gap: $space-mobile-between*1.5;
+            gap: $space-mobile-between*2;
 
             margin-top: $space-mobile-between;
             @include tablet-query {
@@ -464,32 +464,63 @@ h1,h2,h3 {
             }
         }
     }
+    &__logos-legal-box {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    
+        padding: 0 1.5rem;
+    }
     &__links {
-        display: none; // flex;
-        flex-flow: row nowrap;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
         gap: 0.5rem;
 
         margin: 1rem 0 0;
+        font-size: 0.8rem;
+            
         &-item {
             font-family:Arial, Helvetica, sans-serif;
             font-size: 0.8rem;
-            color: rgb(114,114,114);
+            text-decoration: none;
+            color: $col-text-primary;  
+        }
+
+        &-divider {
+            @include verysmall-query {
+                display: none;
+            }
         }
     }
     &__legal {
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        
         margin: 1rem;
         
         text-align: center;
 
-        @include tablet-query {
-            font-size: 0.9rem;
-        }
     }
     &__logos {
-        display: none;
+        // display: none;
         margin-top: 1rem;
         padding: 0;
+
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        &-image {
+            height: 50px;
+
+            @include tablet-query {
+                height: 55px;
+            }
+        }
     }
 }
