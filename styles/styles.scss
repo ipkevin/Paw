@@ -114,16 +114,18 @@ h1,h2,h3 {
     padding: $space-section-padding-mobile 0;
     margin:  $space-section-padding-mobile 0;
     background-color: $col-activities-background;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: $space-section-padding-mobile;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // gap: $space-section-padding-mobile;
+
 
     overflow: hidden;
 
     &__title {
         width: 21.875rem;
-        
+        margin: 0 auto $space-section-padding-mobile;
+
         font-size: $font-section-title-mobile;
         text-align: center;
 
@@ -214,8 +216,6 @@ h1,h2,h3 {
     flex-flow: column nowrap;
     align-items: center;
 
-    background-color: #004b87;
-
     padding: $space-section-padding-mobile 0;
 
     @include desktop-query {
@@ -243,7 +243,8 @@ h1,h2,h3 {
     align-items: center;
     
     &__social {
-        background-color:  #898d8d; // #b2b4b2;
+        background-color: #004b87;
+        // background-color:  #898d8d; // #b2b4b2;
         padding: $space-mobile-between*1.5;
         width: 100%;
         text-align: center;

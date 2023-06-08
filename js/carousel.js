@@ -18,11 +18,12 @@ $('.testimonies-carousel').slick({
 
 $('.activities__carousel').slick({
   arrows: false,
-  centerMode: true,
+  centerMode: false,
   infinite: true,
   centerPadding: '140px',
   slidesToShow: 3, // increase on larger screens to ensure start with items all across
   variableWidth: true,
+  swipeToSlide: true,
   // responsive: [
   //   {
   //     breakpoint: 768,
@@ -36,6 +37,16 @@ $('.activities__carousel').slick({
   //     }
   //   }
   // ]
+});
+
+
+$('.test-carousel').slick({
+  arrows: false,
+  centerMode: true,
+  infinite: true,
+  centerPadding: '140px',
+  slidesToShow: 1,
+  variableWidth: true,
 });
 
 $('.games-carousel.games-carousel-centered').slick({
