@@ -7,7 +7,7 @@ $('.activities__carousel').slick({
   slidesToScroll: 3,
   variableWidth: true,
   swipeToSlide: true, /* if enabled, swipe no longer smoothly scrolls multiple items like slidetoScroll, but tradeoff is do not see empty slide pop in either */
-  touchThreshold: 20,
+  touchThreshold: 30,
   responsive: [
     { // all prev settings outside responsive apply to all responsive settings unless overwrite
       // breakpoint is a max-width, not min-width
