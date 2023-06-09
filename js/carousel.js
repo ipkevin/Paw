@@ -1,20 +1,18 @@
 $('.activities__carousel').slick({
   arrows: false,
-  dots: false,
-  centerMode: false,
+  centerMode: false, // causes noticeable bounce back to center on wider screens
   infinite: true,
-  centerPadding: '140px',
-  slidesToShow: 3, // increase on larger screens to ensure start with items all across
+  centerPadding: '1px',
+  slidesToShow: 3, 
   slidesToScroll: 3,
   variableWidth: true,
-  swipeToSlide: false,
-  touchThreshold: 60,
+  swipeToSlide: true, /* if enabled, swipe no longer smoothly scrolls multiple items like slidetoScroll, but tradeoff is do not see empty slide pop in either */
+  touchThreshold: 20,
   responsive: [
     { // all prev settings outside responsive apply to all responsive settings unless overwrite
       // breakpoint is a max-width, not min-width
       breakpoint: 768,
       settings: {
-        arrows: false,
         centerMode: true,
         centerPadding: '140px',
         infinite: true,
@@ -26,7 +24,10 @@ $('.activities__carousel').slick({
     {
       breakpoint: 1023,
       settings: {
+        centerMode:true,
+        slidesToShow: 3,
         slidesToScroll: 2,
+        swipeToSlide: true,
       }
     }
   ]
