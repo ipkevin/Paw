@@ -77,6 +77,11 @@ h1,h2,h3 {
                 color: $col-brand-primary;
                 font-size: $font-section-title-desktop*1.15;
             }
+
+            &--tm {
+                font-size: 50%;
+                vertical-align:text-top;
+            }
         }
         &-logo {
             width: 6.25rem;
@@ -224,7 +229,9 @@ h1,h2,h3 {
         text-align: center;
 
         line-height: 1.15;
-        
+
+        color: $col-brand-primary;
+
         @include tablet-query{
             width: 36.375rem;
             font-size: $font-section-title-tablet;
@@ -235,6 +242,11 @@ h1,h2,h3 {
             width: auto; 
             padding: 0 2rem;
         }
+    }
+    &__carousel-hack {
+        display: flex;
+        flex-flow: row nowrap;
+        
     }
     &__item {
         
@@ -257,6 +269,8 @@ h1,h2,h3 {
         }
         &-desc {
             font-size: $font-activity-mobile;
+            
+            @include section-item-desc;
 
             @include tablet-query {
                 font-size: $font-activity-tablet;
@@ -314,11 +328,11 @@ h1,h2,h3 {
 
     &__title {
         width: 20rem;
-        
         font-size: $font-section-title-mobile;
         text-align: center;
-
         line-height: 1.15;
+
+        color: $col-brand-primary;
 
         @include tablet-query{
             width: auto;
@@ -362,6 +376,8 @@ h1,h2,h3 {
         &-desc {
             text-align: center;
             font-size: $font-feature-mobile;
+            
+            @include section-item-desc;
 
             @include tablet-query {
                 padding: 0 2rem;
@@ -423,7 +439,7 @@ h1,h2,h3 {
     align-items: center;
     
     &__social {
-        background-color: #004b87;
+        background-color: $col-brand-blue-dark;
         // background-color:  #898d8d; // #b2b4b2;
         padding: $space-mobile-between*1.5;
         width: 100%;

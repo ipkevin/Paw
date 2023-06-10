@@ -14,6 +14,12 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: "Gotham Bold";
+  src: url("../assets/fonts/gotham-bold.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -91,6 +97,10 @@ h1, h2, h3 {
     color: #00a3e0;
     font-size: 3.234375rem;
   }
+}
+.header__info-title--tm {
+  font-size: 50%;
+  vertical-align: text-top;
 }
 .header__info-logo {
   width: 6.25rem;
@@ -209,7 +219,7 @@ h1, h2, h3 {
 .activities {
   padding: 2.5rem 0;
   margin: 2.5rem 0;
-  background-color: rgb(242, 249, 249);
+  background-color: #e8f3f7;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -224,6 +234,7 @@ h1, h2, h3 {
   font-size: 1.625rem;
   text-align: center;
   line-height: 1.15;
+  color: #00a3e0;
 }
 @media screen and (min-width: 768px) {
   .activities__title {
@@ -237,6 +248,10 @@ h1, h2, h3 {
     width: auto;
     padding: 0 2rem;
   }
+}
+.activities__carousel-hack {
+  display: flex;
+  flex-flow: row nowrap;
 }
 .activities__item {
   width: 12.5rem;
@@ -260,6 +275,9 @@ h1, h2, h3 {
 }
 .activities__item-desc {
   font-size: 1.1rem;
+  font-family: "Gotham Bold", Arial;
+  letter-spacing: normal;
+  color: inherit;
 }
 @media screen and (min-width: 768px) {
   .activities__item-desc {
@@ -313,6 +331,7 @@ h1, h2, h3 {
   font-size: 1.625rem;
   text-align: center;
   line-height: 1.15;
+  color: #00a3e0;
 }
 @media screen and (min-width: 768px) {
   .features__title {
@@ -354,6 +373,9 @@ h1, h2, h3 {
 .features__item-desc {
   text-align: center;
   font-size: 1.25rem;
+  font-family: "Gotham Bold", Arial;
+  letter-spacing: normal;
+  color: inherit;
 }
 @media screen and (min-width: 768px) {
   .features__item-desc {
@@ -477,7 +499,7 @@ h1, h2, h3 {
   text-decoration: none;
   color: rgb(114, 114, 114);
 }
-@media screen and (max-width: 408px) {
+@media screen and (max-width: 320px) {
   .footer__links-divider {
     display: none;
   }

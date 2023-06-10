@@ -1,5 +1,8 @@
+@use 'colors' as *;
+@use 'variables' as *;
+
 @mixin verysmall-query {
-    @media screen and (max-width: 408px){
+    @media screen and (max-width: 320px){
         @content;
     }
 }
@@ -14,4 +17,10 @@
     @media screen and (min-width: 1023px){
         @content;
     }
+}
+
+@mixin section-item-desc {
+    font-family: "Gotham Bold", Arial;
+    letter-spacing: normal;
+    color: inherit;
 }
