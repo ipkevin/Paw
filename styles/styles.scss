@@ -84,11 +84,11 @@ h1,h2,h3 {
             }
         }
         &-logo {
-            width: 6.25rem;
+            width: 10rem;// 6.25rem;
             object-fit: contain;
 
             @include tablet-query {
-                width: 8rem;
+                width: 11rem; // 8rem;
             }
             @include desktop-query {
                 display: none;
@@ -190,7 +190,7 @@ h1,h2,h3 {
         }
         &-title {
             font-size: $font-form-title-mobile;
-
+            color: $col-brand-primary;
             @include tablet-query {
                 font-size: $font-form-title-tablet;
             }
