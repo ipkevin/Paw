@@ -1,0 +1,26 @@
+@use 'colors' as *;
+@use 'variables' as *;
+
+@mixin verysmall-query {
+    @media screen and (max-width: 320px){
+        @content;
+    }
+}
+
+@mixin tablet-query {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop-query {
+    @media screen and (min-width: 1023px){
+        @content;
+    }
+}
+
+@mixin section-item-desc {
+    font-family: "Gotham Bold", Arial;
+    letter-spacing: normal;
+    color: inherit;
+}

@@ -1,4 +1,18 @@
 @font-face {
+    font-family: 'PPBango';
+    src: url('/fonts/PPBango-Regular.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bango Pro';
+    src: url('/fonts/bangopro.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'VAGRound-Light';
     src: url('/fonts/VAGRoundedStd-Light.woff') format('woff');
     font-weight: 300;

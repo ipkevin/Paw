@@ -1,0 +1,11 @@
+<FilesMatch ".(eot|otf|ttf|woff)">
+  Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+# Allow Cross-Domain Fonts
+# CDN-served webfonts might not work in Firefox or IE due to CORS. This snippet solves the problem.
+<IfModule mod_headers.c>
+   <FilesMatch "\.(eot|otf|ttc|ttf|woff|woff2)$">
+       Header set Access-Control-Allow-Origin "*"
+   </FilesMatch>
+</IfModule>
