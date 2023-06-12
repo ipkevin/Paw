@@ -103,12 +103,13 @@ h1,h2,h3 {
         }
         &-video {
             width: 100%;
+            object-fit: contain;
             height: auto;
             //aspect-ratio: attr(width) / attr(height); // proper CLS way though may not work on iframes
             aspect-ratio: 16/9;
             // border-radius: 6px;  // for YT video
 
-            object-fit: contain;
+            
             margin: calc($space-mobile-between/2) 0;
         }
         &-subtitle {
