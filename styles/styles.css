@@ -125,6 +125,8 @@ h1, h2, h3 {
 }
 .header__info-video {
   width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
   -o-object-fit: contain;
      object-fit: contain;
   margin: 0.46875rem 0;
