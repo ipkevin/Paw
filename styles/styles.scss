@@ -19,6 +19,30 @@ h1,h2,h3 {
     font-family: "PPBango", "Bango Pro",Arial, Helvetica, sans-serif;
 }
 
+.alert-bar {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $col-activities-background;
+    
+
+    &__text {
+        color: $col-brand-primary;
+        line-height: 1.6;    
+        font-size: 0.8rem;
+
+        @include tablet-query {
+            font-size: 1rem;
+        }
+        @include desktop-query {
+            font-size: 1.3rem;
+            line-height: 2.1;
+        }
+    }
+}    
 .header {
     display: flex;
     flex-flow: column nowrap;
@@ -42,14 +66,15 @@ h1,h2,h3 {
 
         @include tablet-query {
             max-width: 562px;
-            padding: $space-header-padding-tablet 0;
+            padding: $space-header-padding-tablet*0.5 0 $space-header-padding-tablet; // $space-header-padding-tablet 0;
 
             gap: $space-tablet-between;
         }
 
         @include desktop-query {
+
             max-width: 600px;
-            padding-bottom: 0;
+            padding: $space-header-padding-tablet 0 0; // padding-bottom: 0;
         }
 
         // Coming Soon
@@ -445,12 +470,16 @@ h1,h2,h3 {
     align-items: center;
     
     &__social {
-        background-color: $col-brand-blue-dark;
+        background: #0082A4; //#005C83; //#24689f; //linear-gradient($col-brand-primary, #004b87);// $col-grey-dark;// $col-brand-primary; //$col-brand-blue-dark;
         // background-color:  #898d8d; // #b2b4b2;
         padding: $space-mobile-between*1.5;
+        
         width: 100%;
         text-align: center;
-
+        // display: flex;
+        // justify-content: center;
+        // align-items: self-end;
+        // gap: 1rem;
         &-title {
             // color: rgb(207, 207, 207);
             color: white;
@@ -493,7 +522,11 @@ h1,h2,h3 {
         justify-content: center;
         align-items: center;
     
+        width: 100%;
         padding: 0 1.5rem;
+
+        background-color: #004664; // #003f5a; //#174265; // $col-brand-blue-dark; // $col-grey-verydark;  // $col-brand-blue-dark; //#005C83
+        color: rgb(213, 213, 213); // white;
     }
     &__links {
         display: flex;
@@ -509,7 +542,7 @@ h1,h2,h3 {
             font-family:Arial, Helvetica, sans-serif;
             font-size: 0.8rem;
             text-decoration: none;
-            color: $col-text-primary;  
+            color: rgb(213, 213, 213);// white; //$col-text-primary;  
         }
 
         &-divider {
@@ -540,7 +573,8 @@ h1,h2,h3 {
 
         &-image {
             height: 50px;
-
+            // background-color: rgb(213, 213, 213);
+            // padding: 0.5rem 1rem;
             @include tablet-query {
                 height: 55px;
             }

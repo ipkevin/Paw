@@ -37,6 +37,31 @@ h1, h2, h3 {
   font-family: "PPBango", "Bango Pro", Arial, Helvetica, sans-serif;
 }
 
+.alert-bar {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8f3f7;
+}
+.alert-bar__text {
+  color: #00a3e0;
+  line-height: 1.6;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .alert-bar__text {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .alert-bar__text {
+    font-size: 1.3rem;
+    line-height: 2.1;
+  }
+}
+
 .header {
   display: flex;
   flex-flow: column nowrap;
@@ -61,14 +86,14 @@ h1, h2, h3 {
 @media screen and (min-width: 768px) {
   .header__info {
     max-width: 562px;
-    padding: 2.5rem 0;
+    padding: 1.25rem 0 2.5rem;
     gap: 1.4rem;
   }
 }
 @media screen and (min-width: 1023px) {
   .header__info {
     max-width: 600px;
-    padding-bottom: 0;
+    padding: 2.5rem 0 0;
   }
 }
 .header__info-date {
@@ -125,10 +150,10 @@ h1, h2, h3 {
 }
 .header__info-video {
   width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
   -o-object-fit: contain;
      object-fit: contain;
+  height: auto;
+  aspect-ratio: 16/9;
   margin: 0.46875rem 0;
 }
 .header__info-subtitle {
@@ -439,7 +464,7 @@ h1, h2, h3 {
   align-items: center;
 }
 .footer__social {
-  background-color: #004b87;
+  background: #0082A4;
   padding: 1.40625rem;
   width: 100%;
   text-align: center;
@@ -485,7 +510,10 @@ h1, h2, h3 {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding: 0 1.5rem;
+  background-color: #004664;
+  color: rgb(213, 213, 213);
 }
 .footer__links {
   display: flex;
@@ -500,7 +528,7 @@ h1, h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
   text-decoration: none;
-  color: rgb(114, 114, 114);
+  color: rgb(213, 213, 213);
 }
 @media screen and (max-width: 320px) {
   .footer__links-divider {
