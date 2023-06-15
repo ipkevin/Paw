@@ -9,3 +9,6 @@
        Header set Access-Control-Allow-Origin "*"
    </FilesMatch>
 </IfModule>
+
+
+RedirectMatch ^/kevtest/$ https://www.pawpatrolacademy.com/temp/index-new.html?utm_source=blah
