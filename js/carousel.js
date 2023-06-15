@@ -36,8 +36,7 @@ $('.activities__carousel').slick({
 });
 
 
-// On swipe, send a custom event for GTM to trigger GA tracking
+// On swipe, send a custom event that GTM can see and use to trigger GA tracking
 $('.activities__carousel').on('swipe', function(event, slick, direction){
   dataLayer.push({'event': 'activity-carousel-swipe'});
-  console.log("swiped");
 });
