@@ -68,13 +68,17 @@ h1, h2, h3 {
   align-items: center;
   padding-bottom: 2.5rem;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    padding-bottom: 3.75rem;
+  }
+}
 @media screen and (min-width: 1023px) {
   .header {
     flex-flow: row nowrap;
     align-items: flex-start;
     justify-content: center;
     gap: 40px;
-    padding-bottom: 3.75rem;
   }
 }
 .header__info {
@@ -87,7 +91,7 @@ h1, h2, h3 {
 }
 @media screen and (min-width: 768px) {
   .header__info {
-    max-width: 562px;
+    max-width: 35.125rem;
     padding: 1.25rem 0 2.5rem;
     gap: 1.4rem;
   }
@@ -152,11 +156,18 @@ h1, h2, h3 {
 }
 .header__info-video {
   width: 100%;
+  min-width: 20rem;
   -o-object-fit: contain;
      object-fit: contain;
   height: auto;
   aspect-ratio: 16/9;
+  border-radius: 0.7rem;
   margin: 0.46875rem 0;
+}
+@media screen and (min-width: 768px) {
+  .header__info-video {
+    min-width: 35.125rem;
+  }
 }
 .header__info-subtitle {
   font-size: 1.2188rem;
@@ -411,6 +422,11 @@ h1, h2, h3 {
   flex-flow: column nowrap;
   align-items: center;
   padding: 2.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .bottom-form {
+    padding: 3.75rem 0;
+  }
 }
 @media screen and (min-width: 1023px) {
   .bottom-form {

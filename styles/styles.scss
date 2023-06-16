@@ -50,17 +50,19 @@ h1,h2,h3 {
 
     padding-bottom: $space-section-padding-mobile;
 
+    @include tablet-query {
+        padding-bottom: $space-section-padding-tablet;
+    }
     @include desktop-query {
 
         flex-flow: row nowrap;
         align-items:flex-start;
         justify-content: center;
         gap: 40px;
-
-        padding-bottom: $space-section-padding-tablet;
     }
 
     &__info {
+        
         max-width: $space-header-content-mobile;
         display: flex;
         flex-flow: column nowrap;
@@ -70,7 +72,7 @@ h1,h2,h3 {
         // justify-content: space-between;
 
         @include tablet-query {
-            max-width: 562px;
+            max-width: 35.125rem; // 562px;
             padding: $space-header-padding-tablet*0.5 0 $space-header-padding-tablet; // $space-header-padding-tablet 0;
 
             gap: $space-tablet-between;
@@ -130,17 +132,22 @@ h1,h2,h3 {
             flex-flow: column nowrap;
             align-items: center;
             gap: $space-mobile-between;
+            
         }
         &-video {
             width: 100%;
+            min-width: $space-header-content-mobile;
             object-fit: contain;
             height: auto;
             //aspect-ratio: attr(width) / attr(height); // proper CLS way though may not work on iframes
             aspect-ratio: 16/9;
-            // border-radius: 6px;  // for YT video
+            border-radius: 0.7rem;  // for YT video
 
-            
             margin: calc($space-mobile-between/2) 0;
+
+            @include tablet-query {
+                min-width: 35.125rem;
+            }
         }
         &-subtitle {
             font-size: $font-subtitle-mobile;
@@ -245,10 +252,6 @@ h1,h2,h3 {
     padding: $space-section-padding-mobile 0;
     // margin:  $space-section-padding-mobile 0;
     background-color: $col-activities-background;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // gap: $space-section-padding-mobile;
 
     overflow: hidden;
 
@@ -418,6 +421,9 @@ h1,h2,h3 {
 
     padding: $space-section-padding-mobile 0;
 
+    @include tablet-query {
+        padding: $space-section-padding-tablet 0;
+    }
     @include desktop-query {
         flex-flow: row nowrap;
         justify-content: center;
