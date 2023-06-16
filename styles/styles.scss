@@ -31,15 +31,18 @@ h1,h2,h3 {
 
     &__text {
         color: $col-brand-primary;
-        line-height: 1.6;    
+        line-height: 1.3;    
         font-size: 0.8rem;
+
+        padding: 0.35rem 0;
 
         @include tablet-query {
             font-size: 1rem;
+            padding: 0.5rem 0;
         }
         @include desktop-query {
             font-size: 1.3rem;
-            line-height: 2.1;
+            // line-height: 2.1;
         }
     }
 }    
@@ -73,7 +76,8 @@ h1,h2,h3 {
 
         @include tablet-query {
             max-width: 35.125rem; // 562px;
-            padding: $space-header-padding-tablet*0.5 0 $space-header-padding-tablet; // $space-header-padding-tablet 0;
+            // padding: $space-header-padding-tablet*0.5 0 $space-header-padding-tablet; // $space-header-padding-tablet 0;
+            padding: $space-header-padding-tablet*0.65 0 $space-header-padding-tablet; // $space-header-padding-tablet 0;
 
             gap: $space-tablet-between;
         }
@@ -137,13 +141,16 @@ h1,h2,h3 {
         &-video {
             width: 100%;
             min-width: $space-header-content-mobile;
-            object-fit: contain;
             height: auto;
+            object-fit: contain;
+            object-position: left top;
             //aspect-ratio: attr(width) / attr(height); // proper CLS way though may not work on iframes
             aspect-ratio: 16/9;
             border-radius: 0.7rem;  // for YT video
 
             margin: calc($space-mobile-between/2) 0;
+
+            background-color: white; // hide edge lines on some screens
 
             @include tablet-query {
                 min-width: 35.125rem;
