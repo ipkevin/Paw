@@ -171,6 +171,14 @@ h1, h2, h3 {
 @media screen and (min-width: 768px) {
   .header__info-video {
     min-width: 35.125rem;
+    width: 562px;
+    height: 316px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .header__info-video {
+    width: 570px;
+    height: 321px;
   }
 }
 .header__info-subtitle {
@@ -333,12 +341,13 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .features {
     padding: 3.75rem 0;
+    gap: 2.5rem;
   }
 }
 .features__title {

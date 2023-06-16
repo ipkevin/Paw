@@ -154,6 +154,14 @@ h1,h2,h3 {
 
             @include tablet-query {
                 min-width: 35.125rem;
+                // explicitly setting the dimensions as some older versions (14.1.2) of Safari do not recognise height: auto;
+                width: 562px;
+                height: 316px;
+            }
+            @include desktop-query {
+                // explicitly setting the dimensions as some older versions of Safari do not recognise height: auto;
+                width: 570px;
+                height: 321px;
             }
         }
         &-subtitle {
@@ -332,12 +340,13 @@ h1,h2,h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: $space-section-padding-mobile;
+    gap: $space-section-padding-mobile*0.6;
 
     overflow: hidden;
 
     @include tablet-query {
         padding: $space-section-padding-tablet 0;
+        gap: $space-section-padding-mobile;
     }
 
     &__title {
