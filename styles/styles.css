@@ -63,6 +63,17 @@ h1, h2, h3 {
   }
 }
 
+#onetrust-policy-text {
+  color: rgb(114, 114, 114) !important;
+  font-family: "Gotham Bold", Arial, Helvetica, sans-serif !important;
+}
+
+#onetrust-button-group button {
+  border-radius: 100px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
 .header {
   display: flex;
   flex-flow: column nowrap;
