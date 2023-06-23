@@ -20,3 +20,14 @@ RedirectMatch ^/$ https://www.pawpatrolacademy.com/welcome
 # RewriteCond %{HTTP_HOST} pawpatrolacademy\.com [NC]
 # RewriteCond %{REQUEST_URI} ^/$
 # RewriteRule ^(.*)$ /welcome/$1 [L]
+
+<ifModule mod_headers.c>
+ <filesMatch ".(png|webp|gif|jpg|jpeg|otf|ttf|js)$">
+ Header set Cache-Control "max-age=2592000, must-revalidate"
+ </filesMatch>
+
+ <filesMatch ".(html)$">
+ Header set Cache-Control "no-cache"
+ </filesMatch>
+
+</ifModule>
