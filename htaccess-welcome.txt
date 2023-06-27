@@ -1,5 +1,5 @@
 <ifModule mod_headers.c>
- <filesMatch ".(png|webp|gif|jpg|jpeg|otf|ttf|js)$">
+ <filesMatch ".(png|webp|gif|svg|jpg|jpeg|otf|ttf|css|js)$">
  Header set Cache-Control "max-age=2592000, must-revalidate"
  </filesMatch>
 
