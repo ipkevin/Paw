@@ -4,8 +4,30 @@
 
 # Allow Cross-Domain Fonts
 # CDN-served webfonts might not work in Firefox or IE due to CORS. This snippet solves the problem.
-<IfModule mod_headers.c>
-   <FilesMatch "\.(eot|otf|ttc|ttf|woff|woff2)$">
-       Header set Access-Control-Allow-Origin "*"
-   </FilesMatch>
-</IfModule>
+# <IfModule mod_headers.c>
+#   <FilesMatch "\.(eot|otf|ttc|ttf|woff|woff2)$">
+#       Header set Access-Control-Allow-Origin "*"
+#   </FilesMatch>
+# </IfModule>
+
+# For users coming from the first toybox QR code
+RedirectMatch ^/toyboxqrcode1/en$ https://www.pawpatrolacademy.com/welcome?utm_source=qr01
+RedirectMatch ^/toyboxqrcode1/en/$ https://www.pawpatrolacademy.com/welcome?utm_source=qr01
+
+RedirectMatch ^/$ https://www.pawpatrolacademy.com/welcome
+
+# RewriteEngine on
+# RewriteCond %{HTTP_HOST} pawpatrolacademy\.com [NC]
+# RewriteCond %{REQUEST_URI} ^/$
+# RewriteRule ^(.*)$ /welcome/$1 [L]
+
+<ifModule mod_headers.c>
+ <filesMatch ".(png|webp|gif|jpg|jpeg|otf|ttf|js)$">
+ Header set Cache-Control "max-age=2592000, must-revalidate"
+ </filesMatch>
+
+ <filesMatch ".(html)$">
+ Header set Cache-Control "no-cache"
+ </filesMatch>
+
+</ifModule>

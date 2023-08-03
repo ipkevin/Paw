@@ -19,12 +19,63 @@ h1,h2,h3 {
     font-family: "PPBango", "Bango Pro",Arial, Helvetica, sans-serif;
 }
 
+.alert-bar {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $col-activities-background;
+    
+
+    &__text {
+        color: $col-brand-primary;
+        line-height: 1.3;    
+        font-size: 0.8rem;
+
+        padding: 0.35rem 0;
+
+        @include tablet-query {
+            font-size: 1rem;
+            padding: 0.5rem 0;
+        }
+        @include desktop-query {
+            font-size: 1.3rem;
+            // line-height: 2.1;
+        }
+    }
+}    
+
+#onetrust-consent-sdk * {
+    font-family: "Gotham Bold", Arial, Helvetica, sans-serif !important;
+}
+#onetrust-policy-text {
+    color: $col-text-primary !important;
+    // font-family: "Gotham Bold", Arial, Helvetica, sans-serif !important;
+}
+// #onetrust-button-group button {
+//     border-radius: 100px;
+//     font-weight: 300;
+//     letter-spacing: 1px;
+// }
+button#onetrust-pc-btn-handler {
+    background-color: #B2B4B2 !important;
+}
+
+
 .header {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 
+    padding-bottom: $space-section-padding-mobile;
+
+    @include tablet-query {
+        padding-bottom: $space-section-padding-tablet;
+    }
     @include desktop-query {
+
         flex-flow: row nowrap;
         align-items:flex-start;
         justify-content: center;
@@ -32,6 +83,7 @@ h1,h2,h3 {
     }
 
     &__info {
+        
         max-width: $space-header-content-mobile;
         display: flex;
         flex-flow: column nowrap;
@@ -41,15 +93,17 @@ h1,h2,h3 {
         // justify-content: space-between;
 
         @include tablet-query {
-            max-width: 562px;
-            padding: $space-header-padding-tablet 0;
+            max-width: 35.125rem; // 562px;
+            // padding: $space-header-padding-tablet*0.5 0 $space-header-padding-tablet; // $space-header-padding-tablet 0;
+            padding: $space-header-padding-tablet*0.65 0 $space-header-padding-tablet; // $space-header-padding-tablet 0;
 
             gap: $space-tablet-between;
         }
 
         @include desktop-query {
+
             max-width: 600px;
-            padding-bottom: 0;
+            padding: $space-header-padding-tablet 0 0; // padding-bottom: 0;
         }
 
         // Coming Soon
@@ -75,7 +129,7 @@ h1,h2,h3 {
             @include desktop-query {
                 display: block;
                 color: $col-brand-primary;
-                font-size: $font-section-title-desktop*1.15;
+                font-size: $font-section-title-desktop*1.15;                
             }
 
             &--tm {
@@ -84,11 +138,11 @@ h1,h2,h3 {
             }
         }
         &-logo {
-            width: 10rem;// 6.25rem;
+            width: 10.5rem;// 6.25rem;
             object-fit: contain;
 
             @include tablet-query {
-                width: 11rem; // 8rem;
+                width: 11.5rem; // 8rem;
             }
             @include desktop-query {
                 display: none;
@@ -100,11 +154,33 @@ h1,h2,h3 {
             flex-flow: column nowrap;
             align-items: center;
             gap: $space-mobile-between;
+            
         }
         &-video {
             width: 100%;
+            min-width: $space-header-content-mobile;
+            height: auto;
             object-fit: contain;
+            object-position: left top;
+            //aspect-ratio: attr(width) / attr(height); // proper CLS way though may not work on iframes
+            aspect-ratio: 16/9;
+            border-radius: 0.7rem;  // for YT video
+
             margin: calc($space-mobile-between/2) 0;
+
+            background-color: white; // hide edge lines on some screens
+
+            @include tablet-query {
+                min-width: 35.125rem;
+                // explicitly setting the dimensions as some older versions (14.1.2) of Safari do not recognise height: auto;
+                width: 562px;
+                height: 316px;
+            }
+            @include desktop-query {
+                // explicitly setting the dimensions as some older versions of Safari do not recognise height: auto;
+                width: 570px;
+                height: 321px;
+            }
         }
         &-subtitle {
             font-size: $font-subtitle-mobile;
@@ -170,7 +246,7 @@ h1,h2,h3 {
             &:not(.bottom-form__logo) {
                 @include desktop-query {
                     display: block;
-                    width: 8rem;
+                    width: 8.5rem; //8rem;
                     margin: 0 auto;
     
                     position: absolute;
@@ -207,18 +283,14 @@ h1,h2,h3 {
 }
 .activities {
     padding: $space-section-padding-mobile 0;
-    margin:  $space-section-padding-mobile 0;
+    // margin:  $space-section-padding-mobile 0;
     background-color: $col-activities-background;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // gap: $space-section-padding-mobile;
 
     overflow: hidden;
 
     @include tablet-query {
         padding: $space-section-padding-tablet 0;
-        margin:  $space-section-padding-tablet 0;
+        //margin:  $space-section-padding-tablet 0;
     }
 
     &__title {
@@ -280,51 +352,20 @@ h1,h2,h3 {
     }
 }
 
-// Dots navigation on the Activities carousel
-.slick-dots {
-    display: flex !important; // override app's built-in inline styling
-    justify-content: center;
-    gap: 1.5rem;
-    
-    list-style: none;
-    margin-top: $space-mobile-between*1.5;
-    
-    @include tablet-query {
-        margin-top: $space-mobile-between*2;
-    }
-
-    & li button {
-        font-size: 0;
-        line-height: 0;
-        color: $col-grey-mid;
-
-        border-radius: 100%;
-        height: 0.7rem;
-        width: 0.7rem;
-
-        border: none;
-        background-color: $col-grey-mid;
-
-        @include tablet-query {
-            height: 1rem;
-            width: 1rem;
-        }
-    }
-    & li.slick-active button {
-        background-color:  $col-brand-primary;
-        color: $col-brand-primary;
-    }
-}
-
 .features {
-    // padding: $space-section-padding-mobile 0;
-    margin:  $space-section-padding-mobile 0;
+    padding: $space-section-padding-mobile 0;
+    //margin:  $space-section-padding-mobile 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: $space-section-padding-mobile;
+    gap: $space-section-padding-mobile*0.6;
 
     overflow: hidden;
+
+    @include tablet-query {
+        padding: $space-section-padding-tablet 0;
+        gap: $space-section-padding-mobile;
+    }
 
     &__title {
         width: 20rem;
@@ -349,7 +390,7 @@ h1,h2,h3 {
             max-width: 450px;
 
             @include tablet-query {
-                gap: $space-mobile-between*2.5 0;
+                gap: $space-mobile-between*4.5 $space-mobile-between*2; // $space-mobile-between*2.5 0;
                 max-width: 1000px;
             }
         }
@@ -361,11 +402,11 @@ h1,h2,h3 {
         gap: $space-mobile-between;
 
         @include tablet-query {
-            width: 23rem;
+            width: 22rem; //23rem;
         }
 
         &-image {
-            width: 100%;
+            width: 85%; // 100%;
             object-fit: contain;
 
             @include tablet-query {
@@ -414,6 +455,9 @@ h1,h2,h3 {
 
     padding: $space-section-padding-mobile 0;
 
+    @include tablet-query {
+        padding: $space-section-padding-tablet 0;
+    }
     @include desktop-query {
         flex-flow: row nowrap;
         justify-content: center;
@@ -439,12 +483,16 @@ h1,h2,h3 {
     align-items: center;
     
     &__social {
-        background-color: $col-brand-blue-dark;
+        background: #0082A4; //#005C83; //#24689f; //linear-gradient($col-brand-primary, #004b87);// $col-grey-dark;// $col-brand-primary; //$col-brand-blue-dark;
         // background-color:  #898d8d; // #b2b4b2;
         padding: $space-mobile-between*1.5;
+        
         width: 100%;
         text-align: center;
-
+        // display: flex;
+        // justify-content: center;
+        // align-items: self-end;
+        // gap: 1rem;
         &-title {
             // color: rgb(207, 207, 207);
             color: white;
@@ -487,7 +535,11 @@ h1,h2,h3 {
         justify-content: center;
         align-items: center;
     
+        width: 100%;
         padding: 0 1.5rem;
+
+        background-color: #004664; // #003f5a; //#174265; // $col-brand-blue-dark; // $col-grey-verydark;  // $col-brand-blue-dark; //#005C83
+        color: rgb(213, 213, 213); // white;
     }
     &__links {
         display: flex;
@@ -503,7 +555,7 @@ h1,h2,h3 {
             font-family:Arial, Helvetica, sans-serif;
             font-size: 0.8rem;
             text-decoration: none;
-            color: $col-text-primary;  
+            color: rgb(213, 213, 213);// white; //$col-text-primary;  
         }
 
         &-divider {
@@ -534,7 +586,8 @@ h1,h2,h3 {
 
         &-image {
             height: 50px;
-
+            // background-color: rgb(213, 213, 213);
+            // padding: 0.5rem 1rem;
             @include tablet-query {
                 height: 55px;
             }
