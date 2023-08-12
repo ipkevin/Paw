@@ -321,7 +321,10 @@ button#onetrust-pc-btn-handler {
         text-shadow: 0px 0px 5px $col-brand-primary;
 
         @include tablet-query {
-            font-size: $font-subtitle-tablet;
+            font-size: $font-date-tablet;
+        }
+        @include desktop-query {
+            font-size: $font-date-desktop; 
         }
     }
     &__icons-box {
