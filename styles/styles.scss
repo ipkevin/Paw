@@ -75,11 +75,12 @@ button#onetrust-pc-btn-handler {
         padding-bottom: $space-section-padding-tablet;
     }
     @include desktop-query {
-
         flex-flow: row nowrap;
         align-items:flex-start;
         justify-content: center;
         gap: 40px;
+
+        padding-bottom: $space-section-padding-tablet - 1rem;
     }
 
     &__info {
@@ -95,30 +96,32 @@ button#onetrust-pc-btn-handler {
         @include tablet-query {
             max-width: 35.125rem; // 562px;
             // padding: $space-header-padding-tablet*0.5 0 $space-header-padding-tablet; // $space-header-padding-tablet 0;
-            padding: $space-header-padding-tablet*0.65 0 $space-header-padding-tablet; // $space-header-padding-tablet 0;
+            padding: $space-header-padding-tablet*0.65 0 calc($space-header-padding-tablet/2); 
+                // Because we added preorder bar below this, I divided above lower padding in 2 and added other half to
+                // upper margin of the form box (which is below the preorder bar)
 
             gap: $space-tablet-between;
         }
 
         @include desktop-query {
-
             max-width: 600px;
             padding: $space-header-padding-tablet 0 0; // padding-bottom: 0;
         }
 
-        // Coming Soon
+        // Coming Soon / Pre-Order Now
         &-date {
             font-weight: normal;
             font-size: $font-date-mobile;
             color: $col-brand-primary;
             text-transform: uppercase;
+            text-align: center;
 
             @include tablet-query {
                 font-size: $font-date-tablet;
             }
             @include desktop-query {
-                // font-size: $font-date-desktop;
-                text-transform:none;
+                font-size: $font-date-desktop;
+                // text-transform:none;
                 color: $col-text-primary;
             }
         }
@@ -138,11 +141,11 @@ button#onetrust-pc-btn-handler {
             }
         }
         &-logo {
-            width: 10.5rem;// 6.25rem;
+            width: 9.3rem; // 10.5rem;// 6.25rem;
             object-fit: contain;
 
             @include tablet-query {
-                width: 11.5rem; // 8rem;
+                width: 10rem; // 10.5rem; //11.5rem; // 8rem;
             }
             @include desktop-query {
                 display: none;
@@ -171,10 +174,10 @@ button#onetrust-pc-btn-handler {
             background-color: white; // hide edge lines on some screens
 
             @include tablet-query {
-                min-width: 35.125rem;
+                min-width: 30rem; // 35.125rem;
                 // explicitly setting the dimensions as some older versions (14.1.2) of Safari do not recognise height: auto;
-                width: 562px;
-                height: 316px;
+                width: 480px; // 562px;
+                height: 270px; // 316px;
             }
             @include desktop-query {
                 // explicitly setting the dimensions as some older versions of Safari do not recognise height: auto;
@@ -220,13 +223,15 @@ button#onetrust-pc-btn-handler {
         border: 1px solid $col-form-border;
         border-radius: 10px;
         
-        margin: calc($space-mobile-between/2) 0;
+        // made upper margin larger to accomodate new preorder bar above it
+        margin: $space-tablet-between 0 calc($space-mobile-between/2);
         padding: calc($space-mobile-between * 2) calc(2*$space-mobile-between);
 
         position: relative;
 
         @include tablet-query {
             max-width: $space-header-content-tablet;
+            margin-top: calc($space-header-padding-tablet/1.2); // added this for space btwn preorder & form
         }
 
         &:not(.bottom-form__form) {
@@ -267,6 +272,7 @@ button#onetrust-pc-btn-handler {
         &-title {
             font-size: $font-form-title-mobile;
             color: $col-brand-primary;
+            text-align: center;
             @include tablet-query {
                 font-size: $font-form-title-tablet;
             }
@@ -278,6 +284,71 @@ button#onetrust-pc-btn-handler {
             @include tablet-query {
                 font-size: $font-form-copy-tablet;
             }
+        }
+    }
+}
+
+// Pre-Order or Download bar
+.download {
+    
+    &__container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: $space-mobile-between - 0.2rem;
+
+        // background: url("../assets/images/misc/bluebar.webp") bottom center / cover;
+        background: url("../assets/images/misc/bluebar2.webp") bottom center / cover;
+
+        padding: $space-tablet-between 0;
+
+        border-top: 0.1rem solid #accbda;
+        border-bottom: 0.1rem solid #accbda;
+
+        @include tablet-query {
+            gap: $space-tablet-between - 0.5rem;
+            // padding: $space-tablet-between 0;
+
+            border-width: 0.14rem 0;
+        }
+    }
+    &__title {
+        font-size: $font-section-title-mobile;
+        color: white;
+        text-transform: uppercase;
+
+        text-shadow: 0px 0px 5px $col-brand-primary;
+
+        @include tablet-query {
+            font-size: $font-subtitle-tablet;
+        }
+    }
+    &__icons-box {
+        display: flex;
+        gap: 1.2rem;
+
+        @include tablet-query {
+            gap: 1.5rem;
+        }
+    }
+    &__icon {
+        width: 10rem;
+        @include tablet-query {
+            width: 12rem;
+        }
+    }
+    &__upper { 
+        /* must come after other "download__" CSS display directives so that display rule not overridden */
+        width: 100%;
+        @include desktop-query {
+            display:none;
+        }
+    }
+    &__lower {
+        display: none;
+        @include desktop-query {
+            display: flex;
         }
     }
 }

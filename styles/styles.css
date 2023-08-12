@@ -92,6 +92,7 @@ button#onetrust-pc-btn-handler {
     align-items: flex-start;
     justify-content: center;
     gap: 40px;
+    padding-bottom: 2.75rem;
   }
 }
 .header__info {
@@ -105,7 +106,7 @@ button#onetrust-pc-btn-handler {
 @media screen and (min-width: 768px) {
   .header__info {
     max-width: 35.125rem;
-    padding: 1.625rem 0 2.5rem;
+    padding: 1.625rem 0 1.25rem;
     gap: 1.4rem;
   }
 }
@@ -120,15 +121,16 @@ button#onetrust-pc-btn-handler {
   font-size: 1.625rem;
   color: #00a3e0;
   text-transform: uppercase;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .header__info-date {
-    font-size: 2.1875rem;
+    font-size: 1.9rem;
   }
 }
 @media screen and (min-width: 1023px) {
   .header__info-date {
-    text-transform: none;
+    font-size: 2.1875rem;
     color: rgb(114, 114, 114);
   }
 }
@@ -147,13 +149,13 @@ button#onetrust-pc-btn-handler {
   vertical-align: text-top;
 }
 .header__info-logo {
-  width: 10.5rem;
+  width: 9.3rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media screen and (min-width: 768px) {
   .header__info-logo {
-    width: 11.5rem;
+    width: 10rem;
   }
 }
 @media screen and (min-width: 1023px) {
@@ -182,9 +184,9 @@ button#onetrust-pc-btn-handler {
 }
 @media screen and (min-width: 768px) {
   .header__info-video {
-    min-width: 35.125rem;
-    width: 562px;
-    height: 316px;
+    min-width: 30rem;
+    width: 480px;
+    height: 270px;
   }
 }
 @media screen and (min-width: 1023px) {
@@ -226,7 +228,7 @@ button#onetrust-pc-btn-handler {
   max-width: 20rem;
   border: 1px solid rgb(216, 215, 215);
   border-radius: 10px;
-  margin: 0.46875rem 0;
+  margin: 1.4rem 0 0.46875rem;
   padding: 1.875rem 1.875rem;
   position: relative;
   background-color: white;
@@ -234,6 +236,7 @@ button#onetrust-pc-btn-handler {
 @media screen and (min-width: 768px) {
   .header__form {
     max-width: 36.5625rem;
+    margin-top: 2.0833333333rem;
   }
 }
 @media screen and (min-width: 1023px) {
@@ -265,6 +268,7 @@ button#onetrust-pc-btn-handler {
 .header__form-title {
   font-size: 1.4063rem;
   color: #00a3e0;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .header__form-title {
@@ -278,6 +282,69 @@ button#onetrust-pc-btn-handler {
 @media screen and (min-width: 768px) {
   .header__form-subtitle {
     font-size: 1rem;
+  }
+}
+
+.download__container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7375rem;
+  background: url("../assets/images/misc/bluebar2.webp") bottom center/cover;
+  padding: 1.4rem 0;
+  border-top: 0.1rem solid #accbda;
+  border-bottom: 0.1rem solid #accbda;
+}
+@media screen and (min-width: 768px) {
+  .download__container {
+    gap: 0.9rem;
+    border-width: 0.14rem 0;
+  }
+}
+.download__title {
+  font-size: 1.625rem;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px #00a3e0;
+}
+@media screen and (min-width: 768px) {
+  .download__title {
+    font-size: 1.6rem;
+  }
+}
+.download__icons-box {
+  display: flex;
+  gap: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .download__icons-box {
+    gap: 1.5rem;
+  }
+}
+.download__icon {
+  width: 10rem;
+}
+@media screen and (min-width: 768px) {
+  .download__icon {
+    width: 12rem;
+  }
+}
+.download__upper {
+  /* must come after other "download__" CSS display directives so that display rule not overridden */
+  width: 100%;
+}
+@media screen and (min-width: 1023px) {
+  .download__upper {
+    display: none;
+  }
+}
+.download__lower {
+  display: none;
+}
+@media screen and (min-width: 1023px) {
+  .download__lower {
+    display: flex;
   }
 }
 
