@@ -285,6 +285,75 @@ button#onetrust-pc-btn-handler {
   }
 }
 
+.form-inline {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.7rem;
+  max-width: 16.2rem;
+}
+.form-inline__input::-moz-placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: normal;
+}
+.form-inline__warning, .form-inline__checkbox-label, .form-inline__input::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: normal;
+}
+.form-inline__warning {
+  color: rgb(204, 51, 0);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.4rem;
+  padding: 0 0.1rem;
+}
+.form-inline__warning-hide-email {
+  display: none;
+}
+.form-inline__warning-hide-firstname {
+  display: none;
+}
+.form-inline__warning-hide-lastname {
+  display: none;
+}
+.form-inline__warning-hide-checkbox {
+  display: none;
+}
+.form-inline__checkbox-container {
+  padding: 0 0.8rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+}
+.form-inline__checkbox {
+  margin-right: 0.5rem;
+  vertical-align: bottom;
+  transform: scale(120%);
+  line-height: 1.4rem;
+}
+.form-inline__checkbox-label {
+  color: black;
+  line-height: 1.4rem;
+  vertical-align: text-top;
+}
+.form-inline__input {
+  padding: 0.55rem 0.3rem;
+}
+.form-inline__button {
+  background-color: #00a3e0;
+  padding: 0.7rem 3.3rem;
+  border: none;
+  border-radius: 2rem;
+  font-family: "Bango Pro", "PPBango", sans-serif;
+  font-size: 1.625rem;
+  color: white;
+  align-self: center;
+}
+.form-inline__button:hover {
+  cursor: pointer;
+}
+
 .download__container {
   display: flex;
   flex-flow: column nowrap;

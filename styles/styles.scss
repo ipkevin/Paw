@@ -288,6 +288,80 @@ button#onetrust-pc-btn-handler {
     }
 }
 
+.form-inline {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.7rem;
+    // width: 88%;
+    max-width: 16.2rem;
+
+    &__warning, &__checkbox-label, &__input::placeholder {
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: normal;
+    }
+
+    &__warning {
+        color: rgb(204, 51, 0); // $col-brand-red;
+        font-style:italic;
+        font-weight: 700;
+        line-height: 1.4rem;
+        padding: 0 0.1rem;
+
+        &-hide-email {
+            display:none;
+        }
+        &-hide-firstname {
+            display:none;
+        }
+        &-hide-lastname {
+            display:none;
+        }
+        &-hide-checkbox {
+            display:none;
+        }
+    }
+    
+    &__checkbox-container {
+        padding: 0 0.8rem;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items:baseline;
+    }
+    &__checkbox {
+        margin-right: 0.5rem;
+        vertical-align: bottom;
+        transform: scale(120%);
+        line-height:1.4rem;
+    }
+    &__checkbox-label {
+        color: black;
+        line-height: 1.4rem;
+        vertical-align: text-top;    
+    }
+    &__input {
+        // width: 100%;
+        padding: 0.55rem 0.3rem;
+    }
+    &__button {
+        background-color: $col-brand-primary;
+        // width:fit-content;
+        padding: 0.7rem 3.3rem;
+        border: none;
+        border-radius: 2rem;
+
+        font-family:"Bango Pro", "PPBango", sans-serif;
+        font-size: 1.625rem;
+        color: white;
+
+        align-self: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
 // Pre-Order or Download bar
 .download {
     
