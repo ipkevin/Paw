@@ -1,8 +1,10 @@
 
 const formTop = document.getElementById("form-inline__top");
+// TO DO add bottom form reference
 // const formBottom = document.getElementById("form-inline__bottom");
 
 formTop.addEventListener('submit', event => {handleSubmit(event, "top");});  
+// TO DO add bottom form event listener
 
 const handleSubmit = async (event, formLocation) => {
     event.preventDefault();
@@ -71,6 +73,51 @@ const handleSubmit = async (event, formLocation) => {
                 console.log("lower form push event");
             }
         
+            // remember to hide form & show successmsg on BOTH forms
+            // also, add a check at top of code to check if forms hidden and unhide it (tho maybe unnecessary as reloading will reset)
+            
+            let successMsgs = document.querySelectorAll(".form__success");
+            console.log("here are successmsgs: "+successMsgs);
+
+            let isSupportedDevice = /iPhone|iPad|Android/i.test(navigator.userAgent);
+
+            successMsgs.forEach((theMsg) => {
+                // unhide the success msg area
+                (theMsg.classList.contains("form__success--hide")) ? theMsg.classList.remove("form__success--hide") : "";
+            
+                // display the proper message depending on whether can redirect or not
+                if (isSupportedDevice) {
+                    // show the redirect message
+                    let redirMsg = theMsg.querySelector(".form__success-copy--redir");
+                    if (redirMsg.classList.contains("form__success--hide")){
+                        redirMsg.classList.remove("form__success--hide");
+                    } 
+                } else {
+                    // show the non-redirecting messge
+                    let redirMsg = theMsg.querySelector(".form__success-copy--noredir");
+                    if (redirMsg.classList.contains("form__success--hide")){
+                        redirMsg.classList.remove("form__success--hide");
+                    } 
+                }
+            });
+            
+            // unhide the 
+            // if (/iPhone|iPad|Android/i.test(navigator.userAgent)){
+            //     let redirMsgs = document.querySelectorAll(".form__success-copy--redir");
+            //     redirMsgs.forEach((theMsg) => {
+            //         (theMsg.classList.contains("form__success--hide")) ? theMsg.classList.remove("form__success--hide") : "";
+            //     });
+            // }
+            // if (/Android|iPhone/i.test(navigator.userAgent)) 
+            // hide the forms
+            console.log("formTOp classlist: "+formTop.classList);
+            formTop.classList.add("form-inline--hide");
+            // TODO add bottomform
+
+            setTimeout(() => {
+                // insert redirect here
+            }, 10);
+            
         } catch (error) {
             // NB: By default, this only catches network errors, not non-2xx responses from the server (eg, 3xx, 4xx).
             // In those cases, you must manually throw error from try block to catch them here.

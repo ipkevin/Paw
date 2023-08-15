@@ -288,12 +288,18 @@ button#onetrust-pc-btn-handler {
     }
 }
 
+
+
 .form-inline {
     display: flex;
     flex-flow: column nowrap;
     gap: 0.7rem;
     // width: 88%;
     max-width: 16.2rem;
+
+    &--hide {
+        display: none;
+    }
 
     &__warning, &__checkbox-label, &__input::placeholder {
         font-family:Arial, Helvetica, sans-serif;
@@ -363,6 +369,34 @@ button#onetrust-pc-btn-handler {
             cursor: pointer;
         }
     }
+}
+
+// Form success message
+.form__success {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+    &--hide { // MAKE SURE THIS IS BELOW 
+        display: none;
+    }
+    &-copy {
+        text-align: center;
+        line-height: 1.4rem;
+
+    }
+    &-icons-box {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 0.7rem;
+
+        margin: 1rem 0;
+    }
+    &-icon {
+        width: 9rem;
+    }
+
 }
 
 // Pre-Order or Download bar
