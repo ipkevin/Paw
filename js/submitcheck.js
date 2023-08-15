@@ -43,10 +43,6 @@ const handleSubmit = async (event, formLocation) => {
         console.log("here is the data: "+JSON.stringify(data));
         
         // send api call
-        // let username = "apiuser-57e81593b346@apiconnector.com";
-        // let thepass = "KW!!kQ8zGtnaLPm";
-        // let basicauth = "Basic "+btoa(username + ":" + thepass);
-        // console.log("encoded basic auth: "+basicauth);
         try {
             const response = await fetch("http://localhost:8080", {
             method: "POST",
@@ -100,7 +96,6 @@ const checkValid = (event) => {
     let isValid = true;
 
     // Email validation
-    // const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     const validRegex = /^[\w-\.\+]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (!(event.target.emailField.value).match(validRegex)) {
         isValid = false;
