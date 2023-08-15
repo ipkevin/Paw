@@ -12,22 +12,24 @@ const handleSubmit = async (event, formLocation) => {
     if (checkValid(event)) {
 
         // Get the utm_source
+        // 1st, grab all url params
         const urlParams = new URLSearchParams(window.location.search);
-        
-        // convert all param names (not values) to lowercase to make sure we don't miss anything (as urlsearchparams.get() is case sensitive)
+        // 2nd, convert all param names (not values) to lowercase to make sure we don't miss anything 
+        // since urlsearchparams.get() is case sensitive
         const newParams = new URLSearchParams();
         for (const [name, value] of urlParams) { 
             newParams.append(name.toLowerCase(), value);
         }
         const utmString = newParams.get('utm_source');
         
-        if (utmString !== null && utmString !== "") {
-            console.log("Here is the utm_param: "+utmString);
-        }
+        // Don't need this check.  Even if you assign null/empty to utmstring and assign to the data, receiver will ignore it
+        // if (utmString !== null && utmString !== "") {
+        //     // console.log("Here is the utm_param: "+utmString);
+        // }
         
         // Get current URL incl pathname but not query params:
         const currUrl = window.location.href.split(/[?#]/)[0];
-        console.log("here's the current url: "+currUrl);
+        // console.log("here's the current url: "+currUrl);
 
 
         // SEND THE API CALL
@@ -40,9 +42,9 @@ const handleSubmit = async (event, formLocation) => {
             FIRSTNAME: event.target.firstnameField.value,
             LASTNAME: event.target.lastnameField.value,
         };
-        console.log("here is the data: "+JSON.stringify(data));
+        // console.log("here is the data: "+JSON.stringify(data));
         
-        // send api call
+        // Send api call
         try {
             const response = await fetch("http://localhost:8080", {
             method: "POST",
@@ -59,22 +61,27 @@ const handleSubmit = async (event, formLocation) => {
             }
             const result = await response.json();
             console.log("Success:", result);
+
+            // Fire GA event to track form submission; NB: GA will not count this if user has not consented yet
+            if (formLocation === "top") {
+                dataLayer.push({'event': 'upper-form-submitted'});
+                console.log("upper form push event");
+            } else if (formLocation === "bottom"){
+                dataLayer.push({'event': 'lower-form-submitted'});
+                console.log("lower form push event");
+            }
         
         } catch (error) {
             // NB: By default, this only catches network errors, not non-2xx responses from the server (eg, 3xx, 4xx).
             // In those cases, you must manually throw error from try block to catch them here.
             console.error("Error:", error);
         }
-          
-          
         
 
-
-        // fire GA event after successful api call
-
-        // receive response.  If successful, display confirmation message and links or redirect.
+        // TODO:  receive response.  If successful, display confirmation message and links or redirect.
         // If error, display a message but let them submit again.
 
+        // STRETCH TODO: Blank out both forms when one submits
 
     } else {
         // 
