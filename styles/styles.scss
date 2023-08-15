@@ -308,17 +308,20 @@ button#onetrust-pc-btn-handler {
         line-height: 1.4rem;
         padding: 0 0.1rem;
 
-        &-hide-email {
-            display:none;
+        &-hide {
+            display: none;
         }
-        &-hide-firstname {
-            display:none;
+        &-email {
+            
         }
-        &-hide-lastname {
-            display:none;
+        &-firstname {
+            
         }
-        &-hide-checkbox {
-            display:none;
+        &-lastname {
+            
+        }
+        &-checkbox {
+            
         }
     }
     

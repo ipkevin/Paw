@@ -22,7 +22,7 @@ RedirectMatch ^/$ https://www.pawpatrolacademy.com/welcome
 # RewriteRule ^(.*)$ /welcome/$1 [L]
 
 <ifModule mod_headers.c>
- <filesMatch ".(png|webp|gif|jpg|jpeg|otf|ttf|js)$">
+ <filesMatch ".(png|webp|gif|jpg|jpeg|otf|ttf|js|pdf)$">
  Header set Cache-Control "max-age=2592000, must-revalidate"
  </filesMatch>
 

@@ -89,13 +89,13 @@ Please provide your consent by ticking the box
 Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master
             -->
             <form id="form-inline__top" class="form-inline">
-                <p class="form-inline__warning form-inline__warning-hide-email">Please add a valid email address</p>
+                <p class="form-inline__warning form-inline__warning-email form-inline__warning-hide">Please add a valid email address</p>
                 <input type="email" id="emailField" name="emailField" class="form-inline__input" placeholder="Parent's Email Address" />
-                <p class="form-inline__warning form-inline__warning-hide-firstname">Please add parent's first name</p>
-                <input type="text" id="firstNameField" name="firstNameField" class="form-inline__input" placeholder="Parent's First Name" />
-                <p class="form-inline__warning form-inline__warning-hide-lastname">Please add parent's last name</p>
-                <input type="text" id="lastNameField" name="lastNameField" class="form-inline__input" placeholder="Parent's Last Name" />
-                <p class="form-inline__warning form-inline__warning-hide-checkbox">Please provide your consent by ticking the box</p>
+                <p class="form-inline__warning form-inline__warning-firstname form-inline__warning-hide">Please add parent's first name</p>
+                <input type="text" minlength="2" id="firstnameField" name="firstnameField" class="form-inline__input" placeholder="Parent's First Name" />
+                <p class="form-inline__warning form-inline__warning-lastname form-inline__warning-hide">Please add parent's last name</p>
+                <input type="text" minlength="2" id="lastnameField" name="lastnameField" class="form-inline__input" placeholder="Parent's Last Name" />
+                <p class="form-inline__warning form-inline__warning-checkbox form-inline__warning-hide">Please provide your consent by ticking the box</p>
                 <div class="form-inline__checkbox-container">
                     <input type="checkbox" id="optinCheckbox" name="optinCheckbox" class="form-inline__checkbox">
                     <label for="optinCheckbox" class="form-inline__checkbox-label">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</label>
@@ -231,6 +231,7 @@ Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master
 
     <script type="text/javascript" src="./js/carousel.js" defer></script>
     <script type="text/javascript" src="./js/checkformsubmit.js" defer></script>
+    <script type="text/javascript" src="./js/submitcheck.js" defer></script>
 
 </body>
 </html>

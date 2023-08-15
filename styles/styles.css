@@ -308,16 +308,7 @@ button#onetrust-pc-btn-handler {
   line-height: 1.4rem;
   padding: 0 0.1rem;
 }
-.form-inline__warning-hide-email {
-  display: none;
-}
-.form-inline__warning-hide-firstname {
-  display: none;
-}
-.form-inline__warning-hide-lastname {
-  display: none;
-}
-.form-inline__warning-hide-checkbox {
+.form-inline__warning-hide {
   display: none;
 }
 .form-inline__checkbox-container {
