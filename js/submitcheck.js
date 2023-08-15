@@ -30,26 +30,48 @@ const handleSubmit = async (event, formLocation) => {
         console.log("here's the current url: "+currUrl);
 
 
+        // SEND THE API CALL
+        const data = { 
+            email: event.target.emailField.value,
+            optInType: 'Single',
+            emailType: 'Html',            
+            REFERRER: utmString,
+            SIGNUP_PAGE: currUrl,
+            FIRSTNAME: event.target.firstnameField.value,
+            LASTNAME: event.target.lastnameField.value,
+        };
+        console.log("here is the data: "+JSON.stringify(data));
+        
         // send api call
-        // async function postJSON(data) {
-        //     try {
-        //       const response = await fetch("https://example.com/profile", {
-        //         method: "POST", // or 'PUT'
-        //         headers: {
-        //           "Content-Type": "application/json",
-        //         },
-        //         body: JSON.stringify(data),
-        //       });
+        // let username = "apiuser-57e81593b346@apiconnector.com";
+        // let thepass = "KW!!kQ8zGtnaLPm";
+        // let basicauth = "Basic "+btoa(username + ":" + thepass);
+        // console.log("encoded basic auth: "+basicauth);
+        try {
+            const response = await fetch("http://localhost:8080", {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(data),
+            
+            });
+
+            if (!response.ok) {
+                console.log("here's raw response: ", JSON.stringify(response.status));
+                throw new Error(response.status);
+            }
+            const result = await response.json();
+            console.log("Success:", result);
+        
+        } catch (error) {
+            // NB: By default, this only catches network errors, not non-2xx responses from the server (eg, 3xx, 4xx).
+            // In those cases, you must manually throw error from try block to catch them here.
+            console.error("Error:", error);
+        }
           
-        //       const result = await response.json();
-        //       console.log("Success:", result);
-        //     } catch (error) {
-        //       console.error("Error:", error);
-        //     }
-        //   }
           
-        //   const data = { username: "example" };
-        //   postJSON(data);
+        
 
 
         // fire GA event after successful api call
@@ -65,7 +87,7 @@ const handleSubmit = async (event, formLocation) => {
 }
 
 
-
+// Function: Checks if email, firstname, and lastname are valid; Returns true if so, false otherwise
 const checkValid = (event) => {
     event.preventDefault();
 
@@ -78,7 +100,8 @@ const checkValid = (event) => {
     let isValid = true;
 
     // Email validation
-    const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    // const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const validRegex = /^[\w-\.\+]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (!(event.target.emailField.value).match(validRegex)) {
         isValid = false;
         if (emailWarning.classList.contains("form-inline__warning-hide")) {
@@ -91,7 +114,7 @@ const checkValid = (event) => {
         }
     }
     // First Name validation
-    if ((event.target.firstnameField.value.length < 2)) {
+    if ((event.target.firstnameField.value.length < 2 && event.target.firstnameField.value.length < 51)) {
         isValid = false;
         if (firstnameWarning.classList.contains("form-inline__warning-hide")){
             firstnameWarning.classList.remove("form-inline__warning-hide");
@@ -102,7 +125,7 @@ const checkValid = (event) => {
         }
     }
     // Last Name validation
-    if ((event.target.lastnameField.value.length < 2)) {
+    if ((event.target.lastnameField.value.length < 2 && event.target.lastnameField.value.length < 51)) {
         isValid = false;
         if (lastnameWarning.classList.contains("form-inline__warning-hide")){
             lastnameWarning.classList.remove("form-inline__warning-hide");
