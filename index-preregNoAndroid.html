@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <!-- OneTrust Cookies Consent Notice start for www.pawpatrolacademy.com -->
-    <script type="text/javascript" src="https://cdn.cookielaw.org/consent/3f42219d-2f13-4404-b923-9d055a68d5d7/OtAutoBlock.js" ></script>
+    <!-- <script type="text/javascript" src="https://cdn.cookielaw.org/consent/3f42219d-2f13-4404-b923-9d055a68d5d7/OtAutoBlock.js" ></script>
     <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="3f42219d-2f13-4404-b923-9d055a68d5d7" ></script>
     <script type="text/javascript">
         function OptanonWrapper() { }
-    </script>
+    </script> -->
     <!-- OneTrust Cookies Consent Notice end for www.pawpatrolacademy.com -->
 
     <!-- Google Tag Manager -->
@@ -52,70 +52,73 @@
             <img class="header__info-logo" src="./assets/images/logo/logo-paw-patrol-academy-smaller.webp" alt="PAW Patrol Academy logo" />
             <div class="header__info-content">
                 <div class="header__info-subtitle-group">
-                    <p class="header__info-subtitle">Heroic missions. </p>
+                    <p class="header__info-subtitle">Heroic missions.</p>
                     <p class="header__info-subtitle">REAL educational content.</p>
                 </div>
                 <iframe data-ot-ignore class="header__info-video" width="800" height="450" src="https://www.youtube-nocookie.com/embed/TynJR_juXmk?rel=0&enablejsapi=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <p class="header__info-subtitle header__info-subtitle--last">It's learning unleashed!</p>
             </div>
         </div>
-        <!-- DOWNLOAD PREORDER STORE ICONS BAR (MOBILE/TABLET) -->
+        <!-- STORE ICONS BUTTONS BAR - DESKTOP -->
         <section class="download__container download__upper">
-            <h2 class="download__title">Pre-order Now</h2>
+            <h2 class="download__title">Pre-order Now!</h2>
             <div class="download__icons-box">
                 <a href="#" class="download__link"><img class="download__icon" src="./assets/images/logo/store_itunes.gif" alt="Pre-Order app on Apple iTunes store" /></a>
-                <a href="#" class="download__link"><img class="download__icon" src="./assets/images/logo/store_google.gif" alt="Pre-Order app on Google Play store" /></a>
+                <!-- <a href="#" class="download__link"><img class="download__icon" src="./assets/images/logo/store_google.gif" alt="Pre-Order app on Google Play store" /></a> -->
             </div>
         </section>
-
         <!-- UPPER FORM AREA -->
         <div class="header__form">
             <img class="header__form-logo" src="./assets/images/logo/logo-paw-patrol-academy-smaller.webp" alt="PAW Patrol Academy logo" />
             
             <div class="header__form-container">
                 <h2 class="header__form-title">Sign up to learn more<br>and pre-order</h2>
-                <!-- success message -->
-                <div class="form__success form__success--hide">
-                    <p class="form__success-copy form__success-copy--noredir form__success--hide">You're on the list!<br>Choose a store to pre-order and<br>be the first to download:</p>
-                    <p class="form__success-copy form__success-copy--redir form__success--hide">You're on the list!<br>Redirecting you to the store<br>to preorder in 3 seconds...<br>(or click below):</p>
-                    <div class="form__success-icons-box">
-                        <a href="#" class="form__success-link"><img class="form__success-icon" src="./assets/images/logo/store_itunes.gif" alt="Pre-Order app on Apple iTunes store" /></a>
-                        <a href="#" class="form__success-link"><img class="form__success-icon" src="./assets/images/logo/store_google.gif" alt="Pre-Order app on Google Play store" /></a>
-                    </div>
+                <!-- form embed -->
+               <!-- <script src="//r2.dotdigital-pages.com/resources/sharing/embed.js?sharing=lp-embed&domain=r2.dotdigital-pages.com&id=7LSV-76A"></script> 
+               -->
+            <div class="form__success form__success--hide">
+                <!-- <p class="form__success-copy form__success-copy--noredir form__success--hide">You're on the list!<br>Choose a store to pre-order and<br>be the first to download:</p> -->
+                <!-- <p class="form__success-copy form__success-copy--noredir form__success--hide">You're on the list!<br>Click below to pre-order and<br>be first to download:</p> -->
+                <!-- <p class="form__success-copy form__success-copy--redir form__success--hide">You're on the list!<br>Redirecting you to the store<br>to preorder in 3 seconds...<br>(or click now on a store below):</p> -->
+                <p class="form__success-copy form__success-copy--noredir form__success--hide">You're on the list!<br>Redirecting you to the<br>preorder page in 3 seconds...<br>(or click below)</p>
+                <div class="form__success-icons-box">
+                    <a href="#" class="form__success-link"><img class="form__success-icon" src="./assets/images/logo/store_itunes.gif" alt="Pre-Order app on Apple iTunes store" /></a>
+                    <!-- <a href="#" class="form__success-link"><img class="form__success-icon" src="./assets/images/logo/store_google.gif" alt="Pre-Order app on Google Play store" /></a> -->
+                    <p class="form__success-copy form__success-copy-android-note">(Android Coming Soon)</p>
                 </div>
-                <!-- error message -->
-                <div class="form__error form__error--hide">
-                    <p class="form__error-copy">Sorry, there was an error<br>submitting your request.<br>Please try again later!</p>
+            </div>
+            <div class="form__error form__error--hide">
+                <p class="form__error-copy">Sorry, there was an error<br>submitting your request.<br>Please try again later!</p>
+            </div>
+            <form id="form-inline__top" class="form-inline">
+                <p class="form-inline__warning form-inline__warning-email form-inline__warning-hide">Please add a valid email address</p>
+                <input type="email" id="emailField" name="emailField" class="form-inline__input" placeholder="Parent's Email Address" />
+                <p class="form-inline__warning form-inline__warning-firstname form-inline__warning-hide">Please add parent's first name</p>
+                <input type="text" minlength="2" id="firstnameField" name="firstnameField" class="form-inline__input" placeholder="Parent's First Name" />
+                <p class="form-inline__warning form-inline__warning-lastname form-inline__warning-hide">Please add parent's last name</p>
+                <input type="text" minlength="2" id="lastnameField" name="lastnameField" class="form-inline__input" placeholder="Parent's Last Name" />
+                <p class="form-inline__warning form-inline__warning-checkbox form-inline__warning-hide">Please provide your consent by ticking the box</p>
+                <div class="form-inline__checkbox-container">
+                    <input type="checkbox" id="optinCheckbox" name="optinCheckbox" class="form-inline__checkbox">
+                    <label for="optinCheckbox" class="form-inline__checkbox-label">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</label>
                 </div>
-                <!-- inline form-->
-                <form id="form-inline__top" class="form-inline">
-                    <p class="form-inline__warning form-inline__warning-email form-inline__warning-hide">Please add a valid email address</p>
-                    <input type="email" id="emailField" name="emailField" class="form-inline__input" placeholder="Parent's Email Address" />
-                    <p class="form-inline__warning form-inline__warning-firstname form-inline__warning-hide">Please add parent's first name</p>
-                    <input type="text" minlength="2" id="firstnameField" name="firstnameField" class="form-inline__input" placeholder="Parent's First Name" />
-                    <p class="form-inline__warning form-inline__warning-lastname form-inline__warning-hide">Please add parent's last name</p>
-                    <input type="text" minlength="2" id="lastnameField" name="lastnameField" class="form-inline__input" placeholder="Parent's Last Name" />
-                    <p class="form-inline__warning form-inline__warning-checkbox form-inline__warning-hide">Please provide your consent by ticking the box</p>
-                    <div class="form-inline__checkbox-container">
-                        <input type="checkbox" id="optinCheckbox" name="optinCheckbox" class="form-inline__checkbox">
-                        <label for="optinCheckbox" class="form-inline__checkbox-label">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</label>
-                    </div>
-                    <button type="submit" class="form-inline__button">
-                        <img class="form-inline__button-loading form-inline__hide-misc" src="./assets/images/misc/loading.gif" alt="loading progress" />
-                        <span class="form-inline__button-copy">Join Us</span>
-                        
-                    </button>
-                </form>
+                <button type="submit" class="form-inline__button">
+                    <img class="form-inline__button-loading form-inline__hide-misc" src="./assets/images/misc/loading.gif" alt="loading progress" />
+                    <span class="form-inline__button-copy">Join Us</span>
+                    
+                </button>
+            </form>
+
             </div>
         </div>
     </header>
 
-    <!-- DOWNLOAD PREORDER STORE ICONS BAR (DESKTOP) -->
+    <!-- STORE ICONS BUTTONS BAR - MOBILE TABLET -->
     <section class="download__container download__lower">
         <h2 class="download__title">Pre-order Now</h2>
         <div class="download__icons-box">
             <a href="#" class="download__link"><img class="download__icon" src="./assets/images/logo/store_itunes.gif" alt="Pre-Order app on Apple iTunes store" /></a>
-            <a href="#" class="download__link"><img class="download__icon" src="./assets/images/logo/store_google.gif" alt="Pre-Order app on Google Play store" /></a>
+            <!-- <a href="#" class="download__link"><img class="download__icon" src="./assets/images/logo/store_google.gif" alt="Pre-Order app on Google Play store" /></a> -->
         </div>
     </section>
 
@@ -193,20 +196,20 @@
             <img class="header__form-logo bottom-form__logo" src="#" alt="PAW Patrol Academy logo" />
             <div class="header__form-container">
                 <h2 class="header__form-title">Sign up to learn more<br>and pre-order</h2>
-                <!-- Success message -->
+                <!-- form embed -->
+                <!-- <script src="//r2.dotdigital-pages.com/resources/sharing/embed.js?sharing=lp-embed&domain=r2.dotdigital-pages.com&id=7LSV-76V%2F%22"></script> -->
+
                 <div class="form__success form__success--hide">
                     <p class="form__success-copy form__success-copy--noredir form__success--hide">You're on the list!<br>Choose a store to pre-order and<br>be the first to download:</p>
-                    <p class="form__success-copy form__success-copy--redir form__success--hide">You're on the list!<br>Redirecting you to the store<br>to preorder in 3 seconds...<br>(or click below):</p>
+                    <p class="form__success-copy form__success-copy--redir form__success--hide">You're on the list!<br>Redirecting you to the store<br>to preorder in 3 seconds...<br>(or click now on a store below):</p>
                     <div class="form__success-icons-box">
                         <a href="#" class="form__success-link"><img class="form__success-icon" src="./assets/images/logo/store_itunes.gif" alt="Pre-Order app on Apple iTunes store" /></a>
                         <a href="#" class="form__success-link"><img class="form__success-icon" src="./assets/images/logo/store_google.gif" alt="Pre-Order app on Google Play store" /></a>
                     </div>
                 </div>
-                <!-- Error message -->
                 <div class="form__error form__error--hide">
                     <p class="form__error-copy">Sorry, there was an error<br>submitting your request.<br>Please try again later!</p>
                 </div>
-                <!-- Inline form -->
                 <form id="form-inline__bottom" class="form-inline">
                     <p class="form-inline__warning form-inline__warning-email form-inline__warning-hide">Please add a valid email address</p>
                     <input type="email" id="emailField" name="emailField" class="form-inline__input" placeholder="Parent's Email Address" />
@@ -216,7 +219,6 @@
                     <input type="text" minlength="2" id="lastnameField" name="lastnameField" class="form-inline__input" placeholder="Parent's Last Name" />
                     <p class="form-inline__warning form-inline__warning-checkbox form-inline__warning-hide">Please provide your consent by ticking the box</p>
                     <div class="form-inline__checkbox-container">
-                        <!-- NB: id is different than upper's checkbox so as to prevent this label from being tied to top checkbox -->
                         <input type="checkbox" id="optinCheckboxBottom" name="optinCheckbox" class="form-inline__checkbox">
                         <label for="optinCheckboxBottom" class="form-inline__checkbox-label">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</label>
                     </div>
