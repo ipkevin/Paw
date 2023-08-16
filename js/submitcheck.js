@@ -2,12 +2,15 @@ const IOS_STORE_URL = "https://www.apple.com/app-store/";
 const ANDROID_STORE_URL = "https://play.google.com/";
 
 const formTop = document.getElementById("form-inline__top");
-// TO DO add bottom form reference
-// const formBottom = document.getElementById("form-inline__bottom");
+const formBottom = document.getElementById("form-inline__bottom");
 
 formTop.addEventListener('submit', event => {handleSubmit(event, "top");});  
-// TO DO add bottom form event listener
+formBottom.addEventListener('submit', event => {handleSubmit(event, "bottom");});  
 
+/* 
+* Handles submitted form content. Sends off for validation and if valid, then sends request to API 
+* to create/update contact. Will cause calling index page form to display messages & feedback.
+*/
 const handleSubmit = async (event, formLocation) => {
     event.preventDefault();
     console.log("form location: "+formLocation);
@@ -58,8 +61,8 @@ const handleSubmit = async (event, formLocation) => {
         // You can test this easily by pointing to local server url but running on another
         // network (like view on your phone -- it cannot access localhost on your pc)
         try {
-            const response = await fetch("http://localhost:8080", {
-            // const response = await fetch("https://pawnewslettersignupserver.azurewebsites.net/", {
+            // const response = await fetch("http://localhost:8080", {
+            const response = await fetch("https://pawnewslettersignupserver.azurewebsites.net/", {
             method: "POST",
             headers: {
                 'content-type': 'application/json',
@@ -117,7 +120,7 @@ const handleSubmit = async (event, formLocation) => {
             });
             // Now hide the signup forms
             formTop.classList.add("form-inline--hide");
-            // TODO add bottomform
+            formBottom.classList.add("form-inline--hide");
 
             // Redirect user to store page if possible
             if (isSupportedDevice) {
@@ -131,8 +134,8 @@ const handleSubmit = async (event, formLocation) => {
             }
             
         } catch (error) {
-            // NB: By default, this only catches network errors, not non-2xx responses from the server (eg, 3xx, 4xx).
-            // In those cases, you must manually throw error from try block to catch them here.
+            // This will fire if network returns a non-2xx status
+            // Generally if this fires, can assume that it's due to auth or network error, not form validation issue
             console.error("Error:", error);
 
             // Remove loading anim & add back btn copy
