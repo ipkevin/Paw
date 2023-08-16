@@ -90,6 +90,9 @@
                     <a href="#" class="form__success-link"><img class="form__success-icon" src="./assets/images/logo/store_google.gif" alt="Pre-Order app on Google Play store" /></a>
                 </div>
             </div>
+            <div class="form__error form__error--hide">
+                <p class="form__error-copy">Sorry, there was an error<br>submitting your request.<br>Please try again later!</p>
+            </div>
             <form id="form-inline__top" class="form-inline">
                 <p class="form-inline__warning form-inline__warning-email form-inline__warning-hide">Please add a valid email address</p>
                 <input type="email" id="emailField" name="emailField" class="form-inline__input" placeholder="Parent's Email Address" />
@@ -102,7 +105,11 @@
                     <input type="checkbox" id="optinCheckbox" name="optinCheckbox" class="form-inline__checkbox">
                     <label for="optinCheckbox" class="form-inline__checkbox-label">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</label>
                 </div>
-                <button type="submit" class="form-inline__button">Join Us</button>
+                <button type="submit" class="form-inline__button">
+                    <img class="form-inline__button-loading form-inline__hide-misc" src="./assets/images/misc/loading.gif" alt="loading progress" />
+                    <span class="form-inline__button-copy">Join Us</span>
+                    
+                </button>
             </form>
 
             </div>

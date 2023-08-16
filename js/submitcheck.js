@@ -1,3 +1,5 @@
+const IOS_STORE_URL = "https://www.apple.com/app-store/";
+const ANDROID_STORE_URL = "https://play.google.com/";
 
 const formTop = document.getElementById("form-inline__top");
 // TO DO add bottom form reference
@@ -8,8 +10,13 @@ formTop.addEventListener('submit', event => {handleSubmit(event, "top");});
 
 const handleSubmit = async (event, formLocation) => {
     event.preventDefault();
-
     console.log("form location: "+formLocation);
+
+    // Replace form's button label with loading image
+    let currButtonCopy = event.target.getElementsByClassName("form-inline__button-copy")[0];
+    let currLoading = event.target.getElementsByClassName("form-inline__button-loading")[0];
+    (!currButtonCopy.classList.contains("form-inline__hide-misc")) ? currButtonCopy.classList.add("form-inline__hide-misc") : "";
+    (currLoading.classList.contains("form-inline__hide-misc")) ? currLoading.classList.remove("form-inline__hide-misc") : "";
 
     if (checkValid(event)) {
 
@@ -47,8 +54,12 @@ const handleSubmit = async (event, formLocation) => {
         // console.log("here is the data: "+JSON.stringify(data));
         
         // Send api call
+        // TO DO: Setup timeout on the fetch after 10 seconds.
+        // You can test this easily by pointing to local server url but running on another
+        // network (like view on your phone -- it cannot access localhost on your pc)
         try {
             const response = await fetch("http://localhost:8080", {
+            // const response = await fetch("https://pawnewslettersignupserver.azurewebsites.net/", {
             method: "POST",
             headers: {
                 'content-type': 'application/json',
@@ -56,13 +67,16 @@ const handleSubmit = async (event, formLocation) => {
             body: JSON.stringify(data),
             
             });
-
             if (!response.ok) {
                 console.log("here's raw response: ", JSON.stringify(response.status));
                 throw new Error(response.status);
             }
             const result = await response.json();
             console.log("Success:", result);
+
+            // Remove loading anim & add back btn copy
+            (currButtonCopy.classList.contains("form-inline__hide-misc")) ? currButtonCopy.classList.remove("form-inline__hide-misc") : "";
+            (!currLoading.classList.contains("form-inline__hide-misc")) ? currLoading.classList.add("form-inline__hide-misc") : "";
 
             // Fire GA event to track form submission; NB: GA will not count this if user has not consented yet
             if (formLocation === "top") {
@@ -73,19 +87,20 @@ const handleSubmit = async (event, formLocation) => {
                 console.log("lower form push event");
             }
         
-            // remember to hide form & show successmsg on BOTH forms
-            // also, add a check at top of code to check if forms hidden and unhide it (tho maybe unnecessary as reloading will reset)
-            
+            // Clear error msgs if they happen to be visible (ie, had a prev unsuccess submit, then succeeded without reloading)
+            let errorMsgs = document.querySelectorAll(".form__error");
+            errorMsgs.forEach((theErrMsg) => {
+                (!theErrMsg.classList.contains("form__error--hide")) ? theErrMsg.classList.add("form__error--hide") : "";
+            });
+
+            // Show success message on both forms
             let successMsgs = document.querySelectorAll(".form__success");
-            console.log("here are successmsgs: "+successMsgs);
-
-            let isSupportedDevice = /iPhone|iPad|Android/i.test(navigator.userAgent);
-
+            let isSupportedDevice = /iPhone|iPad|Android/i.test(navigator.userAgent); // check if on iOS/And so we know what msg to show
             successMsgs.forEach((theMsg) => {
-                // unhide the success msg area
+                // unhide the success msg area 
                 (theMsg.classList.contains("form__success--hide")) ? theMsg.classList.remove("form__success--hide") : "";
             
-                // display the proper message depending on whether can redirect or not
+                // display the proper copy depending on whether can redirect or not
                 if (isSupportedDevice) {
                     // show the redirect message
                     let redirMsg = theMsg.querySelector(".form__success-copy--redir");
@@ -100,44 +115,49 @@ const handleSubmit = async (event, formLocation) => {
                     } 
                 }
             });
-            
-            // unhide the 
-            // if (/iPhone|iPad|Android/i.test(navigator.userAgent)){
-            //     let redirMsgs = document.querySelectorAll(".form__success-copy--redir");
-            //     redirMsgs.forEach((theMsg) => {
-            //         (theMsg.classList.contains("form__success--hide")) ? theMsg.classList.remove("form__success--hide") : "";
-            //     });
-            // }
-            // if (/Android|iPhone/i.test(navigator.userAgent)) 
-            // hide the forms
-            console.log("formTOp classlist: "+formTop.classList);
+            // Now hide the signup forms
             formTop.classList.add("form-inline--hide");
             // TODO add bottomform
 
-            setTimeout(() => {
-                // insert redirect here
-            }, 10);
+            // Redirect user to store page if possible
+            if (isSupportedDevice) {
+                setTimeout(() => {
+                    if (/iPhone|iPad/i.test(navigator.userAgent)) {
+                        location.href = IOS_STORE_URL;
+                    } else {
+                        location.href = ANDROID_STORE_URL;
+                    }
+                }, 3000);
+            }
             
         } catch (error) {
             // NB: By default, this only catches network errors, not non-2xx responses from the server (eg, 3xx, 4xx).
             // In those cases, you must manually throw error from try block to catch them here.
             console.error("Error:", error);
+
+            // Remove loading anim & add back btn copy
+            (currButtonCopy.classList.contains("form-inline__hide-misc")) ? currButtonCopy.classList.remove("form-inline__hide-misc") : "";
+            (!currLoading.classList.contains("form-inline__hide-misc")) ? currLoading.classList.add("form-inline__hide-misc") : "";
+            
+            // Display the error message above the form
+            // NB: We must also check for & hide this msg in success condition
+            let errorMsgs = document.querySelectorAll(".form__error");
+            errorMsgs.forEach((theErrMsg) => {
+                (theErrMsg.classList.contains("form__error--hide")) ? theErrMsg.classList.remove("form__error--hide") : "";
+            });
         }
-        
-
-        // TODO:  receive response.  If successful, display confirmation message and links or redirect.
-        // If error, display a message but let them submit again.
-
-        // STRETCH TODO: Blank out both forms when one submits
-
     } else {
-        // 
+        // Don't need to do much since check fxn already displayed input warnings
         console.log("invalid form");
+        // Remove loading anim & add back btn copy
+        (currButtonCopy.classList.contains("form-inline__hide-misc")) ? currButtonCopy.classList.remove("form-inline__hide-misc") : "";
+        (!currLoading.classList.contains("form-inline__hide-misc")) ? currLoading.classList.add("form-inline__hide-misc") : "";
     }
 }
 
 
-// Function: Checks if email, firstname, and lastname are valid; Returns true if so, false otherwise
+// Function to check if email, firstname, and lastname are valid; Returns true if so, false otherwise
+// Also displays/hides corresponding warning messages in form
 const checkValid = (event) => {
     event.preventDefault();
 

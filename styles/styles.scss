@@ -217,6 +217,7 @@ button#onetrust-pc-btn-handler {
         }   
     }
 
+    // Form Container
     &__form {
         max-width: $space-header-content-mobile;
 
@@ -289,13 +290,14 @@ button#onetrust-pc-btn-handler {
 }
 
 
-
+// Inline form (not iframed)
 .form-inline {
     display: flex;
     flex-flow: column nowrap;
     gap: 0.7rem;
     // width: 88%;
     max-width: 16.2rem;
+    margin: 0.2rem 1.3rem 1.3rem;
 
     &--hide {
         display: none;
@@ -308,7 +310,7 @@ button#onetrust-pc-btn-handler {
     }
 
     &__warning {
-        color: rgb(204, 51, 0); // $col-brand-red;
+        color: $col-error;
         font-style:italic;
         font-weight: 700;
         line-height: 1.4rem;
@@ -317,18 +319,6 @@ button#onetrust-pc-btn-handler {
         &-hide {
             display: none;
         }
-        // &-email {
-            
-        // }
-        // &-firstname {
-            
-        // }
-        // &-lastname {
-            
-        // }
-        // &-checkbox {
-            
-        // }
     }
     
     &__checkbox-container {
@@ -353,9 +343,10 @@ button#onetrust-pc-btn-handler {
         padding: 0.55rem 0.3rem;
     }
     &__button {
+        position: relative;
         background-color: $col-brand-primary;
-        // width:fit-content;
-        padding: 0.7rem 3.3rem;
+        width:12.7rem;
+        padding: 0.7rem 1rem; // 0.7rem 3.3rem;
         border: none;
         border-radius: 2rem;
 
@@ -368,6 +359,18 @@ button#onetrust-pc-btn-handler {
         &:hover {
             cursor: pointer;
         }
+
+        &-loading {
+            width: 2rem;
+            vertical-align: text-bottom;
+            // position: absolute;
+            // left:1.1rem;
+            // bottom: 0.7rem;
+        }
+    }
+    &__hide-misc {
+        // make sure this is below other display declarations so that it has precedence
+        display: none;
     }
 }
 
@@ -396,7 +399,23 @@ button#onetrust-pc-btn-handler {
     &-icon {
         width: 9rem;
     }
+}
 
+// Form Network Error Message
+.form__error {
+    &-copy {
+        color: $col-error;
+        text-align: center;
+        font-family:Arial, Helvetica, sans-serif;
+        color: $col-error;
+        font-size: .9rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+        padding: 0 0.1rem;
+    }
+    &--hide {
+        display: none;
+    }
 }
 
 // Pre-Order or Download bar
