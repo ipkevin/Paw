@@ -13,8 +13,7 @@ formBottom.addEventListener('submit', event => {handleSubmit(event, "bottom");})
 */
 const handleSubmit = async (event, formLocation) => {
     event.preventDefault();
-    console.log("form location: "+formLocation);
-
+ 
     // Replace form's button label with loading image
     let currButtonCopy = event.target.getElementsByClassName("form-inline__button-copy")[0];
     let currLoading = event.target.getElementsByClassName("form-inline__button-loading")[0];
@@ -71,11 +70,10 @@ const handleSubmit = async (event, formLocation) => {
             
             });
             if (!response.ok) {
-                console.log("here's raw response: ", JSON.stringify(response.status));
+                // console.log("here's raw response: ", JSON.stringify(response.status));
                 throw new Error(response.status);
             }
             const result = await response.json();
-            console.log("Success:", result);
 
             // Remove loading anim & add back btn copy
             (currButtonCopy.classList.contains("form-inline__hide-misc")) ? currButtonCopy.classList.remove("form-inline__hide-misc") : "";
@@ -84,10 +82,8 @@ const handleSubmit = async (event, formLocation) => {
             // Fire GA event to track form submission; NB: GA will not count this if user has not consented yet
             if (formLocation === "top") {
                 dataLayer.push({'event': 'upper-form-submitted'});
-                console.log("upper form push event");
             } else if (formLocation === "bottom"){
                 dataLayer.push({'event': 'lower-form-submitted'});
-                console.log("lower form push event");
             }
         
             // Clear error msgs if they happen to be visible (ie, had a prev unsuccess submit, then succeeded without reloading)
@@ -136,7 +132,7 @@ const handleSubmit = async (event, formLocation) => {
         } catch (error) {
             // This will fire if network returns a non-2xx status
             // Generally if this fires, can assume that it's due to auth or network error, not form validation issue
-            console.error("Error:", error);
+            // console.error("Error:", error);
 
             // Remove loading anim & add back btn copy
             (currButtonCopy.classList.contains("form-inline__hide-misc")) ? currButtonCopy.classList.remove("form-inline__hide-misc") : "";
@@ -151,7 +147,8 @@ const handleSubmit = async (event, formLocation) => {
         }
     } else {
         // Don't need to do much since check fxn already displayed input warnings
-        console.log("invalid form");
+        // console.log("invalid form");
+
         // Remove loading anim & add back btn copy
         (currButtonCopy.classList.contains("form-inline__hide-misc")) ? currButtonCopy.classList.remove("form-inline__hide-misc") : "";
         (!currLoading.classList.contains("form-inline__hide-misc")) ? currLoading.classList.add("form-inline__hide-misc") : "";
