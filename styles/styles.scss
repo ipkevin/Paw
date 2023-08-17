@@ -226,13 +226,18 @@ button#onetrust-pc-btn-handler {
         
         // made upper margin larger to accomodate new preorder bar above it
         margin: $space-tablet-between 0 calc($space-mobile-between/2);
-        padding: calc($space-mobile-between * 2) calc(2*$space-mobile-between);
+        padding: calc($space-mobile-between * 2) calc(2*$space-mobile-between) calc($space-mobile-between * 2.6);
 
         position: relative;
 
         @include tablet-query {
             max-width: $space-header-content-tablet;
             margin-top: calc($space-header-padding-tablet/1.2); // added this for space btwn preorder & form
+        }
+
+        @include desktop-query {
+            padding-top: calc($space-mobile-between*2.8);
+            padding-bottom: calc($space-mobile-between*3);
         }
 
         &:not(.bottom-form__form) {
@@ -296,7 +301,7 @@ button#onetrust-pc-btn-handler {
     flex-flow: column nowrap;
     gap: 0.7rem;
     max-width: 16.2rem;
-    margin: 0.2rem 1.3rem 1.3rem;
+    margin: 0.2rem 1.3rem 0rem; //0.7rem;
 
     &--hide {
         display: none;
