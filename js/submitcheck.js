@@ -1,5 +1,5 @@
-const IOS_STORE_URL = "https://www.apple.com/app-store/";
-const ANDROID_STORE_URL = "https://play.google.com/";
+const IOS_STORE_URL = "https://apps.apple.com/us/app/paw-patrol-academy/id6444813487";
+const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=com.originatorkids.paw&pli=1";
 
 const formTop = document.getElementById("form-inline__top");
 const formBottom = document.getElementById("form-inline__bottom");
