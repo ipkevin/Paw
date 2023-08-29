@@ -2,7 +2,7 @@
 @use 'variables' as *;
 
 @mixin verysmall-query {
-    @media screen and (max-width: 320px){
+    @media screen and (max-width: 340px){
         @content;
     }
 }

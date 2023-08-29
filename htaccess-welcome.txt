@@ -1,14 +1,18 @@
-RewriteCond %{QUERY_STRING} page=([^&]+)
-RewriteRule ^(.*)$ https://www.cnn.com/%1 [L]
+#RewriteCond %{QUERY_STRING} page=([^&]+)
+#RewriteRule ^(.*)$ https://www.cnn.com/%1 [L]
 
 #RewriteRule ^/redirect\.php$ http://somewhereelse.com/%1? [R=302,L]
 
 <ifModule mod_headers.c>
- <filesMatch ".(png|webp|gif|svg|jpg|jpeg|otf|ttf|css|js)$">
- Header set Cache-Control "max-age=2592000, must-revalidate"
- </filesMatch>
+# <filesMatch ".(png|webp|gif|svg|jpg|jpeg|otf|ttf|css|js)$">
+# Header set Cache-Control "max-age=2592000, must-revalidate"
+# </filesMatch>
 
- <filesMatch ".(html)$">
+<filesMatch ".(css|js)$">
+Header set Cache-Control "max-age=0, must-revalidate"
+</filesMatch>
+
+ <filesMatch ".(html|css|scss|js)$">
  Header set Cache-Control "no-cache"
  </filesMatch>
 

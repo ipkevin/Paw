@@ -110,11 +110,16 @@ button#onetrust-pc-btn-handler {
 
         // Coming Soon / Pre-Order Now
         &-date {
+            display: inline;
             font-weight: normal;
             font-size: $font-date-mobile;
             color: $col-brand-primary;
             text-transform: uppercase;
             text-align: center;
+
+            @include verysmall-query {
+                font-size: calc($font-date-mobile * 0.85);
+            }
 
             @include tablet-query {
                 font-size: $font-date-tablet;
@@ -230,6 +235,7 @@ button#onetrust-pc-btn-handler {
 
         position: relative;
 
+        
         @include tablet-query {
             max-width: $space-header-content-tablet;
             margin-top: calc($space-header-padding-tablet/1.2); // added this for space btwn preorder & form
@@ -312,6 +318,10 @@ button#onetrust-pc-btn-handler {
         font-size: 0.9rem;
         letter-spacing: normal;
     }
+    &__input,  &__input::placeholder {
+        // Form input size must be >= 16px in order to stop Safari mobile from auto-zooming into the form when click into a field
+        font-size: 1rem;
+    }
 
     &__warning {
         color: $col-error;
@@ -332,16 +342,19 @@ button#onetrust-pc-btn-handler {
     }
     &__checkbox {
         position: relative;
-        top: -0.7rem;
-        margin-right: 0.5rem;
+        top: 0.2rem;
         width: 3rem;
-        height: 3rem;
+        // height: 32px;
         
     }
     &__checkbox-label {
         color: black;
         line-height: 1.4rem;
         vertical-align: text-top;    
+
+        display: flex;
+        align-items: flex-start;
+        gap: 0.3rem;
     }
     &__input {
         // width: 100%;
@@ -467,6 +480,8 @@ button#onetrust-pc-btn-handler {
     }
     &__icons-box {
         display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
         gap: 1.2rem;
 
         @include tablet-query {
@@ -475,6 +490,10 @@ button#onetrust-pc-btn-handler {
     }
     &__icon {
         width: 10rem;
+        // @include verysmall-query {
+        //     // This applies to screens <= 340px. Some devices were pushed out at the side with empty space due to buttons being wider than screen 
+        //     width: 8rem;
+        // }
         @include tablet-query {
             width: 12rem;
         }

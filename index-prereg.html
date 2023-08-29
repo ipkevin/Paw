@@ -57,7 +57,8 @@
                     <p class="header__info-subtitle">Heroic missions. </p>
                     <p class="header__info-subtitle">REAL educational content.</p>
                 </div>
-                <iframe data-ot-ignore class="header__info-video" width="800" height="450" src="https://www.youtube-nocookie.com/embed/TynJR_juXmk?rel=0&enablejsapi=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!-- <iframe data-ot-ignore class="header__info-video" width="800" height="450" src="https://www.youtube-nocookie.com/embed/TynJR_juXmk?rel=0&enablejsapi=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                <iframe data-ot-ignore class="header__info-video" width="800" height="450" src="https://www.youtube-nocookie.com/embed/e89r2xDEC7M?rel=0&enablejsapi=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <p class="header__info-subtitle header__info-subtitle--last">It's learning unleashed!</p>
             </div>
         </div>
@@ -79,7 +80,7 @@
                 <!-- success message -->
                 <div class="form__success form__success--hide">
                     <p class="form__success-copy form__success-copy--noredir form__success--hide">You're on the list!<br>Choose a store to pre-order and<br>be the first to download:</p>
-                    <p class="form__success-copy form__success-copy--redir form__success--hide">You're on the list!<br>Redirecting you to the store<br>to preorder in 3 seconds...<br>(or click below):</p>
+                    <p class="form__success-copy form__success-copy--redir form__success--hide">You're on the list!<br>Redirecting you to the store<br>to preorder in <span id="countdownUpperForm">3</span> seconds...<br>(or click below):</p>
                     <div class="form__success-icons-box">
                         <a href="https://apps.apple.com/us/app/paw-patrol-academy/id6444813487" class="form__success-link" target="_blank"><img class="form__success-icon" src="./assets/images/logo/store_itunes.gif" alt="Pre-Order app on Apple App store" /></a>
                         <a href="https://play.google.com/store/apps/details?id=com.originatorkids.paw&pli=1" class="form__success-link" target="_blank"><img class="form__success-icon" src="./assets/images/logo/store_google.gif" alt="Pre-Order app on Google Play store" /></a>
@@ -99,8 +100,14 @@
                     <input type="text" minlength="2" id="lastnameField" name="lastnameField" class="form-inline__input" placeholder="Parent's Last Name" />
                     <p class="form-inline__warning form-inline__warning-checkbox form-inline__warning-hide">Please provide your consent by ticking the box</p>
                     <div class="form-inline__checkbox-container">
-                        <input type="checkbox" id="optinCheckbox" name="optinCheckbox" class="form-inline__checkbox">
-                        <label for="optinCheckbox" class="form-inline__checkbox-label">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</label>
+                        <!-- <input type="checkbox" id="optinCheckbox" name="optinCheckbox" class="form-inline__checkbox">
+                        <label for="optinCheckbox" class="form-inline__checkbox-label">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</label> -->
+                        
+                        <label for="optinCheckbox" class="form-inline__checkbox-label">
+                            <input type="checkbox" id="optinCheckbox" name="optinCheckbox" class="form-inline__checkbox">
+                            <span class="form-inline__checkbox-label-copy">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</span>
+                        </label>
+                        
                     </div>
                     <button type="submit" class="form-inline__button">
                         <img class="form-inline__button-loading form-inline__hide-misc" src="./assets/images/misc/loading.gif" alt="loading progress" />
@@ -198,7 +205,7 @@
                 <!-- Success message -->
                 <div class="form__success form__success--hide">
                     <p class="form__success-copy form__success-copy--noredir form__success--hide">You're on the list!<br>Choose a store to pre-order and<br>be the first to download:</p>
-                    <p class="form__success-copy form__success-copy--redir form__success--hide">You're on the list!<br>Redirecting you to the store<br>to preorder in 3 seconds...<br>(or click below):</p>
+                    <p class="form__success-copy form__success-copy--redir form__success--hide">You're on the list!<br>Redirecting you to the store<br>to preorder in <span id="countdownLowerForm">3</span> seconds...<br>(or click below):</p>
                     <div class="form__success-icons-box">
                         <a href="https://apps.apple.com/us/app/paw-patrol-academy/id6444813487" class="form__success-link" target="_blank"><img class="form__success-icon" src="./assets/images/logo/store_itunes.gif" alt="Pre-Order app on Apple App store" /></a>
                         <a href="https://play.google.com/store/apps/details?id=com.originatorkids.paw&pli=1" class="form__success-link" target="_blank"><img class="form__success-icon" src="./assets/images/logo/store_google.gif" alt="Pre-Order app on Google Play store" /></a>
@@ -219,8 +226,13 @@
                     <p class="form-inline__warning form-inline__warning-checkbox form-inline__warning-hide">Please provide your consent by ticking the box</p>
                     <div class="form-inline__checkbox-container">
                         <!-- NB: id is different than upper's checkbox so as to prevent this label from being tied to top checkbox -->
-                        <input type="checkbox" id="optinCheckboxBottom" name="optinCheckbox" class="form-inline__checkbox">
-                        <label for="optinCheckboxBottom" class="form-inline__checkbox-label">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</label>
+                        <!-- <input type="checkbox" id="optinCheckboxBottom" name="optinCheckbox" class="form-inline__checkbox">
+                        <label for="optinCheckboxBottom" class="form-inline__checkbox-label">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</label> -->
+
+                        <label for="optinCheckboxBottom" class="form-inline__checkbox-label">
+                            <input type="checkbox" id="optinCheckboxBottom" name="optinCheckbox" class="form-inline__checkbox">
+                            <span class="form-inline__checkbox-label-copy">Yes! I want to receive PAW Patrol Academy™ promotional emails from Spin Master</span>
+                        </label>
                     </div>
                     <button type="submit" class="form-inline__button">
                         <img class="form-inline__button-loading form-inline__hide-misc" src="./assets/images/misc/loading.gif" alt="loading progress" />

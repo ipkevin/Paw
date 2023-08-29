@@ -117,11 +117,17 @@ button#onetrust-pc-btn-handler {
   }
 }
 .header__info-date {
+  display: inline;
   font-weight: normal;
   font-size: 1.625rem;
   color: #00a3e0;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (max-width: 340px) {
+  .header__info-date {
+    font-size: 1.38125rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .header__info-date {
@@ -311,6 +317,12 @@ button#onetrust-pc-btn-handler {
   font-size: 0.9rem;
   letter-spacing: normal;
 }
+.form-inline__input::-moz-placeholder {
+  font-size: 1rem;
+}
+.form-inline__input, .form-inline__input::placeholder {
+  font-size: 1rem;
+}
 .form-inline__warning {
   color: rgb(204, 51, 0);
   font-style: italic;
@@ -328,15 +340,16 @@ button#onetrust-pc-btn-handler {
 }
 .form-inline__checkbox {
   position: relative;
-  top: -0.7rem;
-  margin-right: 0.5rem;
+  top: 0.2rem;
   width: 3rem;
-  height: 3rem;
 }
 .form-inline__checkbox-label {
   color: black;
   line-height: 1.4rem;
   vertical-align: text-top;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
 }
 .form-inline__input {
   padding: 0.55rem 0.3rem;
@@ -438,6 +451,8 @@ button#onetrust-pc-btn-handler {
 }
 .download__icons-box {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   gap: 1.2rem;
 }
 @media screen and (min-width: 768px) {
@@ -733,7 +748,7 @@ button#onetrust-pc-btn-handler {
   text-decoration: none;
   color: rgb(213, 213, 213);
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 340px) {
   .footer__links-divider {
     display: none;
   }

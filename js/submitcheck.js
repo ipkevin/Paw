@@ -120,12 +120,23 @@ const handleSubmit = async (event, formLocation) => {
 
             // Redirect user to store page if possible
             if (isSupportedDevice) {
+                
+                let countdownValue = 3;
+                let intervalID = setInterval(() => {
+                        --countdownValue;                 
+                        if (countdownValue >= 0 ) {               
+                            document.getElementById("countdownUpperForm").innerText = countdownValue;
+                            document.getElementById("countdownLowerForm").innerText = countdownValue;
+                        }
+                }, 1000);
+
                 setTimeout(() => {
                     if (/iPhone|iPad/i.test(navigator.userAgent)) {
                         location.href = IOS_STORE_URL;
                     } else {
                         location.href = ANDROID_STORE_URL;
                     }
+                    clearInterval(intervalID);
                 }, 3000);
             }
             
