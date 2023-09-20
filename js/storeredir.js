@@ -3,6 +3,8 @@ const utmVal = newParams.get('utm_source');
 const IOS_STORE_URL_STOREREDIR = "https://apps.apple.com/us/app/paw-patrol-academy/id6444813487";
 const ANDROID_STORE_URL_STOREREDIR = "https://play.google.com/store/apps/details?id=com.originatorkids.paw&pli=1";
 
+const ANDROID_STORE_AUSTRALIA = "https://play.google.com/store/apps/details?id=com.originatorkids.paw&hl=en_CA&gl=au";
+
 console.log("here is valud of utmval", utmVal);
 if (utmVal){
     // console.log("in utmVal check");
@@ -19,5 +21,7 @@ if (utmVal){
         location.href = IOS_STORE_URL_STOREREDIR;
     } else if (utmVal === "metaanprereg"){
         location.href = ANDROID_STORE_URL_STOREREDIR;
+    } else if (utmVal === "metaandstoreaus"){
+        location.href = ANDROID_STORE_AUSTRALIA;
     }
 }
